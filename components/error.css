@@ -1,0 +1,39 @@
+.error {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  font-family: monospace;
+}
+.error pre {
+  color: #8f9295;
+  background: #2d323e;
+}
+.error pre .comment {
+  color: #465159;
+}
+.error pre .keyword {
+  color: #198fe3;
+}
+.error pre .token {
+  color: #ff1c68;
+}
