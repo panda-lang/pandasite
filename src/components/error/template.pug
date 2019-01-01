@@ -1,24 +1,24 @@
 .error
   pre
-    span(style='color: #465159') // {{ err.status }} {{ err.name }}.
+    span.comment // {{ err.status }} {{ err.name }}.
     br
     
-    span(v-if='err.message' style='color: #465159') // {{ err.message }}
+    span.comment(v-if='err.message') // {{ err.message }}
     br(v-if='err.message')
     
-    span(style='color: #198FE3') if&nbsp;
-    span(style='color: #8f9295') (status ===&nbsp;
-    span(style='color: #FF1C68') {{ err.status }}
-    span(style='color: #8f9295') ) {
+    span.keyword if&nbsp;
+    span (status ===&nbsp;
+    span.token {{ err.status }}
+    span ) {
     br
     
-    span(style='color: #198FE3') &nbsp; throw new&nbsp;
-    span(style='color: #8f9295') Error (
-    span(style='color: #FF1C68') `{{ face }}`
-    span(style='color: #8f9295') );
+    span.keyword &nbsp; throw new&nbsp;
+    span Error (
+    span.token `{{ face }}`
+    span );
     br
     
-    span(style='color: #8f9295') }
+    span }
 
-  pre(style='color: #465159' v-if='err.stack')
+  pre(v-if='err.stack')
     | {{ err.stack }}

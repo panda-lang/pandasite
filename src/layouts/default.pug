@@ -22,8 +22,21 @@ html
       script.
         window._waffle = {
           view: `#{view}`,
-          err: !{!err || err.status === 200 ? false : JSON.stringify(err)}
+          err: !{!err || err.status === 200 ? false : JSON.stringify(err)},
+          styles: document.createElement('style'),
+          async loadStyle (component) {
+            if (this.styles[component]) {
+              return
+            }
+            
+            this.styles[component] = true
+            
+            const { data } = await axios.get(`components/${component}.css`, { responseType: 'text' })
+            this.styles.innerHTML += data
+          }
         }
+        
+        document.head.appendChild(_waffle.styles)
         
       +script('/components')
       
@@ -41,4 +54,5 @@ html
         
     block post-scripts
       +script('routes')
+      +script('router')
       +script('app')

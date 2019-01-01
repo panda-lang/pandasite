@@ -1,0 +1,104 @@
+html {
+  font-size: 112.5%;
+  line-height: 1.56em;
+}
+body {
+  font-weight: 400;
+  font-family: 'Source Sans Pro', sans-serif;
+  word-wrap: break-word;
+  color: rgba(0,0,0,0.7);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.56rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgba(0,0,0,0.85);
+  font-family: Source Sans Pro, sans-serif;
+  font-weight: 200;
+  text-rendering: optimizeLegibility;
+  font-size: 2rem;
+  line-height: 2.34rem;
+}
+h2 {
+  font-size: 1.51572rem;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.31951rem;
+  line-height: 1.56rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.87055rem;
+}
+h6 {
+  font-size: 0.81225rem;
+}
+a {
+  color: #0af;
+  text-decoration: none;
+}
+a:hover {
+  color: #2d323e;
+  text-decoration: underline;
+}
+a.router-link-active {
+  color: #2d323e;
+}
+strong {
+  font-weight: 700;
+}
+small {
+  font-size: 80%;
+}
+ul,
+ol {
+  margin-bottom: 1.56rem;
+  margin-left: 1.56rem;
+}
+ul > li,
+ol > li {
+  margin-top: ;
+  margin-right: ;
+  margin-bottom: ;
+  margin-left: ;
+}
+pre,
+kbd,
+code {
+  background: #2d323e;
+  color: #fff;
+  border-radius: 3px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  font-family: Consolas, Roboto Mono, Liberation Mono, Menlo, Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.56rem;
+}
+pre {
+  padding: 1.56rem;
+}
+blockquote {
+  margin-right: 1.56rem;
+  margin-bottom: 1.56rem;
+  padding-bottom: 1.17rem;
+  font-size: 1.1487rem;
+  line-height: 1.56rem;
+  color: rgba(0,0,0,0.6);
+  border-left: 0.39rem solid rgba(0,0,0,0.13);
+}
