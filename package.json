@@ -9,10 +9,13 @@
   "description": "Panda programming language website",
   "website": "https://panda-lang.org/",
   "devDependencies": {
-    "pre-commit": "^1.2.2",
+    "pre-push": "^0.1.1",
     "static-waffle": "^0.0.11"
   },
-  "pre-commit": [
-    "waffle export"
+  "scripts": {
+    "export": "waffle export"
+  },
+  "pre-push": [
+    "export"
   ]
 }
