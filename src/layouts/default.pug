@@ -1,0 +1,44 @@
+include /values/mixins
+
+doctype html
+html
+  head
+    block pre-head
+      meta(charset='utf-8')
+    
+    block head
+      title static-waffle
+      
+    block scripts
+      script(src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver")
+        
+      +npm('vue/dist/vue.js')
+      +npm('vue-router/dist/vue-router.min.js')
+      +npm('axios/dist/axios.min.js')
+      +npm('nprogress')
+      +npm('slugify')
+      +npm('lodash')
+      
+      script.
+        window._waffle = {
+          view: `#{view}`,
+          err: !{!err || err.status === 200 ? false : JSON.stringify(err)}
+        }
+        
+      +script('/components')
+      
+    mixin font(name, sizes = [ 400 ])
+      link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=' + name.replace(/\s/g, '+') + ':' + sizes.join(','))
+      
+    block styles
+      +npm('reset.css')
+      +npm('nprogress/nprogress.css')
+      +font('Source Sans Pro', [ 200, 400, 700 ])
+      
+  body
+    #app
+      router-view
+        
+    block post-scripts
+      +script('routes')
+      +script('app')

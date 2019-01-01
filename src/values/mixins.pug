@@ -1,0 +1,51 @@
+- view = view ? view : '%view%'
+  
+mixin lib(provider, path)
+  - var isStyle = path.endsWith('.css')
+  - var url = 'https://cdn.jsdelivr.net/' + provider + '/' + path
+  if isStyle
+    link(rel='stylesheet', href=url)
+  else
+    script(src=url)
+      
+mixin npm(path)
+  +lib('npm', path)
+      
+mixin gh(path)
+  +lib('gh', path)
+
+mixin wp(path)
+  +lib('wp', path)
+  
+mixin root(path, ext)
+  - path = path.replace(/(\..+|)$/, ext)
+  if ext === '.css'
+    link(rel='stylesheet', href=path)
+      
+  else if ~['.jpg', '.png', '.svg'].indexOf(ext)
+    img(src=path)
+      
+  else
+    script(src=path)
+  
+mixin asset(path, ext)
+  +root(view + '/assets/' + path, ext)
+  
+mixin style(path)
+  if (path[0] === '/')
+    +root(path.slice(1), '.css')
+  else
+    +asset('css/' + path, '.css')
+  
+mixin script(path)
+  if (path[0] === '/')
+    +root(path.slice(1), '.js')
+  else
+    +asset('js/' + path, '.js')
+  
+mixin image(path)
+  - var ext = path.split('/').slice(-1)[0].match(/[^.]+(\..+)$/)[1]
+  if (path[0] === '/')
+    +root(path.slice(1), ext)
+  else
+    +asset('img/' + path, ext)
