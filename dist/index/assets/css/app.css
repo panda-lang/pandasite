@@ -6,4 +6,73 @@ html {
 body {
   height: 100%;
   min-height: 100%;
+  background: #fefefe;
+}
+.container {
+  --max-width: 1177px;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-right: auto;
+  margin-left: auto;
+}
+section {
+  --breakpoint: 70%;
+  position: relative;
+  height: 100vh;
+  background: -webkit-linear-gradient(top, #050304 var(--breakpoint), #fefefe var(--breakpoint));
+  background: -moz-linear-gradient(top, #050304 var(--breakpoint), #fefefe var(--breakpoint));
+  background: -o-linear-gradient(top, #050304 var(--breakpoint), #fefefe var(--breakpoint));
+  background: -ms-linear-gradient(top, #050304 var(--breakpoint), #fefefe var(--breakpoint));
+  background: linear-gradient(to bottom, #050304 var(--breakpoint), #fefefe var(--breakpoint));
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+section > :not(svg) {
+  z-index: 1;
+}
+section svg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: var(--breakpoint);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+section svg path {
+  fill: #fff;
+}
+pre code.hljs.panda {
+  background: transparent;
+  padding: 0;
+}
+.bg-1 {
+  background: #050304;
+}
+.text-1 {
+  color: #050304;
+}
+.bg-2 {
+  background: #fefefe;
+}
+.text-2 {
+  color: #fefefe;
+}
+.bg-3 {
+  background: #222;
+}
+.text-3 {
+  color: #222;
 }

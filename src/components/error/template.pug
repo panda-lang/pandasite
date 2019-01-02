@@ -1,23 +1,35 @@
 .error
   pre
-    span.comment // {{ err.status }} {{ err.name }}.
+    span.keyword main&nbsp;
+    span {
+    
+    br
+    br
+    span.comment &nbsp; // ...
+    br
     br
     
-    span.comment(v-if='err.message') // {{ err.message }}
+    span.comment &nbsp; // {{ err.status }} {{ err.name }}.
+    br
+    
+    span.comment(v-if='err.message') &nbsp; // {{ err.message }}
     br(v-if='err.message')
     
-    span.keyword if&nbsp;
+    span.keyword &nbsp; if&nbsp;
     span (status ===&nbsp;
     span.token {{ err.status }}
     span ) {
     br
     
-    span.keyword &nbsp; throw new&nbsp;
-    span Error (
-    span.token `{{ face }}`
-    span );
+    span.keyword &nbsp; &nbsp; Console
+    span .print(
+    span.token "{{ face }}"
+    span )
     br
     
+    span &nbsp; }
+    br
+      
     span }
 
   pre(v-if='err.stack')

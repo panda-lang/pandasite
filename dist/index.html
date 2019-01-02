@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>My custom title</title><script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver"></script><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.min.js"></script><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script><script src="https://cdn.jsdelivr.net/npm/nprogress"></script><script src="https://cdn.jsdelivr.net/npm/slugify"></script><script src="https://cdn.jsdelivr.net/npm/lodash"></script><script>window._waffle = {
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Panda - lightweight and powerful programming language</title><script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver"></script><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.min.js"></script><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script><script src="https://cdn.jsdelivr.net/npm/nprogress"></script><script src="https://cdn.jsdelivr.net/npm/slugify"></script><script src="https://cdn.jsdelivr.net/npm/lodash"></script><script>window._waffle = {
   view: `index`,
   err: false,
   styles: document.createElement('style'),
@@ -15,4 +15,31 @@
 }
 
 document.head.appendChild(_waffle.styles)
-</script><script src="components.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress/nprogress.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700"><link rel="stylesheet" href="index/assets/css/app.css"/><link rel="stylesheet" href="index/assets/css/typography.css"/><link rel="stylesheet" href="index/assets/css/grid.css"/><link rel="stylesheet" href="index/assets/css/padding.css"/></head><body><div id="app"><router-view></router-view></div><script src="index/assets/js/routes.js"></script><script src="index/assets/js/router.js"></script><script src="index/assets/js/app.js"></script></body></html>
+</script><script src="components.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress/nprogress.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700"><link rel="stylesheet" href="index/assets/css/app.css"/><link rel="stylesheet" href="index/assets/css/typography.css"/><link rel="stylesheet" href="index/assets/css/grid.css"/><link rel="stylesheet" href="index/assets/css/padding.css"/><link rel="stylesheet" href="index/assets/css/margin.css"/></head><body><div id="app"><router-view></router-view></div><script src="index/assets/js/routes.js"></script><script src="index/assets/js/router.js"></script><script src="index/assets/js/app.js"></script><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.min.css"/><script>hljs.registerLanguage('panda', hljs => {
+  return {
+    aliases: ['panda'],
+    k: {
+      keyword: 'for if while main import module continue break loop method void new',
+      literal: 'true false null',
+      type: 'String Console Panda',
+    },
+    c: [
+      {
+        cN: 'class',
+        bK: 'class', end: /[{;=]/, excludeEnd: true,
+        k: 'class interface',
+        i: /[:"\[\]]/,
+        c: [
+          { bK: 'extends' },
+          hljs.UTM,
+        ]
+      },
+      hljs.CBCM,
+      hljs.CLCM,
+      hljs.QSM,
+      hljs.NM,
+    ]
+  }
+})
+
+hljs.initHighlighting()</script></body></html>

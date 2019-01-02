@@ -1,0 +1,12 @@
+import panda-lang
+
+class Panda {
+  method void speak (String name) {
+    Console.print("Hello " + name + "!")
+  }
+}
+
+main {
+  Panda panda = new Panda()
+  panda.speak(666) // Hello satan!
+}
