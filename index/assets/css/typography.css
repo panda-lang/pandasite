@@ -54,16 +54,18 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #2d323e;
+  color: #222;
   text-decoration: underline;
 }
 a.router-link-active {
-  color: #2d323e;
+  color: #222;
 }
 strong {
+  display: inline-block;
   font-weight: 700;
 }
 small {
+  display: inline-block;
   font-size: 80%;
 }
 ul,
@@ -79,9 +81,8 @@ ol > li {
   margin-left: ;
 }
 pre,
-kbd,
-code {
-  background: #2d323e;
+kbd {
+  background: #222;
   color: #fff;
   border-radius: 3px;
   padding-top: 0.2rem;

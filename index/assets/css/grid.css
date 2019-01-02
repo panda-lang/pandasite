@@ -5,6 +5,7 @@
   display: -ms-flexbox;
   display: box;
   display: flex;
+  width: 100%;
 }
 .row .col {
   -webkit-box-flex: 1;
