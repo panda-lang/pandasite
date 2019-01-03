@@ -1,4 +1,6 @@
 const routes = {
   '/': 'templates/index', // template path
-  '*': [ 'templates/404', 'notfound' ], // template path, route name
+  '/api/': 'templates/api',
+  '/examples/': 'templates/examples',
+  '/guide/': 'templates/guide',
 }
