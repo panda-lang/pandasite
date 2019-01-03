@@ -4,10 +4,12 @@
   var component = {
     name: `error-handler`,
     lazy: false,
+    props: ['err'],
     functional: true,
     render (h, ctx) {
-      if (!!_waffle.err) {
-        return h('error')
+      const { err } = ctx.props;
+      if (ctx.props.err) {
+        return h('error', { props: { err } })
       }
 
       return ctx.slots().default
@@ -17,14 +19,7 @@
   var component$1 = {
     name: `error`,
     lazy: false,
-    props: {
-      err: {
-        type: Object,
-        default () {
-          return !_waffle.err ? {} : _waffle.err
-        },
-      },
-    },
+    props: ['err'],
     data () {
       const faces = [ '(;´༎ຶД༎ຶ`)', '⚆ _ ⚆', '｡゜(｀Д´)゜｡', '¬_¬', '(ʘᗩʘ\')', 'ಥ_ಥ', '(ノಠ益ಠ)ノ彡┻━┻', '>.<' ];
       const face  = faces[Math.random() * faces.length ^ 0];
