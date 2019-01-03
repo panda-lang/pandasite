@@ -1,0 +1,39 @@
+header {
+  background: #050304;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+header nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+}
+header nav .right {
+  margin-left: auto;
+}
+header nav .left {
+  margin-right: auto;
+}
+header nav a {
+  display: inline-block;
+  padding: 27px 7px;
+  color: rgba(255,255,255,0.5);
+}
+header nav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+header nav a.router-link-active {
+  color: #fff;
+}
