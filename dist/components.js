@@ -70,15 +70,25 @@
     },
   };
 
+  var component$3 = {
+    name: `panda-header`,
+    lazy: false, 
+    props: [],
+    data () {
+      return {}
+    },
+  };
+
 
 
   var components = /*#__PURE__*/Object.freeze({
     errorHandler: component,
     error: component$1,
-    limg: component$2
+    limg: component$2,
+    pandaHeader: component$3
   });
 
-  const styled = {"error":true};
+  const styled = {"error":true,"pandaHeader":true};
 
   const resolver = (c, args, resolve) => {
     const component$$1 = components[c];
@@ -97,8 +107,10 @@
   Object.keys(components).map(c => {
     const component$$1 = components[c];
 
-    Vue.component(component$$1.name, (resolve, reject) => {
+    Vue.component(c, (resolve, reject) => {
       const promises = [];
+
+      console.log(c, styled[c], styled);
 
       if (styled[c]) {
         promises.push(_waffle.loadStyle(c));

@@ -1,11 +1,11 @@
-header {
+header.padna-header {
   background: #050304;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
 }
-header nav {
+header.padna-header nav {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -19,21 +19,21 @@ header nav {
   -ms-flex-flow: row;
   flex-flow: row;
 }
-header nav .right {
+header.padna-header nav .right {
   margin-left: auto;
 }
-header nav .left {
+header.padna-header nav .left {
   margin-right: auto;
 }
-header nav a {
+header.padna-header nav a {
   display: inline-block;
   padding: 27px 7px;
   color: rgba(255,255,255,0.5);
 }
-header nav a:hover {
+header.padna-header nav a:hover {
   color: #fff;
   text-decoration: none;
 }
-header nav a.router-link-active {
+header.padna-header nav a.router-link-active {
   color: #fff;
 }
