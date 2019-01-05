@@ -110,8 +110,6 @@
     Vue.component(c, (resolve, reject) => {
       const promises = [];
 
-      console.log(c, styled[c], styled);
-
       if (styled[c]) {
         promises.push(_waffle.loadStyle(c));
       }
