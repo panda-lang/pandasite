@@ -79,16 +79,26 @@
     },
   };
 
+  var component$4 = {
+    name: `panda-hero`,
+    lazy: false, 
+    props: [],
+    data () {
+      return {}
+    },
+  };
+
 
 
   var components = /*#__PURE__*/Object.freeze({
     errorHandler: component,
     error: component$1,
     limg: component$2,
-    pandaHeader: component$3
+    pandaHeader: component$3,
+    pandaHero: component$4
   });
 
-  const styled = {"error":true,"pandaHeader":true};
+  const styled = {"error":true,"pandaHero":true,"pandaHeader":true};
 
   const resolver = (c, args, resolve) => {
     const component$$1 = components[c];
