@@ -98,7 +98,7 @@
     pandaHero: component$4
   });
 
-  const styled = {"error":true,"pandaHero":true,"pandaHeader":true};
+  const styled = {"error":true,"pandaHeader":true,"pandaHero":true};
 
   const resolver = (c, args, resolve) => {
     const component$$1 = components[c];
