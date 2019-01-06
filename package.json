@@ -9,13 +9,10 @@
   "description": "Panda programming language website",
   "website": "https://panda-lang.org/",
   "devDependencies": {
-    "pre-push": "^0.1.1",
     "static-waffle": "^0.0.15"
   },
   "scripts": {
-    "export": "waffle export"
-  },
-  "pre-push": [
-    "export"
-  ]
+    "export": "waffle export",
+    "push": "waffle export && git push && git subtree push --prefix dist origin gh-pages"
+  }
 }
