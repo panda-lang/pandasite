@@ -10,6 +10,10 @@ block append styles
   +style('padding')
   +style('margin')
   
+block append scripts
+  +npm('marked')
+  +script('guide_routes.js')
+  
 block append post-scripts
   +gh('highlightjs/cdn-release/build/highlight.min.js')
   +gh('highlightjs/cdn-release/build/styles/atom-one-dark.min.css')

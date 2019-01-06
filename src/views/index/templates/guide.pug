@@ -1,0 +1,9 @@
+panda-header
+.panda-header-spacer
+  
+section
+  .container
+    .row
+      .col
+        router-link(:to='article.href', :key='article.href', v-for='(article, i) of articles') {{ article.title }}
+      .col.span-3(v-html='article.content')

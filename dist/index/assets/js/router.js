@@ -41,6 +41,10 @@ const router = new VueRouter({
   routes: Object.keys(routes).map(path => {
     const route = compileRoute(routes[path])
 
+    if (typeof route.redirect === 'string') {
+      return { path, redirect: route.redirect }
+    }
+
     const component = async () => {
       let err = false
       let template = route.template || ''

@@ -1574,10 +1574,10 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
-static-waffle@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/static-waffle/-/static-waffle-0.0.14.tgz#27cea15fd65494d940518b419661423463447147"
-  integrity sha512-EPXxbu6xSfkigfitXFIQXPCcCqqVuz5y1vvXhfFsVKBQvyDxcRg3YZm3Rq/uuKhTaisudn0SLwqlrhSjvofUGg==
+static-waffle@^0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/static-waffle/-/static-waffle-0.0.15.tgz#abc4635d181162e17960a997774de09a6883cf10"
+  integrity sha512-z2od/uOWcbhB/EL/QF42qPqWmK+/mc58xN7cmE8xP2WyeLG+O4kSKt0ZD53lrpma2ChLhoTqZYC3CGN1H5k5tQ==
   dependencies:
     camelcase "^5.0.0"
     commander "^2.19.0"
