@@ -1,0 +1,21 @@
+section.panda-hero
+  --breakpoint 70%
+
+  relative _
+  height 100vh
+  background linear-gradient(top, color-1 var(--breakpoint), color-2 var(--breakpoint))
+
+  display flex
+  align-items center
+
+  > :not(svg)
+    z-index 1
+
+  svg
+    size 100% auto
+
+    absolute var(--breakpoint) _ _
+    transform translateY(-100%)
+
+    path
+      fill #fff
