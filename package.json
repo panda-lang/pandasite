@@ -13,6 +13,7 @@
   },
   "scripts": {
     "export": "waffle export",
-    "push": "waffle export && git push && git subtree push --prefix dist origin gh-pages"
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "push": "export && git push && deploy"
   }
 }
