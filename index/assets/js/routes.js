@@ -12,5 +12,4 @@ const routes = {
   },
   '/api/': 'templates/api',
   '/examples/': 'templates/examples',
-  '/guide/': 'templates/guide',
 }
