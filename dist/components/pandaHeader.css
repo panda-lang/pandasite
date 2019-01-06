@@ -37,3 +37,7 @@ header.padna-header nav a:hover {
 header.padna-header nav a.router-link-active {
   color: #fff;
 }
+.panda-header-spacer {
+  height: 72px;
+  padding-bottom: 27px;
+}
