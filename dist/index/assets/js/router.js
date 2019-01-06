@@ -41,7 +41,7 @@ const router = new VueRouter({
   routes: Object.keys(routes).map(path => {
     const route = compileRoute(routes[path])
 
-    const component = async _ => {
+    const component = async () => {
       let err = false
       let template = route.template || ''
 
@@ -60,7 +60,7 @@ const router = new VueRouter({
 
       return {
         ...route,
-        template: `<main><error-handler :err="err || false">${template}</error-handler></main>`,
+        template: _.template(_waffle.routeDecorator)({ template }),
 
         data () {
           if (route.data) {

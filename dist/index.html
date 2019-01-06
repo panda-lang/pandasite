@@ -1,5 +1,6 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><title>Panda - lightweight and powerful programming language</title><script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver"></script><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.min.js"></script><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script><script src="https://cdn.jsdelivr.net/npm/nprogress"></script><script src="https://cdn.jsdelivr.net/npm/slugify"></script><script src="https://cdn.jsdelivr.net/npm/lodash"></script><script>window._waffle = {
   view: `index`,
+  routeDecorator: `<main><error-handler :err="err || false"><%= template %></error-handler></main>`,
   err: false,
   styles: document.createElement('style'),
   async loadStyle (component) {
