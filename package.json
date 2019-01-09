@@ -8,6 +8,7 @@
   "private": true,
   "description": "Panda programming language website",
   "website": "https://panda-lang.org/",
+  "waffle": true,
   "devDependencies": {
     "static-waffle": "^0.0.15"
   },
