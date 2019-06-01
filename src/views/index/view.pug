@@ -12,7 +12,9 @@ block append styles
   
 block append scripts
   +npm('marked')
-  +script('guide_routes.js')
+  
+block append routes
+  +script('guide_routes')
   
 block append post-scripts
   +gh('highlightjs/cdn-release/build/highlight.min.js')

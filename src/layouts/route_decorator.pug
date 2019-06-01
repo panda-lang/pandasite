@@ -1,0 +1,5 @@
+main
+  panda-header
+  .panda-header-spacer(v-if='typeof this["spacer"] === "undefined" || spacer === true')
+  error-handler(:err='err || false') %template%
+  waff-footer

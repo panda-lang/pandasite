@@ -1,12 +1,23 @@
-main
+:root
+  {apply-colors}
+
 html
   height 100%
+
+main
+  display flex
+  flex-flow column
+  min-height 100%
+
+  // move footer down
+  > :last-child
+    margin-top auto
 
 #app
 body
   height 100%
   min-height 100%
-  background color-2
+  background pallete(5)
 
 .container
   --max-width 1177px
@@ -19,9 +30,21 @@ pre code.hljs.panda
   background transparent
   padding 0
 
-for n in (1..3)
+for n in (1..5)
   .bg-{n}
-    background lookup('color-' + n)
+    background pallete(n)
 
   .text-{n}
-    color lookup('color-' + n)
+    color pallete(n)
+
+.bg-light
+  background color-text-light
+
+.bg-dark
+  background color-text-dark
+
+.text-light
+  color color-text-light
+
+.text-dark
+  color color-text-dark

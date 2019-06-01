@@ -1,12 +1,36 @@
-main,
+:root {
+  --color1: #0af;
+  --color2: #ff0059;
+  --color3: #292f33;
+  --color4: #000b11;
+  --color5: #fff;
+}
 html {
   height: 100%;
+}
+main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  min-height: 100%;
+}
+main > :last-child {
+  margin-top: auto;
 }
 #app,
 body {
   height: 100%;
   min-height: 100%;
-  background: #fefefe;
+  background: var(--color5);
 }
 .container {
   --max-width: 1177px;
@@ -20,20 +44,44 @@ pre code.hljs.panda {
   padding: 0;
 }
 .bg-1 {
-  background: #050304;
+  background: var(--color1);
 }
 .text-1 {
-  color: #050304;
+  color: var(--color1);
 }
 .bg-2 {
-  background: #fefefe;
+  background: var(--color2);
 }
 .text-2 {
-  color: #fefefe;
+  color: var(--color2);
 }
 .bg-3 {
-  background: #222;
+  background: var(--color3);
 }
 .text-3 {
-  color: #222;
+  color: var(--color3);
+}
+.bg-4 {
+  background: var(--color4);
+}
+.text-4 {
+  color: var(--color4);
+}
+.bg-5 {
+  background: var(--color5);
+}
+.text-5 {
+  color: var(--color5);
+}
+.bg-light {
+  background: #fff;
+}
+.bg-dark {
+  background: #2d323e;
+}
+.text-light {
+  color: #fff;
+}
+.text-dark {
+  color: #2d323e;
 }

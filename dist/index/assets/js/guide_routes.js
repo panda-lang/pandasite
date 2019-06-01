@@ -19,7 +19,7 @@ for (const entry of guideArticles) {
   routes[entry.href] = {
     templatePath: 'templates/guide',
     async created () {
-      const { data } = await axios.get(entry.contentUrl, { responseType: 'text' })
+      const data = await waffle.get(entry.contentUrl, 'text')
       this.content = marked(data)
     },
     data () {

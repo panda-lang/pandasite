@@ -6,7 +6,7 @@ body
   font-weight 400
   font-family 'Source Sans Pro', sans-serif
   word-wrap break-word
-  color hsla(#000, .7)
+  color color-text-dark
 p
   margin-bottom 1.56rem
 
@@ -42,15 +42,14 @@ h6
 
 
 a
-  color color-primary
+  color pallete(1)
   text-decoration none
 
   &:hover
-    color color-alt
-    text-decoration underline
+    color pallete(2)
 
   &.router-link-active
-    color color-alt
+    color pallete(2)
 
 strong
   display inline-block
@@ -69,8 +68,8 @@ ol
 
 pre
 kbd
-  background color-alt
-  color #fff
+  background pallete(3)
+  color pallete(5)
   border-radius 3px
   padding 0.2rem _
 

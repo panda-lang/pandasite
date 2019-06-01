@@ -37,7 +37,7 @@ const compileRoute = r => {
 
 const router = new VueRouter({
   mode: 'hash',
-  base: `/${_waffle.view}/`,
+  base: `/${waffle.view}/`,
   routes: Object.keys(routes).map(path => {
     const route = compileRoute(routes[path])
 
@@ -50,21 +50,23 @@ const router = new VueRouter({
       let template = route.template || ''
 
       if (route.templatePath) {
-        try {
-          const req = await axios.get(`${_waffle.view || 'index'}/${route.templatePath}.tmpl`, { responseType: 'text' })
-          template = req.data.replace(/%view%/g, _waffle.view)
-        } catch (e) {
+        const req = await waffle.ajax.get(`${waffle.view || 'index'}/${route.templatePath}.tmpl`)
+        if (req.success) {
+          template = req.response.replace(/%view%/g, waffle.view)
+        } else if (req.status === 404) {
           err = {
-            name: 'Template not found.',
+            name: 'Template not found',
             message: `Template file for route ${path} not found.`,
             status: 404,
           }
+        } else {
+          err = { status: req.status, name: req.statusText }
         }
       }
 
       return {
         ...route,
-        template: _.template(_waffle.routeDecorator)({ template }),
+        template: waffle.routeDecorator.replace(/%template%/g, template),
 
         data () {
           if (route.data) {

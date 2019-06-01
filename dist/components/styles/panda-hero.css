@@ -2,11 +2,11 @@ section.panda-hero {
   --breakpoint: 70%;
   position: relative;
   height: 100vh;
-  background: -webkit-linear-gradient(top, #050304 var(--breakpoint), #fefefe var(--breakpoint));
-  background: -moz-linear-gradient(top, #050304 var(--breakpoint), #fefefe var(--breakpoint));
-  background: -o-linear-gradient(top, #050304 var(--breakpoint), #fefefe var(--breakpoint));
-  background: -ms-linear-gradient(top, #050304 var(--breakpoint), #fefefe var(--breakpoint));
-  background: linear-gradient(to bottom, #050304 var(--breakpoint), #fefefe var(--breakpoint));
+  background: -webkit-linear-gradient(top, #000b11 var(--breakpoint), #fff var(--breakpoint));
+  background: -moz-linear-gradient(top, #000b11 var(--breakpoint), #fff var(--breakpoint));
+  background: -o-linear-gradient(top, #000b11 var(--breakpoint), #fff var(--breakpoint));
+  background: -ms-linear-gradient(top, #000b11 var(--breakpoint), #fff var(--breakpoint));
+  background: linear-gradient(to bottom, #000b11 var(--breakpoint), #fff var(--breakpoint));
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -35,5 +35,5 @@ section.panda-hero svg {
   transform: translateY(-100%);
 }
 section.panda-hero svg path {
-  fill: #fff;
+  fill: var(--color5);
 }

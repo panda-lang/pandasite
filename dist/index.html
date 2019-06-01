@@ -1,22 +1,8 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>Panda - lightweight and powerful programming language</title><script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver"></script><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.min.js"></script><script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script><script src="https://cdn.jsdelivr.net/npm/nprogress"></script><script src="https://cdn.jsdelivr.net/npm/slugify"></script><script src="https://cdn.jsdelivr.net/npm/lodash"></script><script>window._waffle = {
-  view: `index`,
-  routeDecorator: `<main><error-handler :err="err || false"><%= template %></error-handler></main>`,
-  err: false,
-  styles: document.createElement('style'),
-  async loadStyle (component) {
-    if (this.styles[component]) {
-      return
-    }
-    
-    this.styles[component] = true
-    
-    const { data } = await axios.get(`components/${component}.css`, { responseType: 'text' })
-    this.styles.innerHTML += data
-  }
-}
-
-document.head.appendChild(_waffle.styles)
-</script><script src="components.js"></script><script src="index/assets/js/routes.js"></script><script src="https://cdn.jsdelivr.net/npm/marked"></script><script src="index/assets/js/guide_routes.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress/nprogress.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700"><link rel="stylesheet" href="index/assets/css/app.css"/><link rel="stylesheet" href="index/assets/css/typography.css"/><link rel="stylesheet" href="index/assets/css/grid.css"/><link rel="stylesheet" href="index/assets/css/padding.css"/><link rel="stylesheet" href="index/assets/css/margin.css"/></head><body><div id="app"><router-view></router-view></div><script src="index/assets/js/router.js"></script><script src="index/assets/js/app.js"></script><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.min.css"/><script>hljs.registerLanguage('panda', hljs => {
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Panda - lightweight and powerful programming language</title><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous"><link rel="shortcut icon" href="/index/img/favicon.ico"><link rel="shortcut icon" type="image/png" href="/index/img/favicon.png"><script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver,Promise,fetch"></script><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script><script src="https://cdn.jsdelivr.net/npm/slugify"></script><script src="index/assets/js/waffle.js"></script><script>waffle.view = `index`
+waffle.app = `Panda Programming Language`
+waffle.routeDecorator = `<main><panda-header></panda-header><div class="panda-header-spacer" v-if="typeof this[&quot;spacer&quot;] === &quot;undefined&quot; || spacer === true"></div><error-handler :err="err || false">%template%</error-handler><waff-footer></waff-footer></main>`
+waffle.err = false
+</script><script src="components/fetcher.js"></script><script src="https://cdn.jsdelivr.net/npm/marked"></script><script src="index/assets/js/routes.js"></script><script src="index/assets/js/guide_routes.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset.css"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress/nprogress.css"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700"/><link rel="stylesheet" href="index/assets/css/app.css"/><link rel="stylesheet" href="index/assets/css/typography.css"/><link rel="stylesheet" href="index/assets/css/grid.css"/><link rel="stylesheet" href="index/assets/css/padding.css"/><link rel="stylesheet" href="index/assets/css/margin.css"/></head><body><div id="app"><router-view></router-view></div><script src="https://cdn.jsdelivr.net/npm/nprogress"></script><script src="index/assets/js/router.js"></script><script src="index/assets/js/app.js"></script><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/atom-one-dark.min.css"/><script>hljs.registerLanguage('panda', hljs => {
   return {
     aliases: ['panda'],
     k: {

@@ -1,0 +1,34 @@
+flex(args...)
+  if args[0] is 'center'
+    display flex
+    justify-content center
+    align-items center
+  else
+    flex args
+
+pallete(number)
+  color = s('var(--color%s)', number)
+
+  if current-property[0] is 'pallete'
+    background color
+
+    if dark(raw-pallete(number))
+      color color-text-light
+    else
+      color color-text-dark
+
+  return color
+
+raw-pallete(number)
+  return color-pallete[s('color%s', number)]
+
+
+apply-colors = @block
+  for color, i in color-pallete
+    {s('--%s', unquote(color))} color-pallete[color]
+
+
+utilus.media.xs  = media-query('<768px')
+utilus.media.sm = media-query('>767px')
+utilus.media.md = media-query('>991px')
+utilus.media.lg = media-query('>1199px')

@@ -1,16 +1,14 @@
 {
-  "name": "Pandasite",
+  "name": "Panda-Programming-Language",
   "version": "1.0.0",
-  "main": "dist/index.html",
-  "repository": "git@github.com:Panda-Programming-Language/Pandasite.git",
-  "author": "Kasper Seweryn <casper@wvffle.net>",
-  "license": "Apache-2.0",
-  "private": true,
-  "description": "Panda programming language website",
-  "website": "https://panda-lang.org/",
-  "waffle": true,
+  "private": false,
+  "license": "MIT",
+  "waffle": {
+    "name": "Panda Programming Language",
+    "structure": "compact"
+  },
   "devDependencies": {
-    "static-waffle": "^0.0.15"
+    "static-waffle": "^0.0.22"
   },
   "scripts": {
     "export": "waffle export",
