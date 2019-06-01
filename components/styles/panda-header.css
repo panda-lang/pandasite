@@ -1,5 +1,5 @@
 header.padna-header {
-  background: #050304;
+  background: var(--color4);
   position: fixed;
   top: 0;
   width: 100%;

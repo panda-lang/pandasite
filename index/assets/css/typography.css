@@ -6,7 +6,7 @@ body {
   font-weight: 400;
   font-family: 'Source Sans Pro', sans-serif;
   word-wrap: break-word;
-  color: rgba(0,0,0,0.7);
+  color: #2d323e;
 }
 p,
 h1,
@@ -50,15 +50,14 @@ h6 {
   font-size: 0.81225rem;
 }
 a {
-  color: #0af;
+  color: var(--color1);
   text-decoration: none;
 }
 a:hover {
-  color: #222;
-  text-decoration: underline;
+  color: var(--color2);
 }
 a.router-link-active {
-  color: #222;
+  color: var(--color2);
 }
 strong {
   display: inline-block;
@@ -82,8 +81,8 @@ ol > li {
 }
 pre,
 kbd {
-  background: #222;
-  color: #fff;
+  background: var(--color3);
+  color: var(--color5);
   border-radius: 3px;
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;

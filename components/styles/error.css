@@ -26,7 +26,7 @@
 }
 .error pre {
   color: #8f9295;
-  background: #222;
+  background: color-alt;
 }
 .error pre .comment {
   color: #465159;
