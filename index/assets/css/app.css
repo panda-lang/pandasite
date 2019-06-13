@@ -109,3 +109,6 @@ pre code.hljs.panda {
   -webkit-align-items: center;
   align-items: center;
 }
+.block {
+  display: block;
+}
