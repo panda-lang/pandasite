@@ -102,3 +102,12 @@ blockquote {
   color: rgba(0,11,17,0.6);
   border-left: 0.39rem solid rgba(0,11,17,0.13);
 }
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
