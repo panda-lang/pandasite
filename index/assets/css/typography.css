@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: rgba(0,0,0,0.85);
+  color: rgba(0,11,17,0.85);
   font-family: Source Sans Pro, sans-serif;
   font-weight: 200;
   text-rendering: optimizeLegibility;
@@ -56,7 +56,7 @@ a {
 a:hover {
   color: var(--color2);
 }
-a.router-link-active {
+a.router-link-exact-active {
   color: var(--color2);
 }
 strong {
@@ -99,6 +99,6 @@ blockquote {
   padding-bottom: 1.17rem;
   font-size: 1.1487rem;
   line-height: 1.56rem;
-  color: rgba(0,0,0,0.6);
-  border-left: 0.39rem solid rgba(0,0,0,0.13);
+  color: rgba(0,11,17,0.6);
+  border-left: 0.39rem solid rgba(0,11,17,0.13);
 }

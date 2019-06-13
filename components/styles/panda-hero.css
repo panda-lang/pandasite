@@ -2,11 +2,8 @@ section.panda-hero {
   --breakpoint: 70%;
   position: relative;
   height: 100vh;
-  background: -webkit-linear-gradient(top, #000b11 var(--breakpoint), #fff var(--breakpoint));
-  background: -moz-linear-gradient(top, #000b11 var(--breakpoint), #fff var(--breakpoint));
-  background: -o-linear-gradient(top, #000b11 var(--breakpoint), #fff var(--breakpoint));
-  background: -ms-linear-gradient(top, #000b11 var(--breakpoint), #fff var(--breakpoint));
-  background: linear-gradient(to bottom, #000b11 var(--breakpoint), #fff var(--breakpoint));
+  background: var(--color5);
+  color: #2d323e;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -19,6 +16,18 @@ section.panda-hero {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+section.panda-hero::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--breakpoint);
+  background: var(--color4);
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
 }
 section.panda-hero > :not(svg) {
   z-index: 1;

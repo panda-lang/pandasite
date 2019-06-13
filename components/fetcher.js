@@ -54,7 +54,12 @@
         Promise.all([
           (async () => {
             if (waffle_template) {
-              return get(`components/templates/${component}.tmpl`)
+              const request = await waffle.ajax.get(`components/templates/${component}.tmpl`)
+              if (request.success === false) {
+                return `<div class="fetcher-error">Cannot fetch ${component} template</div>`
+              }
+
+              return request.response
             }
           })(),
           (async () => waffle_style && waffle.loadStyle(component))(),
