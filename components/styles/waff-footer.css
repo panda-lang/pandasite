@@ -9,18 +9,6 @@
   }
 }
 .waff-footer .container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-pack: justify;
-  -moz-box-pack: justify;
-  -o-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   -webkit-box-align: center;
   -moz-box-align: center;
   -o-box-align: center;
@@ -32,4 +20,8 @@
 }
 .waff-footer .container p {
   margin-bottom: 0;
+}
+.waff-footer .container a > i {
+  color: var(--color5);
+  padding: 0 7px;
 }
