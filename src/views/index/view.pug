@@ -9,6 +9,7 @@ block append styles
   +style('grid')
   +style('padding')
   +style('margin')
+  +gh('highlightjs/cdn-release/build/styles/atom-one-dark.min.css')
   
 block append scripts
   +npm('marked')
@@ -18,7 +19,7 @@ block append routes
   
 block append post-scripts
   +gh('highlightjs/cdn-release/build/highlight.min.js')
-  +gh('highlightjs/cdn-release/build/styles/atom-one-dark.min.css')
+  +script('main')
   
   script.
     hljs.registerLanguage('panda', hljs => {
