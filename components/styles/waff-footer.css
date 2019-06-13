@@ -25,3 +25,19 @@
   color: var(--color5);
   padding: 0 7px;
 }
+.waff-footer .container > .col > * {
+  text-align: center;
+}
+.waff-footer .container > .col > *:last-child {
+  padding-bottom: 27px;
+}
+@media (min-width: 991px) {
+  .waff-footer .container > .col > *:last-child {
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 991px) {
+  .waff-footer .container > .col > * {
+    text-align: inherit;
+  }
+}
