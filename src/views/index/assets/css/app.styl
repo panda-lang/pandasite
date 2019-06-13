@@ -20,11 +20,23 @@ body
   background pallete(5)
 
 .container
-  --max-width 1177px
-
   width 100%
-  max-width var(--max-width)
   margin _ auto
+
+  +media('xs')
+    padding _ 17px
+
+  +media('sm')
+    max-width 700px
+
+  +media('md')
+    max-width 900px
+
+  +media('lg')
+    max-width 1100px
+
+*
+  box-sizing border-box
 
 pre code.hljs.panda
   background transparent
@@ -61,10 +73,10 @@ for n in (1..5)
 
 // HLJS
 .hljs-keyword
-  color #198fe3 !important
+  color #ff1c68 !important
 
 .hljs-type
-  color #ff1c68 !important
+  color #198fe3 !important
 
 .hljs-string
 .hljs-regexp

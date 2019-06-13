@@ -33,11 +33,35 @@ body {
   background: var(--color5);
 }
 .container {
-  --max-width: 1177px;
   width: 100%;
-  max-width: var(--max-width);
   margin-right: auto;
   margin-left: auto;
+}
+@media (max-width: 767px) {
+  .container {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+}
+@media (min-width: 767px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media (min-width: 991px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1199px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 pre code.hljs.panda {
   background: transparent;
@@ -113,10 +137,10 @@ pre code.hljs.panda {
   display: block;
 }
 .hljs-keyword {
-  color: #198fe3 !important;
+  color: #ff1c68 !important;
 }
 .hljs-type {
-  color: #ff1c68 !important;
+  color: #198fe3 !important;
 }
 .hljs-string,
 .hljs-regexp,
