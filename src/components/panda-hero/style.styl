@@ -1,9 +1,17 @@
 section.panda-hero
   --breakpoint 70%
 
+  &::before
+    content ''
+    display block
+    absolute 0 0 _
+    height var(--breakpoint)
+    pallete 4
+    clip-path polygon(0 0, 100% 0, 100% 100%, 0 70%)
+
   relative _
   height 100vh
-  background linear-gradient(top, raw-pallete(4) var(--breakpoint), raw-pallete(5) var(--breakpoint))
+  pallete 5
 
   display flex
   align-items center

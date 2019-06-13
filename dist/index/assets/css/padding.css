@@ -1,4 +1,5 @@
-.pad-7 {
+.pad-7,
+.p-7 {
   padding: 7px;
 }
 .pad-top-7,
@@ -17,15 +18,18 @@
 .pl-7 {
   padding-left: 7px;
 }
-.pad-h-7 {
+.pad-h-7,
+.ph-7 {
   padding-right: 7px;
   padding-left: 7px;
 }
-.pad-v-7 {
+.pad-v-7,
+.pv-7 {
   padding-top: 7px;
   padding-bottom: 7px;
 }
-.pad-17 {
+.pad-17,
+.p-17 {
   padding: 17px;
 }
 .pad-top-17,
@@ -44,15 +48,18 @@
 .pl-17 {
   padding-left: 17px;
 }
-.pad-h-17 {
+.pad-h-17,
+.ph-17 {
   padding-right: 17px;
   padding-left: 17px;
 }
-.pad-v-17 {
+.pad-v-17,
+.pv-17 {
   padding-top: 17px;
   padding-bottom: 17px;
 }
-.pad-27 {
+.pad-27,
+.p-27 {
   padding: 27px;
 }
 .pad-top-27,
@@ -71,15 +78,18 @@
 .pl-27 {
   padding-left: 27px;
 }
-.pad-h-27 {
+.pad-h-27,
+.ph-27 {
   padding-right: 27px;
   padding-left: 27px;
 }
-.pad-v-27 {
+.pad-v-27,
+.pv-27 {
   padding-top: 27px;
   padding-bottom: 27px;
 }
-.pad-37 {
+.pad-37,
+.p-37 {
   padding: 37px;
 }
 .pad-top-37,
@@ -98,15 +108,18 @@
 .pl-37 {
   padding-left: 37px;
 }
-.pad-h-37 {
+.pad-h-37,
+.ph-37 {
   padding-right: 37px;
   padding-left: 37px;
 }
-.pad-v-37 {
+.pad-v-37,
+.pv-37 {
   padding-top: 37px;
   padding-bottom: 37px;
 }
-.pad-47 {
+.pad-47,
+.p-47 {
   padding: 47px;
 }
 .pad-top-47,
@@ -125,15 +138,18 @@
 .pl-47 {
   padding-left: 47px;
 }
-.pad-h-47 {
+.pad-h-47,
+.ph-47 {
   padding-right: 47px;
   padding-left: 47px;
 }
-.pad-v-47 {
+.pad-v-47,
+.pv-47 {
   padding-top: 47px;
   padding-bottom: 47px;
 }
-.pad-57 {
+.pad-57,
+.p-57 {
   padding: 57px;
 }
 .pad-top-57,
@@ -152,15 +168,18 @@
 .pl-57 {
   padding-left: 57px;
 }
-.pad-h-57 {
+.pad-h-57,
+.ph-57 {
   padding-right: 57px;
   padding-left: 57px;
 }
-.pad-v-57 {
+.pad-v-57,
+.pv-57 {
   padding-top: 57px;
   padding-bottom: 57px;
 }
-.pad-67 {
+.pad-67,
+.p-67 {
   padding: 67px;
 }
 .pad-top-67,
@@ -179,15 +198,18 @@
 .pl-67 {
   padding-left: 67px;
 }
-.pad-h-67 {
+.pad-h-67,
+.ph-67 {
   padding-right: 67px;
   padding-left: 67px;
 }
-.pad-v-67 {
+.pad-v-67,
+.pv-67 {
   padding-top: 67px;
   padding-bottom: 67px;
 }
-.pad-77 {
+.pad-77,
+.p-77 {
   padding: 77px;
 }
 .pad-top-77,
@@ -206,15 +228,18 @@
 .pl-77 {
   padding-left: 77px;
 }
-.pad-h-77 {
+.pad-h-77,
+.ph-77 {
   padding-right: 77px;
   padding-left: 77px;
 }
-.pad-v-77 {
+.pad-v-77,
+.pv-77 {
   padding-top: 77px;
   padding-bottom: 77px;
 }
-.pad-87 {
+.pad-87,
+.p-87 {
   padding: 87px;
 }
 .pad-top-87,
@@ -233,15 +258,18 @@
 .pl-87 {
   padding-left: 87px;
 }
-.pad-h-87 {
+.pad-h-87,
+.ph-87 {
   padding-right: 87px;
   padding-left: 87px;
 }
-.pad-v-87 {
+.pad-v-87,
+.pv-87 {
   padding-top: 87px;
   padding-bottom: 87px;
 }
-.pad-97 {
+.pad-97,
+.p-97 {
   padding: 97px;
 }
 .pad-top-97,
@@ -260,11 +288,13 @@
 .pl-97 {
   padding-left: 97px;
 }
-.pad-h-97 {
+.pad-h-97,
+.ph-97 {
   padding-right: 97px;
   padding-left: 97px;
 }
-.pad-v-97 {
+.pad-v-97,
+.pv-97 {
   padding-top: 97px;
   padding-bottom: 97px;
 }
