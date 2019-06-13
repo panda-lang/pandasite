@@ -4,6 +4,7 @@ const app = new Vue({
   router,
   data: {
     lazy: 0,
+    bypassFooter: false,
   },
   created () {
     this.$on('lazy-reset', () => {
