@@ -1,13 +1,14 @@
-<panda-hero><div class="row"><div class="col"><pre><code class="panda"><!-- TODO: fix relative path-->import panda-lang
+<panda-hero><div class="row"><div class="col"><pre><code class="panda"><!-- TODO: fix relative path-->module awesomeness
 
 class Panda {
-  method void speak (String name) {
-    Console.print("Hello " + name + "!")
-  }
+    method hello(String name) {
+        Console.print("Hey, " + name + ".")
+        Console.print("You're finally awake ฅ^•ﻌ•^ฅ")
+    }
 }
 
 main {
-  Panda panda = new Panda()
-  panda.speak(666) // Hello satan!
+    Panda panda = new Panda()
+    panda.hello("you")
 }
 </code></pre></div><div class="col span-2 pl-37"><h1><strong class="pad-h-17 pad-v-7 bg-5 text-4">Panda</strong></h1><h1><small class="pad-h-17 pad-v-7 bg-5 text-4">is a lightweight and powerful programming language written in Java.</small></h1></div></div></panda-hero>
