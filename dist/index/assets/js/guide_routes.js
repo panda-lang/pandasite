@@ -1,4 +1,5 @@
 const guideEntries = {
+  'Install': 'index/assets/guide/install.md',
   'Getting Started': 'index/assets/guide/getting_started.md',
 }
 
