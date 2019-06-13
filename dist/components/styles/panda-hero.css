@@ -1,21 +1,8 @@
 section.panda-hero {
   --breakpoint: 70%;
   position: relative;
-  height: 100vh;
   background: var(--color5);
   color: #2d323e;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 section.panda-hero::before {
   content: '';
@@ -27,22 +14,11 @@ section.panda-hero::before {
   height: var(--breakpoint);
   background: var(--color4);
   color: #fff;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 97px));
 }
-section.panda-hero > :not(svg) {
+section.panda-hero > .container {
+  position: relative;
   z-index: 1;
-}
-section.panda-hero svg {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: var(--breakpoint);
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-section.panda-hero svg path {
-  fill: var(--color5);
+  margin-top: 177px;
+  margin-bottom: 77px;
 }

@@ -1,0 +1,28 @@
+.panda-news
+  --breakpoint 90%
+  relative _
+  background pallete(4)
+  padding _ _ 197px
+
+  &::before
+    content ''
+    display block
+    absolute 0 0 _
+    height var(--breakpoint)
+    pallete 5
+    clip-path polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 97px))
+
+  > .container
+    relative _
+    z-index 1
+
+
+  .news
+    &:not(:first-child)
+      padding-top 27px
+
+    &:not(:last-child)
+      border-bottom 1px solid pallete(1)
+
+    h3 > .date
+      font-size 0.7em

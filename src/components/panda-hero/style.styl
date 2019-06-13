@@ -1,5 +1,7 @@
 section.panda-hero
   --breakpoint 70%
+  relative _
+  pallete 5
 
   &::before
     content ''
@@ -7,23 +9,9 @@ section.panda-hero
     absolute 0 0 _
     height var(--breakpoint)
     pallete 4
-    clip-path polygon(0 0, 100% 0, 100% 100%, 0 70%)
+    clip-path polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 97px))
 
-  relative _
-  height 100vh
-  pallete 5
-
-  display flex
-  align-items center
-
-  > :not(svg)
+  > .container
+    relative _
     z-index 1
-
-  svg
-    size 100% auto
-
-    absolute var(--breakpoint) _ _
-    transform translateY(-100%)
-
-    path
-      fill pallete(5)
+    margin 177px _ 77px
