@@ -2,7 +2,8 @@ module awesomeness
 
 class Panda {
     method hello(String name) {
-        Console.print("Hey, " + name + ". You're finally awake ฅ^•ﻌ•^ฅ")
+        Console.print("Hey, " + name + ".")
+        Console.print("You're finally awake ฅ^•ﻌ•^ฅ")
     }
 }
 
