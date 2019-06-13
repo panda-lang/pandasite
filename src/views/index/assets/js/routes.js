@@ -16,7 +16,7 @@ const routes = {
       })
     }
   },
-  '/api/': 'templates/api',
+  '/docs/': 'templates/docs',
   '/support/': 'templates/support',
   '/examples/': 'templates/examples',
 }
