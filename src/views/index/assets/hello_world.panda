@@ -1,12 +1,12 @@
-import panda-lang
+module awesomeness
 
 class Panda {
-  method void speak (String name) {
-    Console.print("Hello " + name + "!")
-  }
+    method hello(String name) {
+        Console.print("Hey, " + name + ". You're finally awake ฅ^•ﻌ•^ฅ")
+    }
 }
 
 main {
-  Panda panda = new Panda()
-  panda.speak(666) // Hello satan!
+    Panda panda = new Panda()
+    panda.hello("you")
 }
