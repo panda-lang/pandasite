@@ -1,0 +1,68 @@
+.pad {
+  --pad-top: 0;
+  --pad-right: 0;
+  --pad-bottom: 0;
+  --pad-left: 0;
+  padding-left: var(--pad-h, var(--pad-left));
+  padding-right: var(--pad-h, var(--pad-right));
+  padding-top: var(--pad-v, var(--pad-top));
+  padding-bottom: var(--pad-v, var(--pad-bottom));
+}
+@media (max-width: 767px) {
+  .pad {
+    padding-left: var(--pad-h-xs, var(--pad-left-xs, initial));
+    padding-right: var(--pad-h-xs, var(--pad-right-xs, initial));
+    padding-top: var(--pad-v-xs, var(--pad-top-xs, initial));
+    padding-bottom: var(--pad-v-xs, var(--pad-bottom-xs, initial));
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .pad {
+    padding-left: var(--pad-h-sm, var(--pad-left-sm, initial));
+    padding-right: var(--pad-h-sm, var(--pad-right-sm, initial));
+    padding-top: var(--pad-v-sm, var(--pad-top-sm, initial));
+    padding-bottom: var(--pad-v-sm, var(--pad-bottom-sm, initial));
+  }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  .pad {
+    padding-left: var(--pad-h-md, var(--pad-left-md, initial));
+    padding-right: var(--pad-h-md, var(--pad-right-md, initial));
+    padding-top: var(--pad-v-md, var(--pad-top-md, initial));
+    padding-bottom: var(--pad-v-md, var(--pad-bottom-md, initial));
+  }
+}
+.mar {
+  --pad-top: 0;
+  --pad-right: 0;
+  --pad-bottom: 0;
+  --pad-left: 0;
+  margin-left: var(--pad-h, var(--pad-left));
+  margin-right: var(--pad-h, var(--pad-right));
+  margin-top: var(--pad-v, var(--pad-top));
+  margin-bottom: var(--pad-v, var(--pad-bottom));
+}
+@media (max-width: 767px) {
+  .mar {
+    margin-left: var(--pad-h-xs, var(--pad-left-xs, initial));
+    margin-right: var(--pad-h-xs, var(--pad-right-xs, initial));
+    margin-top: var(--pad-v-xs, var(--pad-top-xs, initial));
+    margin-bottom: var(--pad-v-xs, var(--pad-bottom-xs, initial));
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .mar {
+    margin-left: var(--pad-h-sm, var(--pad-left-sm, initial));
+    margin-right: var(--pad-h-sm, var(--pad-right-sm, initial));
+    margin-top: var(--pad-v-sm, var(--pad-top-sm, initial));
+    margin-bottom: var(--pad-v-sm, var(--pad-bottom-sm, initial));
+  }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  .mar {
+    margin-left: var(--pad-h-md, var(--pad-left-md, initial));
+    margin-right: var(--pad-h-md, var(--pad-right-md, initial));
+    margin-top: var(--pad-v-md, var(--pad-top-md, initial));
+    margin-bottom: var(--pad-v-md, var(--pad-bottom-md, initial));
+  }
+}

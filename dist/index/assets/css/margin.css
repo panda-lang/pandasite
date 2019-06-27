@@ -1,3 +1,30 @@
+.mar-0 {
+  margin: 0px;
+}
+.mar-top-0,
+.mt-0 {
+  margin-top: 0px;
+}
+.mar-right-0,
+.mr-0 {
+  margin-right: 0px;
+}
+.mar-bottom-0,
+.mb-0 {
+  margin-bottom: 0px;
+}
+.mar-left-0,
+.ml-0 {
+  margin-left: 0px;
+}
+.mar-h-0 {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.mar-v-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .mar-7 {
   margin: 7px;
 }

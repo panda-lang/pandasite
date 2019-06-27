@@ -20,6 +20,8 @@ body
   background pallete(5)
 
 body > .scroll-content
+  height 100%
+
 .container
   width 100%
   margin _ auto
@@ -91,3 +93,19 @@ for n in (1..5)
 
 .hljs
   color #8f9295 !important
+
+a.button
+  pallete 5
+  box-shadow 3px 3px 0 0 pallete(1)
+  text-align center
+  padding 17px
+  cursor pointer
+
+  &:hover
+    box-shadow 3px 3px 0 0 pallete(2)
+
+  + a.button
+    margin-left 7px
+
+  i
+    float left

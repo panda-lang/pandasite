@@ -1,3 +1,33 @@
+.pad-0,
+.p-0 {
+  padding: 0px;
+}
+.pad-top-0,
+.pt-0 {
+  padding-top: 0px;
+}
+.pad-right-0,
+.pr-0 {
+  padding-right: 0px;
+}
+.pad-bottom-0,
+.pb-0 {
+  padding-bottom: 0px;
+}
+.pad-left-0,
+.pl-0 {
+  padding-left: 0px;
+}
+.pad-h-0,
+.ph-0 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.pad-v-0,
+.pv-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 .pad-7,
 .p-7 {
   padding: 7px;

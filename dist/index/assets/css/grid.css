@@ -13,6 +13,32 @@
   flex-flow: column;
   overflow-x: auto;
 }
+@media (max-width: 767px) {
+  .row.reverse-xs {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -o-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-flow: column-reverse;
+    -ms-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .row.reverse-sm {
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -o-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -o-box-orient: vertical;
+    -webkit-flex-flow: column-reverse;
+    -ms-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+  }
+}
 @media (min-width: 991px) {
   .row {
     -webkit-box-orient: horizontal;

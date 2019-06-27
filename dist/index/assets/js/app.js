@@ -1,5 +1,48 @@
 Vue.use(VueRouter)
 
+// Padding / Margin directives
+// v-pad
+// v-pad-xs
+// v-pad-left
+// v-pad-left-xs
+
+const boxmodels = [ 'padding', 'margin' ]
+const cssMobileSizes = [ 'xs', 'sm', 'md', 'lg' ]
+
+const createBoxModelDirective = (model, size) => {
+  const boxName = model.substr(0, 3)
+  let directiveName = boxName
+
+  if (size != null) {
+    directiveName += `-${size}`
+  }
+
+  console.log(model, boxName, directiveName)
+
+
+  Vue.directive(directiveName, function (el, binding) {
+    el.classList.add(boxName)
+    const name = boxName
+      + (binding.arg != null
+        ? `-${binding.arg}`
+        : '')
+      + (size != null
+        ? `-${size}`
+        : '')
+
+    el.style.setProperty(`--${name}`, `${binding.value}px`)
+  })
+}
+
+for (const model of boxmodels) {
+  const name = model.substr(0, 3)
+  createBoxModelDirective(model)
+
+    for (const size of cssMobileSizes) {
+      createBoxModelDirective(model, size)
+    }
+}
+
 const app = new Vue({
   router,
   data: {

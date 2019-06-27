@@ -1,0 +1,5 @@
+.panda-members
+  a.member.pad-v-17.mar-bottom-27(v-for="user of members", :href="user.html_url", :style="'width: ' + columnWidth + '%'")
+    h3.text-center.pad-top-17
+      img(:src="user.avatar_url", :style="'width: ' + imageSize + 'px'")
+      span.pad-left-17 {{ user.login }}
