@@ -1,5 +1,5 @@
 panda-hero
-  .row
+  .row.reverse-sm.reverse-xs
     .col
       pre
         code.panda
@@ -10,12 +10,19 @@ panda-hero
         strong.pad-h-17.pad-v-7.bg-5.text-4 Panda
       h1
         small.pad-h-17.pad-v-7.bg-5.text-4 is a lightweight and powerful programming language written in Java.
+      .row
+        router-link.col.button(to='/guide')
+          i.fas.fa-book-open
+          |  Get started
+        a.col.button(href='https://github.com/panda-lang/panda/releases')
+          i.fas.fa-download
+          |  Download
 
 panda-news
   .news
     h3 New website
       .date 13/09/2019
-    p Today we've lunched our new website
+    p Today we've launched our new website
     
   .news
     h3 New github organization
