@@ -1,7 +1,7 @@
 (async () => {
   const { get } = waffle
 
-  for (const component of ["error","error-handler","hero","icon","limg","mapbox","panda-header","panda-hero","panda-members","panda-news","route-title","waff-footer"]) {
+  for (const component of ["error","error-handler","grid","hero","icon","limg","mapbox","panda-header","panda-hero","panda-members","panda-news","route-title","waff-footer"]) {
     Vue.component(component, function (resolve, reject) {
       get(`components/${component}.js`).then(response => {
         'use strict'

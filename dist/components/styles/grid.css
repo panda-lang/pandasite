@@ -1,0 +1,6 @@
+.grid > .col > .scroll-fade {
+  height: 100%;
+}
+.grid > .col > .scroll-fade > .fade {
+  height: 100%;
+}

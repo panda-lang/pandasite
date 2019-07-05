@@ -16,6 +16,7 @@ const routes = {
       })
     }
   },
+  '/news/': 'templates/news',
   '/docs/': 'templates/docs',
   '/support/': 'templates/support',
   '/examples/': 'templates/examples',
