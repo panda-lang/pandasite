@@ -1,13 +1,12 @@
 module awesomeness
 
-class Panda {
-    method hello(String name) {
-        Console.print("Hey, " + name + ".")
-        Console.print("You're finally awake ฅ^•ﻌ•^ฅ")
+shared class Panda {
+    internal hello(String name) {
+        log 'Hey, ' + name + '. You are finally awake ฅ^•ﻌ•^ฅ'
     }
 }
 
 main {
     Panda panda = new Panda()
-    panda.hello("you")
+    panda.hello('you')
 }
