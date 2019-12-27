@@ -1,5 +1,5 @@
 {
-  "name": "Panda-Programming-Language",
+  "name": "panda-lang",
   "version": "1.0.0",
   "private": false,
   "license": "MIT",
@@ -8,7 +8,7 @@
     "structure": "compact"
   },
   "devDependencies": {
-    "static-waffle": "^0.0.22"
+    "static-waffle": "^0.0.24"
   },
   "scripts": {
     "export": "waffle export",
