@@ -1,18 +1,13 @@
 {
-  "name": "panda-lang",
-  "version": "1.0.0",
-  "private": false,
-  "license": "MIT",
-  "waffle": {
-    "name": "Panda Programming Language",
-    "structure": "compact"
-  },
-  "devDependencies": {
-    "static-waffle": "^0.0.24"
-  },
+  "name": "pandasite",
+  "private": true,
   "scripts": {
-    "export": "waffle export",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
-    "push": "export && git push && deploy"
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "deploy": "yarn build && mv dist/index.html dist/200.html && surge dist"
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0"
   }
 }

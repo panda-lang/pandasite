@@ -1,6 +1,0 @@
-section
-  .container
-    grid(template='abbbb')
-      .col
-        router-link.block.pad-v-17(:to='article.href', :key='article.href', v-for='(article, i) of articles') {{ article.title }}
-      .col.pad-top-27(v-html='article.content')
