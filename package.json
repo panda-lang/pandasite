@@ -8,6 +8,10 @@
     "deploy": "yarn build && mv dist/index.html dist/200.html && surge dist"
   },
   "dependencies": {
-    "gridsome": "^0.7.0"
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.4.0",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-netlify-cms": "^1.0.9",
+    "netlify-cms": "^2.10.3"
   }
 }
