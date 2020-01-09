@@ -22,6 +22,3 @@ query {
   }
 }
 </static-query>
-<script>
-  import '../assets/main.styl'
-</script>
