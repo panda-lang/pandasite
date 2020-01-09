@@ -36,5 +36,26 @@ module.exports = {
         publicPath: `/admin`
       }
     },
-  ]
+    {
+      use: '@gridsome/plugin-critical',
+      options: {
+        paths: ['/'],
+        width: 1300,
+        height: 900
+      }
+    },
+    {
+      use: 'gridsome-plugin-pug',
+      options: {
+        pug: { /* Options for `pug-plain-loader` */ },
+        pugLoader: { /* Options for `pug-loader` */ }
+      }
+    },
+    {
+      use: "gridsome-plugin-tailwindcss"
+    }
+  ],
+  chainWebpack (config) {
+
+  }
 }

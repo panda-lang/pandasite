@@ -8,10 +8,20 @@
     "deploy": "yarn build && mv dist/index.html dist/200.html && surge dist"
   },
   "dependencies": {
+    "@gridsome/plugin-critical": "^0.1.6",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.4.0",
     "gridsome": "^0.7.0",
     "gridsome-plugin-netlify-cms": "^1.0.9",
-    "netlify-cms": "^2.10.3"
+    "gridsome-plugin-pug": "^0.0.3",
+    "gridsome-plugin-tailwindcss": "^2.2.30",
+    "netlify-cms": "^2.10.3",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nib": "^1.1.2",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "utilus": "^2.0.1"
   }
 }
