@@ -1,6 +1,6 @@
 <template lang="pug">
-section.panda-hero
-  .lg_container
+section.panda-hero.h-screen
+  .lg_container.z-10
     slot
 </template>
 
@@ -14,13 +14,16 @@ section.panda-hero
 
   section.panda-hero
     --breakpoint 70%
-    relative _
+    position relative
     background #ffffff
 
     &::before
       content ''
       display block
-      absolute 0 0 _
+      position absolute
+      top 0
+      right 0
+      left 0
       height var(--breakpoint)
       background #000b11
       clip-path polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 97px))

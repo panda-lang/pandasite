@@ -1,6 +1,6 @@
 <template lang="pug">
-  .layout
-    header.panda-header.bg-gray-900.text-white.bg-texture
+  .layout(style="padding-top: 56px")
+    header.panda-header.bg-black.text-white.bg-texture.fixed.z-10.w-full.top-0
       nav.container.mx-auto
         .float-left
           g-link.p-4.inline-block(to="/") {{ $static.metadata.siteName }}
