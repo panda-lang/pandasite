@@ -15,6 +15,7 @@
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-pug": "^0.0.3",
     "gridsome-plugin-tailwindcss": "^2.2.30",
+    "highlight.js": "^9.17.1",
     "netlify-cms": "^2.10.3",
     "pug": "^2.0.4"
   },

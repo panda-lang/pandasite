@@ -1,6 +1,6 @@
 <template lang="pug">
-section.panda-hero.h-screen
-  .lg_container.z-10
+section.panda-hero
+  .lg_container.z-10.relative
     slot
 </template>
 
@@ -14,6 +14,7 @@ section.panda-hero.h-screen
 
   section.panda-hero
     --breakpoint 70%
+    overflow-y auto
     position relative
     background #ffffff
 
