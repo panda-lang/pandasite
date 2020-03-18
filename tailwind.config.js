@@ -10,10 +10,9 @@ module.exports = {
             xl: '1280px'
         },
         colors: {
-            transparent: 'transparent',
-
-            black: '#000',
-            white: '#fff',
+            'transparent': 'transparent',
+            'black': '#000',
+            'white': '#fff',
             'pre-theme': '#19191c',
             'theme-download': '#0767bb',
 
@@ -243,6 +242,7 @@ module.exports = {
             mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace']
         },
         fontSize: {
+            xxs: '0.68rem',
             xs: '0.75rem',
             sm: '0.875rem',
             base: '1rem',

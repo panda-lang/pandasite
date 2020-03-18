@@ -25,7 +25,7 @@
 
         news
             .flex.container.mx-auto.flex-col.mx-6
-                h1.w-full.mb-4.mx-6 News
+                h1.w-2-3.mb-4.mx-6 News
                 .flex.justify-center.flex-wrap
                     article.w-4-11
                         h5 News1
