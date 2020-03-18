@@ -13,7 +13,7 @@ export default {
 <style lang="stylus" scoped>
 
 section.panda-hero
-    --breakpoint 70%
+    --breakpoint 85%
     overflow-y auto
     position relative
     background #ffffff
@@ -25,9 +25,10 @@ section.panda-hero
         top 0
         right 0
         left 0
+        bottom 0
         height var(--breakpoint)
         background black
-        clip-path polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 97px))
+        clip-path polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px))
 
     > .container
         relative _

@@ -12,8 +12,10 @@ module.exports = {
         colors: {
             transparent: 'transparent',
 
-            black: '#000b11',
+            black: '#000',
             white: '#fff',
+            'pre-theme': '#19191c',
+            'theme-download': '#0767bb',
 
             gray: {
                 100: '#f7fafc',
@@ -393,6 +395,7 @@ module.exports = {
             '3-6': '50%',
             '4-6': '66.666667%',
             '5-6': '83.333333%',
+            '4-11': '27.5%',
             '1-12': '8.333333%',
             '2-12': '16.666667%',
             '3-12': '25%',
