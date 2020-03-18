@@ -1,13 +1,13 @@
 <template lang="pug">
-  Layout
-    .container.mx-auto
-      h1 Guide
+    Layout
+        .container.mx-auto
+            h1 Guide
 </template>
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Guide'
-  }
+    metaInfo: {
+        title: 'Guide'
+    }
 }
 </script>
