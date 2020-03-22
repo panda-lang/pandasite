@@ -1,6 +1,6 @@
 <template lang="pug">
-    .layout
-        header.panda-header.bg-black.text-white.bg-texture.fixed.z-10.w-full.top-0
+    .layout.md_pt-header-spacing
+        header.panda-header.bg-black.text-white.bg-texture.z-10.w-full.top-0.md_fixed
             nav.container.mx-auto.bg-black
                 .float-left
                     g-link.p-4.inline-block(to="/") {{ $static.metadata.siteName }}
@@ -30,8 +30,10 @@ query {
     display flex
     min-height 100vh
     flex-direction column
-    padding-top 56px
     align-items stretch
+
+.layout-padding
+    padding-top 56px
 
 header, main, footer
     flex-shrink 0

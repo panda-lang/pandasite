@@ -1,7 +1,7 @@
 <template lang="pug">
     Layout
         panda-hero
-            .flex.flex-wrap-reverse.justify-center.container.mb-10.mt-32.k.mx-auto.lg_flex-no-wrap.lg_mb-24.lg_px-6
+            .flex.flex-wrap-reverse.justify-center.container.mb-10.mt-20.md_mt-32.k.mx-auto.lg_flex-no-wrap.lg_mb-24.lg_px-6
                 .w-full.mx-6.my-6.h-full.lg_my-0.lg_w-1-2.lg_mx-0.lg_mr-6
                     pre.text-xs.md_text-base
                         code.panda.
@@ -21,22 +21,17 @@
                 .w-1-1.mx-6.h-full.lg_w-1-2.lg_mx-0
                     h1.bg-white.inline-block.mb-6.text-4xl.px-6.py-2.mb-4 Panda
                     // is a lightweight and powerful programming language written in Java
-                    h2.bg-white.inline-block.font-thin.text-3xl.px-6.py-2 is a clear and stylish scripting programming language for JVM
+                    h2.bg-white.inline-block.font-thin.text-3xl.px-6.py-2 is a clear and stylish programming language for JVM
                     button.bg-white.inline-block.px-6.py-2.mt-6.text-2xl.bg-theme-download.text-white Get started →
 
         news
             .flex.container.mx-auto.flex-col.mx-6
                 h1.w-2-3.mb-4.mx-6 News
-                .flex.justify-center.flex-wrap
-                    article.w-4-11
-                        h5 News1
-                        p News description
-                    article.w-4-11
-                        h5 News2
-                        p News description
-                    article.w-4-11
-                        h5 News2
-                        p News description
+                .flex.flex-col.justify-center.md_flex-row.md_flex-wrap
+                    for val in [1, 2, 3]
+                        article.w-1-1.md_w-2-3.lg_w-4-11
+                            h5= 'News ' + val
+                            p= 'News ' + val + ' description'
 
 </template>
 
@@ -61,6 +56,7 @@ news article
     background-color #f1f1f1
     padding 17px
     margin 17px
+    margin-top 7px
 
 news article p
     color grey

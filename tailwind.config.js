@@ -146,7 +146,8 @@ module.exports = {
             '40': '10rem',
             '48': '12rem',
             '56': '14rem',
-            '64': '16rem'
+            '64': '16rem',
+            'header-spacing': '56px'
         },
         backgroundColor: theme => theme('colors'),
         backgroundPosition: {
