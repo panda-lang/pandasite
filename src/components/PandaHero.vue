@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 
 section.panda-hero
     --breakpoint 85%
@@ -28,7 +28,7 @@ section.panda-hero
         bottom 0
         height var(--breakpoint)
         background black
-        clip-path polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px))
+        clip-path polygon(0 0, 100% 0, 100% 91%, 0 calc(100% - 130px))
 
     > .container
         relative _
@@ -37,4 +37,6 @@ section.panda-hero
 
     pre
         background-color #19191c
+
+
 </style>

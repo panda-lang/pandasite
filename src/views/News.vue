@@ -1,5 +1,5 @@
 <template lang="pug">
-    Layout
+    div
         .container.mx-auto.mt-12
             h1.mx-6 News
             .news-list.mx-12
