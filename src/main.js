@@ -1,6 +1,5 @@
 import '~/assets/global.styl'
 import '~/assets/highlight.styl'
-import '~/assets/tailwind.css'
 
 import Default from '~/layouts/Default.vue'
 

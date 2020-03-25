@@ -7,18 +7,13 @@
 module.exports = {
   siteName: 'Pandasite',
   plugins: [
+    { use: 'gridsome-plugin-pug' },
     {
-      use: 'gridsome-plugin-pug',
+      use: 'gridsome-plugin-tailwindcss',
       options: {
-        pug: { /* Options for `pug-plain-loader` */ },
-        pugLoader: { /* Options for `pug-loader` */ }
+        shouldPurge: false
       }
     },
-    {
-      use: 'gridsome-plugin-tailwindcss'
-    },
-    {
-      use: 'gridsome-plugin-purgecss'
-    }
+    { use: 'gridsome-plugin-purgecss' }
   ]
 }
