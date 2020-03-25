@@ -19,16 +19,19 @@
 
 <script>
 export default {
-  /*
   watch: {
     $route() {
-      Vue.nextTick(_ => {
-        document.querySelectorAll("pre code.panda").forEach(block => {
-          hljs.highlightBlock(block);
-        });
-      });
+      if (process.isClient) {
+        Vue.nextTick(_ => {
+          import('highlight.js').then(hljs => {
+            document.querySelectorAll("pre code.panda").forEach(block => {
+              hljs.highlightBlock(block)
+            })
+          })
+        })
+      }
     }
-  }*/
+  }
 }
 </script>
 
