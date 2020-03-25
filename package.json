@@ -3,27 +3,39 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build",
-    "develop": "vue-cli-service serve"
+    "develop": "vue-cli-service serve",
+    "dist": "gridsome dist"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/plugin-sitemap": "^0.2.1",
+    "@gridsome/source-filesystem": "^0.5.0",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-pug": "0.0.3",
+    "gridsome-plugin-purgecss": "^1.0.12",
+    "gridsome-plugin-tailwind": "0.0.2",
+    "gridsome-plugin-tailwindcss": "^2.2.43",
     "highlight.js": "^9.17.1",
     "nib": "^1.1.2",
     "pug": "^2.0.4",
-    "tailwindcss": "^1.2.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.1",
     "@vue/cli-service": "^3.11.0",
+    "moment": "^2.24.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.1.2",
     "pug-plain-loader": "^1.0.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "tailwindcss": "^1.2.0",
+    "tailwindcss-transitions": "^2.0.0",
     "utilus": "^2.0.1",
     "vue-cli-plugin-pug": "^1.0.7",
     "vue-cli-plugin-tailwind": "^1.2.0",
-    "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
+    "vue-template-compiler": "^2.6.10"
   }
 }

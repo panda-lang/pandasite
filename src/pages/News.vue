@@ -2,11 +2,15 @@
     div
         .container.mx-auto.mt-12
             h1.mx-6 News
-            .news-list.mx-12
-                each val in [1, 2, 3, 4, 5, 6]
-                    article.w-1-1.xl_w-1-2
-                        h3= 'Title ' + val
-                        p= 'Description ' + val
+            
+            // .news-list.mx-12
+               // each val in [1, 2, 3, 4, 5, 6]
+                 //   article.w-1-1.xl_w-1-2
+                   //     h3= 'Title ' + val
+                     //   p= 'Description ' + val
+
+            // TODO: Timeline         
+            
 </template>
 
 <script>

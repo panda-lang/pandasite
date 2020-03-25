@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="has-navbar-fixed-top">
+<html lang="en" class="has-navbar-fixed-top" ${htmlAttrs}>
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width,initial-scale=1.0" name="viewport">
-    <link href="<%= BASE_URL %>favicon.ico" rel="icon">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
@@ -17,12 +16,10 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <title>Pandasite</title>
+    ${head}
 </head>
-<body>
-<noscript>
-    <strong>We're sorry but pandasite-frontend doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-</noscript>
-<div id="app"></div>
-<!-- built files will be auto injected -->
+<body ${bodyAttrs}>
+    ${app}
+    ${scripts}
 </body>
 </html>

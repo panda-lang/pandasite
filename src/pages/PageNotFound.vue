@@ -1,13 +1,13 @@
 <template lang="pug">
     Layout
         .container.mx-auto
-            h1 Docs
+            h1 404
 </template>
 
 <script>
 export default {
     metaInfo: {
-        title: 'Docs'
+        title: 'PageNotFound'
     }
 }
 </script>

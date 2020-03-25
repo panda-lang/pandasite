@@ -26,32 +26,32 @@ export default new Router({
         {
             path: '/',
             name: 'Index',
-            component: () => import('./views/Index.vue')
+            component: () => import('./pages/Index.vue')
         },
         {
             path: '/news',
             name: 'News',
-            component: () => import('./views/News.vue')
+            component: () => import('./pages/News.vue')
         },
         {
             path: '/docs',
             name: 'Docs',
-            component: () => import('./views/Docs.vue')
+            component: () => import('./pages/Docs.vue')
         },
         {
             path: '/guide',
             name: 'Guide',
-            component: () => import('./views/Guide.vue')
+            component: () => import('./pages/Guide.vue')
         },
         {
             path: '/support',
             name: 'Support',
-            component: () => import('./views/Support.vue')
+            component: () => import('./pages/Support.vue')
         },
         {
             path: "*",
             name: 'Page Not Found',
-            component: () => import('./views/PageNotFound.vue')
+            component: () => import('./pages/PageNotFound.vue')
         }
     ]
 })
