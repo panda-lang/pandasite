@@ -6,8 +6,9 @@ import Default from '~/layouts/Default.vue'
 export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', Default)
 
-  if (process.isClient) {
-    import('highlight.js').then(hljs => {
+  if (isClient) {
+    const hljs = Vue.prototype.hljs = import('highlight.js')
+    hljs.then(hljs => {
       hljs.registerLanguage('panda', hljs => {
         return {
           aliases: ['panda'],

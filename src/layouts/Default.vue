@@ -16,25 +16,6 @@
         footer.bg-black.text-center.p-2.text-xxs.font-sans.w-full
             p.text-white.uppercase panda-lang.org
 </template>
-
-<script>
-export default {
-  watch: {
-    $route() {
-      if (process.isClient) {
-        Vue.nextTick(_ => {
-          import('highlight.js').then(hljs => {
-            document.querySelectorAll("pre code.panda").forEach(block => {
-              hljs.highlightBlock(block)
-            })
-          })
-        })
-      }
-    }
-  }
-}
-</script>
-
 <style lang="stylus">
 .layout {
   display: flex;
