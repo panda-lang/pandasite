@@ -9,6 +9,7 @@
   "dependencies": {
     "gridsome": "^0.7.13",
     "highlight.js": "^9.18.1",
+    "sharp": "^0.25.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -16,6 +17,8 @@
     "gridsome-plugin-purgecss": "^1.0.12",
     "gridsome-plugin-tailwindcss": "^2.2.43",
     "pug": "^2.0.4",
-    "standard": "^14.3.3"
+    "standard": "^14.3.3",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2"
   }
 }
