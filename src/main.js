@@ -1,13 +1,14 @@
 import '~/assets/global.styl'
 import '~/assets/highlight.styl'
 
-import Default from '~/layouts/Default.vue'
+import App from '~/App.vue'
 
 export default function (Vue, { router, head, isClient }) {
-  Vue.component('Layout', Default)
+  Vue.component('Layout', App)
 
   if (isClient) {
     const hljs = Vue.prototype.hljs = import('highlight.js')
+
     hljs.then(hljs => {
       hljs.registerLanguage('panda', hljs => {
         return {
