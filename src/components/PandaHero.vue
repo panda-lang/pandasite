@@ -37,6 +37,4 @@ section.panda-hero
 
     pre
         background-color #19191c
-
-
 </style>
