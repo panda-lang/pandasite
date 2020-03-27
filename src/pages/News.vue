@@ -1,17 +1,19 @@
 <template lang="pug">
-    div.container.mx-auto.mt-12            
-        h1.inline-block.text-2xl.mb-6.px-6.pb-2 News
-        .flex.flex-col.justify-center.md_flex-row.md_flex-wrap.news-block.w-1-1
-            PostBlock(
-                v-for="edge in $page.allPost.edges" 
+    div.container.mx-auto.mt-12
+        div.mx-12         
+            h1.inline-block.text-2xl.px-6.py-3.bg-black.text-white News
+            TreePostLine.h-10
+            TreePostBlock(
+                v-for="edge in $page.allNewsPost.edges" 
                 :key="edge.node.id" 
                 :post="edge.node"
             )
+            TreePostLine.h-10
 </template>
 
 <page-query>
 query {
-  allPost {
+  allNewsPost {
     totalCount
     edges {
       node {
@@ -28,18 +30,16 @@ query {
 </page-query>
 
 <script>
-import PostBlock from '~/components/PostBlock.vue'
+import TreePostLine from '~/components/TreePostLine.vue'
+import TreePostBlock from '~/components/TreePostBlock.vue'
 
 export default {
     metaInfo: {
         title: 'News'
     },
     components: {
-        PostBlock
+        TreePostLine,
+        TreePostBlock
     }
 }
 </script>
-
-<style lang="stylus">
-
-</style>

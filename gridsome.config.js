@@ -6,7 +6,34 @@
 
 module.exports = {
   siteName: 'Pandasite',
+
+  templates: {
+      NewsPost: '/news/:title',
+      GuidePost: '/guide/:title'
+  },
+
   plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: './src/guides/*.md',
+        typeName: 'GuidePost'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: './src/news/*.md',
+        typeName: 'NewsPost',
+        refs: {
+          tags: {
+            typeName: "Tag",
+            route: "/tag/:id",
+            create: true
+          }
+        }
+      }
+    },
     { 
       use: 'gridsome-plugin-pug' },
     {
@@ -17,24 +44,6 @@ module.exports = {
     },
     { 
       use: 'gridsome-plugin-purgecss' 
-    },
-    {
-      use: '@gridsome/source-filesystem',
-      options: {
-        path: './src/news/*.md',
-        typeName: 'Post',
-        route: '/news/:title',
-        refs: {
-          tags: {
-            typeName: "Tag",
-            route: "/tag/:id",
-            create: true
-          }
-        }
-      }
-    },
-    {
-      use: '@gridsome/transformer-remark'
     }
   ]
 }
