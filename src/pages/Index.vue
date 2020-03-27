@@ -77,10 +77,10 @@ export default {
 
 .latest-text
     //text-shadow: 0 1px 0 rgba(0,0,0,.25)
-    font-family: 'Montserrat'
+    font-family 'Montserrat'
 
 .feature-title
-    font-family: 'Lato'
+    font-family 'Lato'
 .feature-block
     //font-family: 'Montserrat'
 
@@ -117,7 +117,7 @@ export default {
     margin-top 8px
     margin-bottom 8px
 .news article h5
-    font-weight: bold
+    font-weight bold
 .news article p
     color grey
 .news article a

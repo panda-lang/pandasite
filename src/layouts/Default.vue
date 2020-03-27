@@ -27,23 +27,23 @@
 
 <style lang="stylus">
 .layout
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: stretch;
+  display flex
+  min-height 100vh
+  flex-direction column
+  align-items stretch
 
 .layout-padding
-  padding-top: 56px
+  padding-top 56px
 
 header, main, footer 
-  flex-shrink: 0
+  flex-shrink 0
 
 main
   flex: 1
 
 footer
   //height: 32px
-  bottom: 0
+  bottom 0
   
 footer .container
   padding  7

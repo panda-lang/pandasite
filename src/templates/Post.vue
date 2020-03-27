@@ -1,7 +1,10 @@
 <template lang="pug">
-    .container
-        div.post-content
-            p Title
+    .container.mx-auto
+        div.post-content.my-10
+            h1
+              span(v-html="$page.post.title")
+              span &nbsp
+              span.font-thin(v-html="$page.post.date")
             p(v-html="$page.post.content")
 </template>
 
