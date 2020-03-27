@@ -7,6 +7,8 @@
     "dist": "gridsome dist"
   },
   "dependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.5.0",
     "gridsome": "^0.7.13",
     "highlight.js": "^9.18.1",
     "sharp": "^0.25.2",

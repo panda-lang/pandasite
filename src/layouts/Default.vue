@@ -13,32 +13,41 @@
                 .clearfix
         main
             slot
-        footer.bg-black.text-center.p-2.text-xxs.font-sans.w-full
-            p.text-white.uppercase panda-lang.org
+        footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full
+            .container.mx-auto.flex.text-white
+                div.flex-1
+                   p.text-white Copyright 2020 Panda Programming Language
+                div.flex-1.text-center.text-sm
+                    a(href="https://github.com/panda-lang")
+                       i.fab.fa-github
+                    a(href="")
+                      i.fab.fa-discord
+                div.flex-1
 </template>
 
 <style lang="stylus">
-.layout {
+.layout
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   align-items: stretch;
-}
 
-.layout-padding {
-  padding-top: 56px;
-}
+.layout-padding
+  padding-top: 56px
 
-header, main, footer {
-  flex-shrink: 0;
-}
+header, main, footer 
+  flex-shrink: 0
 
-main {
-  flex: 1;
-}
+main
+  flex: 1
 
-footer {
-  height: 32px;
-  bottom: 0;
-}
+footer
+  //height: 32px
+  bottom: 0
+  
+footer .container
+  padding  7
+
+footer .container a
+    margin 0 7px
 </style>

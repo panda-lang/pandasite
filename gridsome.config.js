@@ -7,13 +7,34 @@
 module.exports = {
   siteName: 'Pandasite',
   plugins: [
-    { use: 'gridsome-plugin-pug' },
+    { 
+      use: 'gridsome-plugin-pug' },
     {
       use: 'gridsome-plugin-tailwindcss',
-      options: {
+      options: { 
         shouldPurge: false
       }
     },
-    { use: 'gridsome-plugin-purgecss' }
+    { 
+      use: 'gridsome-plugin-purgecss' 
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: './src/news/*.md',
+        typeName: 'Post',
+        route: '/news/:title',
+        refs: {
+          tags: {
+            typeName: "Tag",
+            route: "/tag/:id",
+            create: true
+          }
+        }
+      }
+    },
+    {
+      use: '@gridsome/transformer-remark'
+    }
   ]
 }

@@ -1,7 +1,6 @@
 <template lang="pug">
-    Layout
-        .container.mx-auto
-            h1 Guide
+    .container.mx-auto
+        h1 Guide
 </template>
 
 <script>

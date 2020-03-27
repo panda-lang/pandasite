@@ -1,6 +1,6 @@
 <template>
   <Default>
-    <router-view />
+    <router-view/>
   </Default>
 </template>
 
