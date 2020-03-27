@@ -9,8 +9,8 @@
 </template>
 
 <page-query>
-query NewsPost ($path: String!) {
-   post: newsPost (path: $path) {
+query NewsPost ($id: ID!) {
+   post: newsPost (id: $id) {
     id
     title
     description

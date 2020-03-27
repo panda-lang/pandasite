@@ -8,7 +8,7 @@
 
 <script>
 export default {
-    name: "PostBlock",
+    name: "NewsPostBlock",
     props: ["post"]
 }
 </script>
