@@ -15,6 +15,7 @@ module.exports = {
       'white': '#fff',
       'pre-theme': '#19191c',
       'theme-download': '#0767bb',
+      'grey': '#f7f7f7',
 
       gray: {
         100: '#f7fafc',

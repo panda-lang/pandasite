@@ -2,8 +2,10 @@
     .layout.md_pt-header-spacing
         header.panda-header.bg-black.text-white.bg-texture.z-10.w-full.top-0.md_fixed
             nav.container.mx-auto.bg-black
-                .float-left
-                    g-link.p-4.inline-block(to="/") Pandasite
+                .float-left.flex.flex-row
+                    //g-link(to="/").logo
+                      //  img(src="/logo.png")
+                    g-link.font-bold.ml-4.mt-4(to="/") Pandasite
                 .float-right
                     g-link.p-4.inline-block(to="/news") News
                     g-link.p-4.inline-block(to="/guide") Guide
@@ -31,12 +33,21 @@
   min-height 100vh
   flex-direction column
   align-items stretch
-
 .layout-padding
   padding-top 56px
 
 header, main, footer 
   flex-shrink 0
+.logo
+  height 37px
+  width 37px
+  border-radius 100%
+  background-color #fff
+  padding 2px
+  margin-top 10px
+.logo img
+  border-radius 100%
+  background-color black
 
 main
   flex: 1
@@ -44,10 +55,8 @@ main
 footer
   //height: 32px
   bottom 0
-  
 footer .container
   padding  7
-
 footer .container a
     margin 0 7px
 </style>
