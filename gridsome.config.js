@@ -16,14 +16,14 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: './src/guides/*.md',
+        path: './guides/*.md',
         typeName: 'GuidePost'
       }
     },
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: './src/news/*.md',
+        path: './news/*.md',
         typeName: 'NewsPost',
         refs: {
           tags: {

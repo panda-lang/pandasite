@@ -1,15 +1,15 @@
 <template lang="pug">
     .container
         .docs.flex.flex-row
-            .panel.bg-grey.p-6.h-screen
-                input.mb-4(type="text" placeholder="Search")
-                div(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
+            .panel.bg-grey.p-6.pl-12.h-screen
+                input.p-2.mb-4(type="text" placeholder="Search")
+                div.ml-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
                     a(:href="'#' + edge.node.id")
                         p.mt-4.text-sm.font-bold.uppercase(v-if="(edge.node.id % 10.0) == 0") {{ edge.node.title }}
                         p.ml-4.mt-2.text-sm(v-else) {{ edge.node.title }}    
-            .content.p-12.mt-6
+            .content.p-12.mt-10
                 div(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
-                    div.mb-6(v-html="edge.node.content" :id="edge.node.id")
+                    div.mb-20(v-html="edge.node.content" :id="edge.node.id")
 </template>
 
 
