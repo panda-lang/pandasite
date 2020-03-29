@@ -9,7 +9,7 @@
                 .float-right
                     g-link.p-4.inline-block(to="/news") News
                     g-link.p-4.inline-block(to="/guide") Guide
-                    g-link.p-4.inline-block(to="/docs") Docs
+                    // g-link.p-4.inline-block(to="/docs") Docs
                     g-link.p-4.inline-block(to="/support") Support
                     a.p-4.inline-block(href='https://discordapp.com/invite/AN8HgWc') Community
                 .clearfix
@@ -18,7 +18,7 @@
         footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full
             .container.mx-auto.flex.text-white
                 div.flex-1
-                   p.text-white Copyright 2020 Panda Programming Language
+                   p.text-white Copyright © 2020 The Panda Programming Language
                 div.flex-1.text-center.text-sm
                     a(href="https://github.com/panda-lang")
                        i.fab.fa-github
