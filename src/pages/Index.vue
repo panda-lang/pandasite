@@ -87,8 +87,7 @@ export default {
 .footer-end
     --breakpoint 100%
     position relative
-    background-color wgite
-    z-index 1
+    background-color white
     height 56px
 
     &::before
@@ -102,11 +101,10 @@ export default {
         height var(--breakpoint)
         background black
         clip-path polygon(0 0, 100% 56px, 100% 100%, 0 100%)
-        z-index 2
     > .container
         relative _
         margin 177px _ 77px
-        z-index 3
+        z-index 1
 
 .news-data
     position relative

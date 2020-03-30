@@ -1,6 +1,6 @@
 <template lang="pug">
-    .news-list.h-screen
-        div.container.mx-auto.pt-12.bg-white.h-full
+    .news-list
+        div.container.mx-auto.pt-12.bg-white
             div.mx-12
                 div.text-center   
                   h1.text-3xl.align-center Panda Blog
