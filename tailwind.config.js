@@ -157,6 +157,9 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      '96': '24rem',
+      '112': '28rem',
+      '128': '32rem',
       'header-spacing': '56px'
     },
     backgroundColor: theme => theme('colors'),
