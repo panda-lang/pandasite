@@ -1,7 +1,7 @@
 <template>
-  <Default>
-    <router-view/>
-  </Default>
+    <Default>
+      <router-view/>
+    </Default>
 </template>
 
 <static-query>

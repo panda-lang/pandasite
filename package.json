@@ -7,13 +7,15 @@
     "dist": "gridsome dist"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.5.0",
     "@gridsome/vue-remark": "^0.1.10",
     "gridsome": "^0.7.13",
     "highlight.js": "^9.18.1",
     "sharp": "^0.25.2",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-slider-component": "^3.1.1"
   },
   "devDependencies": {
     "gridsome-plugin-pug": "^0.0.3",

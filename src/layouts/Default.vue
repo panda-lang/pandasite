@@ -11,7 +11,7 @@
                     g-link.p-4.inline-block(to="/guide") Guide
                     // g-link.p-4.inline-block(to="/docs") Docs
                     g-link.p-4.inline-block(to="/support") Support
-                    a.p-4.inline-block(href='https://discordapp.com/invite/AN8HgWc') Community
+                    a.p-4.inline-block(href='xxxhttps://discordapp.com/invite/AN8HgWc') Community
                 .clearfix
         main
             slot

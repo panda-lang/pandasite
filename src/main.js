@@ -1,7 +1,12 @@
+import fontawesome from '@fortawesome/fontawesome'
 import '~/assets/global.styl'
 import '~/assets/highlight.styl'
 
 import App from '~/App.vue'
+
+fontawesome.config = { 
+  autoReplaceSvg: false 
+}
 
 export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', App)
