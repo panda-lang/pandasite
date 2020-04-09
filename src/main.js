@@ -1,7 +1,8 @@
-import fontawesome from '@fortawesome/fontawesome'
 import '~/assets/global.styl'
 import '~/assets/highlight.styl'
+import 'prismjs/themes/prism.css'
 
+import fontawesome from '@fortawesome/fontawesome'
 import App from '~/App.vue'
 
 fontawesome.config = { 

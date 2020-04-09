@@ -4,7 +4,7 @@
             .container.mx-auto.relative.z-5.mx-6.pt-6.justify-center.flex
                 .flex.flex-col.mx-4
                     div.flex-initial
-                        h1.inline-block.my-4.py-4.px-6.text-black.bg-white How to help? 💙
+                        h1.inline-block.my-4.py-4.px-6.text-black.bg-white How to help? 💕 
                     div.flex-initial
                         p.inline-block.py-4.px-6.text-xbase.bg-white.text-black.text-2xl.font-thin
                             | The Panda programming language is an open source project.
@@ -40,18 +40,19 @@
                                 span.font-bold.text-white $
                                     span(v-html="value")
                             i.fa.fa-heart.fa-10x
-                    .flex-initial.pt-2
+                    .flex-initial
                         VueSlider(
                             v-model="value"
                             :min="min"
                             :max="max"
                             :tooltip-placement="['bottom']"
+                            :tooltip-formatter="formatter"
                         )
             div.mt-20.text-center.flex
                 .flex-1
                     hr.z-4.absolute.border-gray-400.mt-5.w-full.left-0
                     h1.bg-white.inline-block.relative.px-8 Supporters
-                        
+                    
 
 </template>
 
@@ -70,7 +71,8 @@ export default {
         return {
             value: 5,
             min: 1,
-            max: 100
+            max: 100,
+            formatter: '${value}'
         }
     }
 }
@@ -103,24 +105,27 @@ export default {
     
 li 
     margin 7px 0 7px
-
 .support-way h1
     font-family 'Lato'
 
 .vue-slider-rail
     background-color lightgrey
 .vue-slider-process
-    //background-color red
-    @apply bg-green-300
+    //@apply bg-green-400
+    background #20bf82
 .vue-slider-dot-handle
     background-color black
-
+.vue-slider-dot-tooltip-inner
+    background black
+.vue-slider-dot-handle::after
+    //@apply bg-red-300
+    @apply bg-gray-400
 .heart-icon
     cursor pointer
 .heart i
-    @apply text-red-300
+    @apply text-red-500
     transition color 0.5s
 .heart-icon:hover i
-    @apply text-red-700
-    transition color 3s
+    @apply text-red-600
+    transition color 1.5s
 </style>

@@ -12,6 +12,14 @@ module.exports = {
       GuidePost: '/guide/:title'
   },
 
+  transformers: {
+    remark: {
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
+
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -35,7 +43,21 @@ module.exports = {
       }
     },
     { 
-      use: 'gridsome-plugin-pug' },
+      use: 'gridsome-plugin-pug' 
+    },
+    {
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        collections: [
+          {
+            typeName: 'GuidePost',
+            indexName: 'GuidePost',
+            fields: [ 'id', 'title', 'content' ]
+          }
+        ],
+        searchFields: [ 'title', 'content' ]
+      }
+    },
     {
       use: 'gridsome-plugin-tailwindcss',
       options: { 

@@ -269,4 +269,5 @@ yarn-error.log
 ### Custom ###
 .idea/
 src/.temp
+.vscode
 
