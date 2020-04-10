@@ -1,36 +1,29 @@
 <template lang="pug">
-    .container
         .docs.flex.flex-col.md_flex-row
-            .panel.bg-grey.py-4.px-12.pb-10
-                input.px-2.py-1.mt-6(
-                    id="search"
-                    type="text" 
-                    class="input",
-                    v-model="searchTerm"
-                    placeholder="Search"
-                )
-                .hint
-                  .list.absolute.bg-white
-                    hr.my-4.mx-2
-                    a(
-                        v-for="result in searchResults"
-                        :key="result.id + 'search-link'"
-                        :href="'#' + result.id"
-                        class="navbar-item"
-                    )
-                      .px-2
-                        h4 {{ result.title }}
-                        p {{ result.content }}
-                        hr.my-4
-                .p-1
-                div.ml-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
-                    a(:href="'#' + edge.node.id")
-                        p.mt-4.text-sm.font-bold.uppercase(v-if="(edge.node.id % 10.0) == 0") {{ edge.node.title }}
-                        p.ml-4.mt-2.text-sm(v-else) {{ edge.node.title }}    
-            .container.justify-center                    
-                .content.p-12
-                    div(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
-                        div.mb-12(v-html="edge.node.content" :id="edge.node.id")
+            .panel.flex-1.bg-grey.py-4.px-8.pb-10.flex.justify-center.md_justify-end
+                .panel-content.flex.flex-col.items-center.md_items-stretch
+                  input.px-2.py-1.mt-6(
+                      id="search"
+                      type="text" 
+                      class="input",
+                      v-model="searchTerm"
+                      placeholder="Search"
+                  )
+                  .p-1
+                  .md_ml-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
+                      a(:href="'#' + edge.node.id")
+                          p.mt-4.text-sm.font-bold.uppercase(v-if="(edge.node.id % 10.0) == 0") {{ edge.node.title }}
+                          p.md_ml-4.mt-2.text-sm(v-else) {{ edge.node.title }}
+            .container.flex.mx-auto          
+                  .content.container.p-12.md_px-24.lg_px-32.xl_px-48.justify-center   
+                      div.mb-12(v-if="searchTerm != '' && searchResults.length == 0")
+                        h1 Not Found
+                      div(v-else v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
+                        div.mb-12(v-if="searchTerm == ''" v-html="edge.node.content" :id="edge.node.id")
+                        div.mb-12(v-if="getResult(edge.node)" v-html="getResult(edge.node).content" :id="getResult(edge.node).id")
+
+            .flex-1
+
 </template>
 
 <page-query>
@@ -70,60 +63,98 @@ export default {
         return []
       }
 
-      let items = this.$search.search({ query: searchTerm, limit: 5 })
-      let cloned = []
+      return this.$search.search({ query: searchTerm, limit: 5 })
+    }
+  },
+  methods: {
+    getResult(node) {
+      const searchTerm = this.searchTerm.trim()
 
-      for (let index = 0; index < items.length; index++) {
-        const item = items[index]
-        const content = item.content
-        const termIndex = content.indexOf(searchTerm)
-        
-        let start = termIndex - 20
-        start = (start < 0) ? 0 : start;
+      for (const item of this.searchResults) {
+        if (item.id != node.id) {
+          continue
+        }
 
-        const text = content.substr(start, 40)
-        console.log(termIndex, termIndex-5, termIndex+5, content.length, text.length, text)
+        let filteredContent = Array.from(node.content)
+        let stack = []
 
-        cloned.push({
-          id: item.id,
-          title: item.title,
-          content: text
+        for (let index = 0; index < filteredContent.length; index++) {
+            let char = filteredContent[index]
+
+            if (stack.length != 0) {
+              filteredContent[index] = ''
+
+              if (char == '>') {
+                stack.pop()
+              }
+
+              continue
+            }
+            
+            if (char == '<') {
+              stack.push('<')
+              filteredContent[index] = ''
+            }
+        }
+
+        let content = node.content
+        let contentIndex = -1
+        let extra = 0
+
+        while ((contentIndex = content.indexOf(searchTerm, contentIndex)) !== -1) {
+          if (filteredContent[contentIndex - extra] == '') {
+            contentIndex += searchTerm.length
+            continue
+          }
+
+          const term = content.substr(contentIndex, searchTerm.length)
+          const wrapped = '<span style="font-weight: bold; background-color: yellow;">' + term + '</span>'
+          content = content.slice(0, contentIndex) + wrapped  + content.slice(contentIndex + term.length)
+          contentIndex += wrapped.length
+          extra += (wrapped.length - term.length)
+        }
+
+        return ({
+          id: node.id,
+          title: node.title,
+          content: content
         })
       }
 
-      console.log(cloned)
-      return cloned
-    } 
+      return null
+    }
   }
 };
 </script>
 
 <style lang="stylus">
-.content {
-  h1, h2, h3, h4, h5 {
-    // @apply px-6
-    @apply: py-6;
-    padding-top: 100px;
-    margin-top: -70px;
-  }
+.panel input:focus
+  border-radius 0
+  color black
 
-  h1 {
-    @apply: text-3xl;
-  }
+.search-element
+  font-family 'Montserrat'
 
-  ul {
-    @apply: list-disc;
-    @apply: list-inside;
-    @apply: py-4;
-    @apply: px-6;
-  }
+.content
+  h1, h2, h3, h4, h5
+    @apply py-6
+    padding-top 100px
+    margin-top -70px
 
-  code {
-    @apply: text-sm;
-  }
+  h1
+    @apply text-3xl
 
-  a {
-    @apply: text-blue-500;
-  }
-}
+  ul
+    @apply list-disc
+    @apply list-inside
+    @apply py-4
+    @apply px-6
+
+  code
+    @apply text-sm
+
+  a
+    @apply text-blue-500
+
+
 </style>
