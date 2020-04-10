@@ -68,21 +68,21 @@ export default {
   },
   methods: {
     getResult(node) {
-      const searchTerm = this.searchTerm.trim()
+      const searchTerm = this.searchTerm.trim().toLowerCase()
 
       for (const item of this.searchResults) {
         if (item.id != node.id) {
           continue
         }
 
-        let filteredContent = Array.from(node.content)
+        let filteredContent = Array.from(node.content.toLowerCase())
         let stack = []
 
         for (let index = 0; index < filteredContent.length; index++) {
             let char = filteredContent[index]
 
             if (stack.length != 0) {
-              filteredContent[index] = ''
+              filteredContent[index] = ' '
 
               if (char == '>') {
                 stack.pop()
@@ -93,25 +93,27 @@ export default {
             
             if (char == '<') {
               stack.push('<')
-              filteredContent[index] = ''
+              filteredContent[index] = ' '
             }
         }
 
+        filteredContent = filteredContent.join('')
         let content = node.content
         let contentIndex = -1
         let extra = 0
 
-        while ((contentIndex = content.indexOf(searchTerm, contentIndex)) !== -1) {
-          if (filteredContent[contentIndex - extra] == '') {
+        while ((contentIndex = filteredContent.indexOf(searchTerm, contentIndex)) !== -1) {
+          if (filteredContent[contentIndex] == ' ') {
             contentIndex += searchTerm.length
             continue
           }
 
-          const term = content.substr(contentIndex, searchTerm.length)
+          const term = content.substr(contentIndex + extra, searchTerm.length)
           const wrapped = '<span style="font-weight: bold; background-color: yellow;">' + term + '</span>'
-          content = content.slice(0, contentIndex) + wrapped  + content.slice(contentIndex + term.length)
-          contentIndex += wrapped.length
+          content = content.slice(0, contentIndex + extra) + wrapped  + content.slice(contentIndex + extra + term.length)
+
           extra += (wrapped.length - term.length)
+          contentIndex += term.length
         }
 
         return ({
