@@ -1,29 +1,25 @@
 <template lang="pug">
-        .docs.flex.flex-col.md_flex-row
-            .panel.flex-1.bg-grey.py-4.px-8.pb-10.flex.justify-center.md_justify-end
-                .panel-content.flex.flex-col.items-center.md_items-stretch
-                  input.px-2.py-1.mt-6(
-                      id="search"
-                      type="text" 
-                      class="input",
-                      v-model="searchTerm"
-                      placeholder="Search"
-                  )
-                  .p-1
-                  .md_ml-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
-                      a(:href="'#' + edge.node.id")
-                          p.mt-4.text-sm.font-bold.uppercase(v-if="(edge.node.id % 10.0) == 0") {{ edge.node.title }}
-                          p.md_ml-4.mt-2.text-sm(v-else) {{ edge.node.title }}
-            .container.flex.mx-auto          
-                  .content.container.p-12.md_px-24.lg_px-32.xl_px-48.justify-center   
-                      div.mb-12(v-if="searchTerm != '' && searchResults.length == 0")
-                        h1 Not Found
-                      div(v-else v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
-                        div.mb-12(v-if="searchTerm == ''" v-html="edge.node.content" :id="edge.node.id")
-                        div.mb-12(v-if="getResult(edge.node)" v-html="getResult(edge.node).content" :id="getResult(edge.node).id")
-
-            .flex-1
-
+  .guide.flex
+      .panel.bg-grey.py-4.px-8.pb-10.flex.justify-center.md_justify-end
+        .panel-content.flex.flex-col.items-center.md_items-stretch
+          input.px-2.py-1.mt-11(
+              id="search"
+              type="text" 
+              class="input",
+              v-model="searchTerm"
+              placeholder="Search"
+          )
+          .p-1
+          .md_ml-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
+            a(:href="'#' + edge.node.id")
+              p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 10.0) == 0") {{ edge.node.title }}
+              p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
+      .content.p-24.pt-7.justify-center   
+          div(v-if="searchTerm != '' && searchResults.length == 0")
+            h1 Not Found
+          div(v-else v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
+            div(v-if="searchTerm == ''" v-html="edge.node.content" :id="edge.node.id")
+            div(v-if="getResult(edge.node)" v-html="getResult(edge.node).content" :id="getResult(edge.node).id")
 </template>
 
 <page-query>
@@ -44,6 +40,8 @@ query {
 
 <script>
 import Search from 'gridsome-plugin-flexsearch/SearchMixin'
+import '~/assets/prism-ghcolors.styl'
+import '~/assets/prism-languages.js'
 
 export default {
   metaInfo: {
@@ -130,6 +128,10 @@ export default {
 </script>
 
 <style lang="stylus">
+.panel 
+  width calc(290px + (100% - 1280px)/2)
+  min-width 290px
+
 .panel input:focus
   border-radius 0
   color black
@@ -138,13 +140,24 @@ export default {
   font-family 'Montserrat'
 
 .content
-  h1, h2, h3, h4, h5
-    @apply py-6
-    padding-top 100px
-    margin-top -70px
+  width calc(100% - 290px)
+  max-width 1010px
+
+  h1 
+    padding-top 124px
+    margin-top -100px
+    padding-bottom 20px
+
+  h2, h3, h4, h5
+    padding-top 84px
+    margin-top -60px
+    padding-bottom 20px
 
   h1
     @apply text-3xl
+
+  p
+    @apply my-2
 
   ul
     @apply list-disc
@@ -152,11 +165,20 @@ export default {
     @apply py-4
     @apply px-6
 
+  pre
+    @apply my-5
+    //background-color #19191c
+    code
+      background-color transparent
+      color inherit
+
   code
     @apply text-sm
+    @apply bg-grey
+    //@apply text-green-600
+    @apply my-6
+    color #dd157c
 
   a
-    @apply text-blue-500
-
-
+    @apply text-theme-download
 </style>
