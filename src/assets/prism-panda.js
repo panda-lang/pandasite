@@ -1,6 +1,6 @@
 import Prism from 'prismjs'
 
-const keywords = /\b(?:abstract|main|log|module |break|catch|class|const|continue|else|extends|for|if|implements|import|interface|module|native|new|null|open|opens|package|private|protected|provides|public|record|requires|return|short|static|strictfp|super|switch|synchronized|this|throw|throws|to|transient|transitive|try|uses|var|void|volatile|while|with|yield)\b/;
+const keywords = /\b(?:abstract|main|log|export|require|use|module|break|catch|class|const|continue|else|extends|for|if|implements|import|interface|module|native|new|null|open|opens|package|private|protected|provides|public|record|requires|return|short|static|strictfp|super|switch|synchronized|this|throw|throws|to|transient|transitive|try|uses|var|void|volatile|while|with|yield)\b/;
 const className = /\b[A-Z](?:\w*[a-z]\w*)?\b/;
 
 Prism.languages.panda = Prism.languages.extend('clike', {
