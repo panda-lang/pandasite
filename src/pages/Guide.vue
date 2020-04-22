@@ -147,14 +147,18 @@ export default {
     padding-top 124px
     margin-top -100px
     padding-bottom 20px
+    @apply text-3xl
 
-  h2, h3, h4, h5
+  h2
     padding-top 84px
     margin-top -60px
     padding-bottom 20px
 
-  h1
-    @apply text-3xl
+  h3, h4, h5
+    padding-top 64px
+    margin-top -50px
+    padding-bottom 12px
+    color #808080
 
   p
     @apply my-2
