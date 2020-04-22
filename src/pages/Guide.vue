@@ -40,8 +40,8 @@ query {
 
 <script>
 import Search from 'gridsome-plugin-flexsearch/SearchMixin'
-import '~/assets/prism-ghcolors.styl'
-import '~/assets/prism-languages.js'
+import '~/assets/prism/prism-ghcolors.styl'
+import '~/assets/prism/prism-languages.js'
 
 export default {
   metaInfo: {
@@ -131,6 +131,7 @@ export default {
 .panel 
   width calc(290px + (100% - 1280px)/2)
   min-width 290px
+  min-height 900px
 
 .panel input:focus
   border-radius 0
@@ -185,4 +186,15 @@ export default {
 
   a
     @apply text-theme-download
+
+  table
+    @apply my-5
+    border 1px solid #ddd 
+
+    td, th
+      @apply px-4 py-1
+
+    th
+      text-align: left
+      @apply px-3
 </style>

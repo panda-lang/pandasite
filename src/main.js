@@ -1,8 +1,6 @@
-import '~/assets/global.styl'
-import '~/assets/highlight.styl'
-
 import fontawesome from '@fortawesome/fontawesome'
 import App from '~/App.vue'
+import '~/assets/global.styl'
 
 fontawesome.config = { 
   autoReplaceSvg: false 
