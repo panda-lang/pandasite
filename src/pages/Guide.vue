@@ -12,7 +12,7 @@
           .p-1
           .md_ml-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
             a(:href="'#' + edge.node.id")
-              p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 10.0) == 0") {{ edge.node.title }}
+              p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 100.0) == 0") {{ edge.node.title }}
               p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
       .content.p-24.pt-7.justify-center   
           div(v-if="searchTerm != '' && searchResults.length == 0")
