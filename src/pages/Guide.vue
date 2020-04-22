@@ -1,7 +1,7 @@
 <template lang="pug">
   .guide.flex
       .panel.bg-grey.py-4.px-8.pb-10.flex.justify-center.md_justify-end
-        .panel-content.flex.flex-col.items-center.md_items-stretch
+        .panel-content.flex.flex-col.items-center.md_items-stretch.fixed
           input.px-2.py-1.mt-11(
               id="search"
               type="text" 
