@@ -15,7 +15,7 @@
                 .clearfix
         main
             slot
-        footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full
+        footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full.z-1
             .container.mx-auto.flex.text-white
                 div.flex-1
                    p.text-white Copyright © 2020 The Panda Programming Language

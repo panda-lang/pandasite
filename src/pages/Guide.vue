@@ -1,20 +1,22 @@
 <template lang="pug">
   .guide.flex
-      .panel.bg-grey.py-4.px-8.pb-10.flex.justify-center.md_justify-end
-        .panel-content.flex.flex-col.items-center.md_items-stretch.fixed
-          input.px-2.py-1.mt-11(
-              id="search"
-              type="text" 
-              class="input",
-              v-model="searchTerm"
-              placeholder="Search"
-          )
-          .p-1
-          .md_ml-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
-            a(:href="'#' + edge.node.id")
-              p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 100.0) == 0") {{ edge.node.title }}
-              p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
-      .content.p-24.pt-7.justify-center   
+      .panel.bg-grey.flex.justify-end
+        .panel-right.panel-width
+          .fixed.panel-width
+            .panel-content.flex.flex-col.items-center.md_items-start.fixed.overflow-auto.panel-width
+              input.px-2.py-1.mt-14.mb-3(
+                  id="search"
+                  type="text" 
+                  class="input",
+                  v-model="searchTerm"
+                  placeholder="Search"
+              )
+              .list.pb-16
+                .md_pl-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id").w-full
+                  a(:href="'#' + edge.node.id")
+                    p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 100.0) == 0") {{ edge.node.title }}
+                    p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
+      .content.p-24.pt-7.justify-center.mb-40
           div(v-if="searchTerm != '' && searchResults.length == 0")
             h1 Not Found
           div(v-else v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
@@ -136,6 +138,17 @@ export default {
 .panel input:focus
   border-radius 0
   color black
+
+.panel-width
+  width: 290px
+
+.panel-content
+  height calc(100% - 56px)
+  padding-top 53px
+  bottom 53px
+
+footer
+  position fixed
 
 .search-element
   font-family 'Montserrat'
