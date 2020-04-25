@@ -3,7 +3,7 @@
       .panel.bg-grey.flex.justify-end
         .panel-right.panel-width
           .fixed.panel-width
-            .panel-content.flex.flex-col.items-center.md_items-start.fixed.overflow-auto.panel-width
+            .panel-content.flex.flex-col.items-center.md_items-start.fixed.overflow-auto.panel-width.pl-8
               input.px-2.py-1.mt-14.mb-3(
                   id="search"
                   type="text" 
