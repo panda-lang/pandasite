@@ -55,6 +55,7 @@ main
 footer
   //height: 32px
   bottom 0
+  position relative
 footer .container
   padding  7
 footer .container a
