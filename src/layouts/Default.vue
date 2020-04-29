@@ -38,6 +38,11 @@
 
 header, main, footer 
   flex-shrink 0
+
+header, footer
+  a
+    color white
+
 .logo
   height 37px
   width 37px

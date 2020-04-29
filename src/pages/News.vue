@@ -1,7 +1,7 @@
 <template lang="pug">
     .news-list
         div.container.mx-auto.pt-12.bg-white
-            div.mx-12
+            div.mx-12.pb-24
                 div.text-center   
                   h1.text-3xl.align-center Panda Blog
                   div.flex.pb-6
@@ -30,6 +30,7 @@ query {
         description
         date (format: "D MMMM YYYY")
         path
+        content
       }
     }
   }

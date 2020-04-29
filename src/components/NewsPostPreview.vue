@@ -1,21 +1,40 @@
 <template lang="pug">  
     .news-article.relative.flex.h-auto.flex-row.py-3.mb-10.border.border-pre-theme
-        div.text-center.w-24.h-full.flex.align-center.mt-5
-            p.mx-auto.my-auto.break-words.px-8(v-html="post.date")
-        div
-            h5.pt-4.mr-4.text-lg(v-html="post.title")
-            div.pb-3
-                p.p-4.pl-0(v-html="post.description")
+        .desc.text-center.w-24.h-full.flex.align-center.mt-4.flex-col
+            h5.font-bold.text-lg.mx-auto.mb-4(v-html="'#' + post.id")
+            p.mb-4.mx-auto.my-auto.break-words.px-8(v-html="post.date")
+        .pt-4
+            h5.mr-4.text-lg(v-html="post.title")
+            .pb-3
+                p.p-4.pl-0(v-html="desc(post)")
                 g-link.mr-4.my-4.text-xs.text-theme-download(:to="post.path") Read More →
 </template>
 
 <script>
 export default {
     name: "NewsPostPreview",
-    props: ["post"]
+    props: ["post"],
+    methods: {
+        desc(post) {
+            if (post.description != '') {
+                return post.description
+            }
+
+            let content = post.content
+                .replace(/<([^p>]+?)([^>]*?)>(.*?)<\/\1>/ig, '')
+                .replace(/(<([^>]+)>)/gi, '')
+
+            if (content.length < 300) {
+                return content
+            }
+
+            return content.substring(0, 300) + '...'
+        }
+    }
 }
 </script>
 
 <style lang="stylus">
-
+.desc h5
+    padding-top 1px
 </style>

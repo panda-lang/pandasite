@@ -8,7 +8,7 @@ module.exports = {
   siteName: 'Pandasite',
 
   templates: {
-      NewsPost: '/news/:title',
+      NewsPost: '/news/:path',
       GuidePost: '/guide/:title'
   },
 

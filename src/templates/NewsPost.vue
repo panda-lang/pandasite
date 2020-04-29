@@ -1,11 +1,14 @@
 <template lang="pug">
-    .container.mx-auto
-        div.post-content.my-10
-            h1
-              span(v-html="$page.newsPost.title")
-              span &nbsp
-              span.font-thin(v-html="$page.newsPost.date")
-            p(v-html="$page.newsPost.content")
+  .container.mx-auto
+    .post-content.my-12
+      .menu.flex.justify-between
+        p
+          span.font-thin(v-html="$page.post.date")
+          span &nbsp - &nbsp
+          span(v-html="$page.post.title")
+        p 
+          a(href='/news') ← Back to the news
+      p.markdown.pt-10(v-html="$page.post.content")
 </template>
 
 <page-query>

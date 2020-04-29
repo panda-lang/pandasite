@@ -16,7 +16,7 @@
                   a(:href="'#' + edge.node.id")
                     p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 100.0) == 0") {{ edge.node.title }}
                     p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
-      .content.p-24.pt-7.justify-center.mb-40
+      .guide-content.markdown.p-24.pt-7.justify-center.mb-40
           div(v-if="searchTerm != '' && searchResults.length == 0")
             h1 Not Found
           div(v-else v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")
@@ -153,61 +153,7 @@ footer
 .search-element
   font-family 'Montserrat'
 
-.content
+.guide-content
   width calc(100% - 290px)
   max-width 1010px
-
-  h1 
-    padding-top 124px
-    margin-top -100px
-    padding-bottom 20px
-    @apply text-3xl
-
-  h2
-    padding-top 84px
-    margin-top -60px
-    padding-bottom 20px
-
-  h3, h4, h5
-    padding-top 64px
-    margin-top -50px
-    padding-bottom 12px
-    color #808080
-
-  p
-    @apply my-2
-
-  ul
-    @apply list-disc
-    @apply list-inside
-    @apply py-4
-    @apply px-6
-
-  pre
-    @apply my-5
-    //background-color #19191c
-    code
-      background-color transparent
-      color inherit
-
-  code
-    @apply text-sm
-    @apply bg-grey
-    //@apply text-green-600
-    @apply my-6
-    color #dd157c
-
-  a
-    @apply text-theme-download
-
-  table
-    @apply my-5
-    border 1px solid #ddd 
-
-    td, th
-      @apply px-4 py-1
-
-    th
-      text-align: left
-      @apply px-3
 </style>
