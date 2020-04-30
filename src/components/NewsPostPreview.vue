@@ -21,14 +21,14 @@ export default {
             }
 
             let content = post.content
-                .replace(/<([^p>]+?)([^>]*?)>(.*?)<\/\1>/ig, '')
+                .replace(/<([^p>]+?)([^h1>]*?)>(.*?)<\/\1>/ig, '')
                 .replace(/(<([^>]+)>)/gi, '')
 
-            if (content.length < 300) {
+            if (content.length < 200) {
                 return content
             }
 
-            return content.substring(0, 300) + '...'
+            return content.substring(0, 200) + '...'
         }
     }
 }
