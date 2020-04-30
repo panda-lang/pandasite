@@ -42,9 +42,6 @@ module.exports = {
         }
       }
     },
-    { 
-      use: 'gridsome-plugin-pug' 
-    },
     {
       use: 'gridsome-plugin-flexsearch',
       options: {
@@ -57,6 +54,9 @@ module.exports = {
         ],
         searchFields: [ 'title', 'content' ]
       }
+    },
+    { 
+      use: 'gridsome-plugin-pug' 
     },
     {
       use: 'gridsome-plugin-tailwindcss',

@@ -20,7 +20,7 @@
 
 <page-query>
 query {
-  allNewsPost(sortBy: "date", order: DESC) {
+  allNewsPost(sortBy: "id", order: DESC) {
     totalCount
     edges {
       node {

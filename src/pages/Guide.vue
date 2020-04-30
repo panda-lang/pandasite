@@ -147,6 +147,10 @@ export default {
   padding-top 53px
   bottom 53px
 
+  .list
+    a
+      color black
+      
 footer
   position fixed
 
