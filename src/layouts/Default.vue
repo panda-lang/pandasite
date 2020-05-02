@@ -7,6 +7,7 @@
                       //  img(src="/logo.png")
                     g-link.font-bold.ml-4.mt-4(to="/") Pandasite
                 .float-right
+                    g-link.p-4.inline-block(to="/install") Install
                     g-link.p-4.inline-block(to="/news") News
                     g-link.p-4.inline-block(to="/guide") Guide
                     // g-link.p-4.inline-block(to="/docs") Docs

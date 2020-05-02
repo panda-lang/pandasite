@@ -46,27 +46,45 @@
             .news-data.flex-col
                 h1.inline-block.text-2xl.mb-6.px-6.pb-2 News
                 .flex.flex-col.justify-center.md_flex-row.md_flex-wrap
-                    for val in [1, 2, 3]
-                        article.w-1-1.md_w-2-3.lg_w-4-11.border.border-grey-300.relative
-                            h5.text-lg= 'Extra News ' + val
-                                span.news-time.text-xs.absolute.font-thin= (val+1) + ' hours ago'
-                            p.py-4= 'News ' + val + ' about the standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those'
-                            a.my-4.text-xs.text-theme-download Read More →
-
+                    NewsPostPreview.w-1-1.md_w-2-3.lg_w-4-11(
+                        v-for="edge in $page.allNewsPost.edges" 
+                        :key="edge.node.id" 
+                        :post="edge.node"
+                    )
         .footer-end
 
 
 </template>
 
+<page-query>
+query {
+  allNewsPost(sortBy: "id", order: DESC, limit: 3) {
+    totalCount
+    edges {
+      node {
+        id
+        title
+        description
+        date (format: "D MMMM YYYY")
+        path
+        content
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
-import PandaHero from "../components/PandaHero";
+import PandaHero from '../components/PandaHero'
+import NewsPostPreview from '../components/NewsPostPreview'
 
 export default {
     metaInfo: {
         title: 'Pandasite'
     },
     components: {
-        PandaHero
+        PandaHero,
+        NewsPostPreview
     }
 }
 </script>
@@ -108,20 +126,4 @@ export default {
 
 .news-data
     position relative
-.news article
-    background-color white
-    padding 17px
-    margin 17px
-    margin-top 8px
-    margin-bottom 8px
-.news article h5
-    font-weight bold
-.news article p
-    color grey
-.news article a
-    // color blue
-.news-time 
-    right 14px
-    top 21px
-    color gray
 </style>

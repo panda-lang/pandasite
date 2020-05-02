@@ -1,5 +1,6 @@
 import fontawesome from '@fortawesome/fontawesome'
 import App from '~/App.vue'
+import NewsMixins from '~/mixins/news-mixins.js'
 import '~/assets/default.styl'
 import '~/assets/markdown.styl'
 
@@ -8,6 +9,7 @@ fontawesome.config = {
 }
 
 export default function (Vue, { router, head, isClient }) {
+  Vue.mixin(NewsMixins)
   Vue.component('Layout', App)
 
   if (isClient) {

@@ -11,7 +11,7 @@
                       br
                       | modern apps that are clean by default
                     div.flex-1
-                NewsPostPreview.mx-auto.md_w-3-4(
+                NewsListElement.mx-auto.md_w-3-4(
                     v-for="edge in $page.allNewsPost.edges" 
                     :key="edge.node.id" 
                     :post="edge.node"
@@ -38,14 +38,14 @@ query {
 </page-query>
 
 <script>
-import NewsPostPreview from '~/components/NewsPostPreview.vue'
+import NewsListElement from '~/components/NewsListElement.vue'
 
 export default {
     metaInfo: {
         title: 'News'
     },
     components: {
-        NewsPostPreview
+        NewsListElement
     }
 }
 </script>
