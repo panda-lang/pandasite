@@ -13,7 +13,7 @@
               )
               .list.pb-16
                 .md_pl-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id").w-full
-                  a(:href="'#' + edge.node.id")
+                  a(:href="'#' + normalize(edge.node.title)")
                     p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 100.0) == 0") {{ edge.node.title }}
                     p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
       .guide-content.markdown.p-24.pt-7.justify-center.mb-40
@@ -41,6 +41,7 @@ query {
 </page-query>
 
 <script>
+import Prism from 'prismjs'
 import Search from 'gridsome-plugin-flexsearch/SearchMixin'
 import '~/assets/prism/prism-ghcolors.styl'
 import '~/assets/prism/prism-languages.js'
@@ -55,6 +56,9 @@ export default {
   data: () => ({
     searchTerm: ''
   }),
+  mounted() {
+    Prism.highlightAll()
+  },
   computed: {
     searchResults() {
       const searchTerm = this.searchTerm
@@ -67,6 +71,9 @@ export default {
     }
   },
   methods: {
+    normalize(title) {
+      return title.toLowerCase().replace(' ', '-')
+    },
     getResult(node) {
       const searchTerm = this.searchTerm.trim().toLowerCase()
 

@@ -1,5 +1,5 @@
 <template lang="pug">  
-    .news-article.relative.flex.h-auto.flex-row.py-3.mb-10.border.border-pre-theme
+    .relative.flex.h-auto.flex-row.py-3.mb-10.border.border-pre-theme
         .desc.text-center.w-24.h-full.flex.align-center.mt-4.flex-col
             h5.font-bold.text-lg.mx-auto.mb-4(v-html="'#' + post.id")
             p.mb-4.mx-auto.my-auto.break-words.px-8(v-html="post.date")

@@ -15,12 +15,19 @@ module.exports = {
   transformers: {
     remark: {
       plugins: [
-        '@gridsome/remark-prismjs'
+        // '@gridsome/remark-prismjs'
       ]
     }
   },
 
   plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: './features/*.md',
+        typeName: 'Feature'
+      }
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {

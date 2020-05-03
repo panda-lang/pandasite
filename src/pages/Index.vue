@@ -21,35 +21,34 @@
                 .w-1-1.mx-6.h-full.lg_w-1-2.lg_mx-0
                     h1.bg-white.inline-block.mb-6.text-4xl.px-6.py-2.mb-4 Panda
                     h2.bg-white.inline-block.font-thin.text-3xl.px-6.py-2 is a clear and stylish programming language for JVM
-                    button.bg-white.inline-block.px-6.py-2.mt-6.text-2xl.bg-theme-download.text-white Get started →
+                    a.bg-white.inline-block.px-6.py-2.mt-6.text-2xl.bg-theme-download.text-white(href='/install') Get started →
 
-        .latest-release.container.mx-auto.flex.mb-16
+        .latest-release.container.mx-auto.flex.mb-14
             div.flex-1.mx-5
                 hr.border-black
             div.flex-1.text-center.-m-7.z-10.px-4
                 p.latest-text.m-0.p-0
                     span.text-gray.text-xl 1.0.0-alpha.1
                     br
-                    span.text-bold.text-sm.italic Latest Release ~ April 01, 2020
+                    span.text-bold.text-sm.italic Latest Release ~ May 10, 2020
             div.flex-1.mx-5
                 hr.border-black
 
         .features.container.mb-4.mx-auto.pb-4
             .features-data.flex.flex-col.justify-center.md_flex-row.md_flex-wrap.content-center
-                for val in [1, 2, 3]
-                    .feature-block.md_w-1-4.border-gray-300.mx-4.my-4.text-center.justify-center
-                        .content.mx-20.md_mx-0
-                            h3.feature-title.text-xl.p-0.md_p-3 Random Feature
-                            p.text-base.p-4.mb-2.md_mb-6 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                            button.bg-theme-download.px-6.py-1.text-white.mb-6 Read more
+                Feature(
+                    v-for="feature in $page.allFeature.edges" 
+                    :key="feature.node.id" 
+                    :feature="feature.node"
+                )
         .news.pb-12.container.mx-auto
             .news-data.flex-col
                 h1.inline-block.text-2xl.mb-6.px-6.pb-2 News
                 .flex.flex-col.justify-center.md_flex-row.md_flex-wrap
                     NewsPostPreview.w-1-1.md_w-2-3.lg_w-4-11(
-                        v-for="edge in $page.allNewsPost.edges" 
-                        :key="edge.node.id" 
-                        :post="edge.node"
+                        v-for="newsPost in $page.allNewsPost.edges" 
+                        :key="newsPost.node.id" 
+                        :post="newsPost.node"
                     )
         .footer-end
 
@@ -58,8 +57,17 @@
 
 <page-query>
 query {
+  allFeature(sortBy: "id", order: ASC) {
+    edges {
+      node {
+        id
+        title
+        link
+        content
+      }
+    }
+  }
   allNewsPost(sortBy: "id", order: DESC, limit: 3) {
-    totalCount
     edges {
       node {
         id
@@ -76,6 +84,7 @@ query {
 
 <script>
 import PandaHero from '../components/PandaHero'
+import Feature from '../components/Feature'
 import NewsPostPreview from '../components/NewsPostPreview'
 
 export default {
@@ -84,6 +93,7 @@ export default {
     },
     components: {
         PandaHero,
+        Feature,
         NewsPostPreview
     }
 }
