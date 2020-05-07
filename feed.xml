@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pandasite</title>
+        <link>https://panda-lang.org/</link>
+        <description>panda-lang organization website</description>
+        <lastBuildDate>Thu, 07 May 2020 23:26:17 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Gridsome Feed Plugin</generator>
+        <atom:link href="https://panda-lang.org/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Pandasite]]></title>
+            <link>https://panda-lang.org/news/pandasite/</link>
+            <guid>https://panda-lang.org/news/pandasite/</guid>
+            <pubDate>Sun, 10 May 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+# Pandasite
+Finally, after a long time, 
+we're happy to announce and introduce the [Pandasite](https://github.com/panda-lang/pandasite) - 
+a new website for panda-lang organization. 
+As a part of alpha release cycle, 
+we've add some extra sections with interesting content like:
+* `News` - regularly posted set of articles about changes and future updates
+* `Guide` - simple introduction into the Panda world and its features
+
+It's also time to say goodby to the old one: 
+
+![Old Page](/news/0.old-page.png) 
+
+So goodby, you served us well  💕  
+
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Panda 1.0.0-alpha]]></title>
+            <link>https://panda-lang.org/news/release-1-0-0-alpha/</link>
+            <guid>https://panda-lang.org/news/release-1-0-0-alpha/</guid>
+            <pubDate>Sun, 10 May 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+# Panda 1.0.0-alpha
+We're happy to announce 📢 the first official release of Panda. 
+Until this day we'll distribute user-friendly binaries to provide simple access and overall availability of current progress.
+
+Goals for alpha releases:
+* detect various bugs
+* verify some concepts
+* improve performance issues
+* simplify API for developers
+
+To download and install Panda, visit [install](/install) page. ]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Releases Roadmap]]></title>
+            <link>https://panda-lang.org/news/releases-roadmap/</link>
+            <guid>https://panda-lang.org/news/releases-roadmap/</guid>
+            <pubDate>Sun, 10 May 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+# Roadmap of release life cycle
+It's time to introduce the precisely defined Panda release life cycle.
+The development process is divided into 4 phases and we will describe them in this article.
+For the sake of clarity and transparent: we've just entered the 2nd phase - alpha.
+
+Here is a list of all the all phases:
+* `indev`
+* `alpha`
+* `beta`
+* `stable`
+
+We've prepared an image to visualize all these phases and plan for them:
+
+![How to draw Panda](/news/1.how-to-draw-panda.png) 
+
+*„I can't think of anything more rewarding than being able to express yourself to others through painting”
+<img class='emoji' src="https://panda-lang.org/news/1.bob-ross.png" alt='Bob Ross'> *]]></content:encoded>
+        </item>
+    </channel>
+</rss>

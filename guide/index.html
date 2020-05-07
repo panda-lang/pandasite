@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top" data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+<head>
+    <title>Guide - Pandasite</title><meta name="gridsome:hash" content="43c0acdf93802941257df1b66027117361c1bfb8"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.14"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><meta data-vue-tag="ssr" data-key="description" name="description" content=""><link rel="preload" href="/assets/css/0.styles.e292bd1a.css" as="style"><link rel="preload" href="/assets/js/app.c53240d5.js" as="script"><link rel="preload" href="/assets/js/page--src-pages-guide-vue.313f6ed5.js" as="script"><link rel="prefetch" href="/assets/js/14.b4b5ea8a.js"><link rel="prefetch" href="/assets/js/page--node-modules-gridsome-app-pages-404-vue.36a54557.js"><link rel="prefetch" href="/assets/js/page--src-pages-docs-vue.8f68b82c.js"><link rel="prefetch" href="/assets/js/page--src-pages-index-vue.49b4388c.js"><link rel="prefetch" href="/assets/js/page--src-pages-install-vue.623e8ce6.js"><link rel="prefetch" href="/assets/js/page--src-pages-news-vue.03c57db0.js"><link rel="prefetch" href="/assets/js/page--src-pages-page-not-found-vue.7df5f886.js"><link rel="prefetch" href="/assets/js/page--src-pages-support-vue.704c6d47.js"><link rel="prefetch" href="/assets/js/page--src-templates-guide-post-vue.972af0bb.js"><link rel="prefetch" href="/assets/js/page--src-templates-news-post-vue.0eb2d878.js"><link rel="prefetch" href="/assets/js/page--src-templates-tag-vue.252c995b.js"><link rel="prefetch" href="/assets/js/vendors~page--src-pages-support-vue.e43df639.js"><link rel="stylesheet" href="/assets/css/0.styles.e292bd1a.css"><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://indestructibletype.com/fonts/Jost.css" type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+</head>
+<body >
+    <div data-server-rendered="true" id="app" class="layout md_pt-header-spacing"><header class="panda-header bg-black text-white bg-texture z-10 w-full top-0 md_fixed"><nav class="container mx-auto bg-black"><div class="float-left flex flex-row"><a href="/" class="font-bold ml-4 mt-4 active">Pandasite</a></div><div class="float-right"><a href="/install" class="p-4 inline-block">Install</a><a href="/news" class="p-4 inline-block">News</a><a href="/guide" class="p-4 inline-block active--exact active">Guide</a><a href="/support" class="p-4 inline-block">Support</a><a href="xxxhttps://discordapp.com/invite/AN8HgWc" class="p-4 inline-block">Community</a></div><div class="clearfix"></div></nav></header><main><div class="guide flex"><div class="panel bg-grey flex justify-end"><div class="panel-right panel-width"><div class="fixed panel-width"><div class="panel-content flex flex-col items-center md_items-start fixed overflow-auto panel-width pl-8"><input id="search" type="text" placeholder="Search" value="" class="px-2 py-1 mt-14 mb-3 input"><div class="list pb-16"><div class="md_pl-2 w-full"><a href="#introduction"><p class="mt-4 text-sbase font-bold uppercase">Introduction</p></a></div><div class="md_pl-2 w-full"><a href="#installation"><p class="md_ml-4 mt-2 text-sbase">Installation</p></a></div><div class="md_pl-2 w-full"><a href="#tools"><p class="md_ml-4 mt-2 text-sbase">Tools</p></a></div><div class="md_pl-2 w-full"><a href="#project"><p class="mt-4 text-sbase font-bold uppercase">Project</p></a></div><div class="md_pl-2 w-full"><a href="#configuration"><p class="md_ml-4 mt-2 text-sbase">Configuration</p></a></div><div class="md_pl-2 w-full"><a href="#running"><p class="md_ml-4 mt-2 text-sbase">Running</p></a></div><div class="md_pl-2 w-full"><a href="#basics"><p class="mt-4 text-sbase font-bold uppercase">Basics</p></a></div><div class="md_pl-2 w-full"><a href="#comments"><p class="md_ml-4 mt-2 text-sbase">Comments</p></a></div><div class="md_pl-2 w-full"><a href="#main"><p class="md_ml-4 mt-2 text-sbase">Main</p></a></div><div class="md_pl-2 w-full"><a href="#basic-types"><p class="md_ml-4 mt-2 text-sbase">Basic types</p></a></div><div class="md_pl-2 w-full"><a href="#log"><p class="md_ml-4 mt-2 text-sbase">Log</p></a></div><div class="md_pl-2 w-full"><a href="#modules"><p class="md_ml-4 mt-2 text-sbase">Modules</p></a></div><div class="md_pl-2 w-full"><a href="#require"><p class="md_ml-4 mt-2 text-sbase">Require</p></a></div><div class="md_pl-2 w-full"><a href="#import"><p class="md_ml-4 mt-2 text-sbase">Import</p></a></div><div class="md_pl-2 w-full"><a href="#export"><p class="md_ml-4 mt-2 text-sbase">Export</p></a></div><div class="md_pl-2 w-full"><a href="#variables"><p class="md_ml-4 mt-2 text-sbase">Variables</p></a></div><div class="md_pl-2 w-full"><a href="#operators"><p class="md_ml-4 mt-2 text-sbase">Operators</p></a></div><div class="md_pl-2 w-full"><a href="#conditions"><p class="md_ml-4 mt-2 text-sbase">Conditions</p></a></div><div class="md_pl-2 w-full"><a href="#loops"><p class="md_ml-4 mt-2 text-sbase">Loops</p></a></div><div class="md_pl-2 w-full"><a href="#branching"><p class="md_ml-4 mt-2 text-sbase">Branching</p></a></div><div class="md_pl-2 w-full"><a href="#throw"><p class="md_ml-4 mt-2 text-sbase">Throw</p></a></div><div class="md_pl-2 w-full"><a href="#try"><p class="md_ml-4 mt-2 text-sbase">Try</p></a></div><div class="md_pl-2 w-full"><a href="#types"><p class="mt-4 text-sbase font-bold uppercase">Types</p></a></div><div class="md_pl-2 w-full"><a href="#visibility"><p class="md_ml-4 mt-2 text-sbase">Visibility</p></a></div><div class="md_pl-2 w-full"><a href="#constructors"><p class="md_ml-4 mt-2 text-sbase">Constructors</p></a></div><div class="md_pl-2 w-full"><a href="#fields"><p class="md_ml-4 mt-2 text-sbase">Fields</p></a></div><div class="md_pl-2 w-full"><a href="#methods"><p class="md_ml-4 mt-2 text-sbase">Methods</p></a></div><div class="md_pl-2 w-full"><a href="#static"><p class="md_ml-4 mt-2 text-sbase">Static</p></a></div><div class="md_pl-2 w-full"><a href="#inheritance"><p class="md_ml-4 mt-2 text-sbase">Inheritance</p></a></div><div class="md_pl-2 w-full"><a href="#base"><p class="md_ml-4 mt-2 text-sbase">Base</p></a></div><div class="md_pl-2 w-full"><a href="#interfaces"><p class="md_ml-4 mt-2 text-sbase">Interfaces</p></a></div><div class="md_pl-2 w-full"><a href="#expressions"><p class="mt-4 text-sbase font-bold uppercase">Expressions</p></a></div><div class="md_pl-2 w-full"><a href="#concatenation"><p class="md_ml-4 mt-2 text-sbase">Concatenation</p></a></div><div class="md_pl-2 w-full"><a href="#number-types"><p class="md_ml-4 mt-2 text-sbase">Number types</p></a></div><div class="md_pl-2 w-full"><a href="#developers"><p class="mt-4 text-sbase font-bold uppercase">Developers</p></a></div></div></div></div></div></div><div class="guide-content markdown p-24 pt-7 justify-center mb-40"><div><div id="100"><h1 id="introduction"><a href="#introduction" aria-hidden="true"><span class="icon icon-link"></span></a>Introduction</h1>
+<p><a href="https://panda-lang.org/" target="_blank" rel="nofollow noopener noreferrer">Panda</a> is a clear and stylish programming language for JVM based on top of the Panda Framework, focusing on safety, simplicity and extensibility. </p>
+<p><strong>Note:</strong> <code>At this moment Panda is at an early stage of development and it is not recommended to use it in any kind of software that requires stability.</code></p>
+<h2 id="who-panda-is-for"><a href="#who-panda-is-for" aria-hidden="true"><span class="icon icon-link"></span></a>Who Panda is For</h2>
+<p>The purpose of the Panda is to reduce boilerplate code written in Java and improve the safety of various aspects of Java language using modern solutions.
+It is also a default implementation of Panda Framework and presentation of some of its possibilities. Let's see who may be interested.</p>
+<h3 id="-beginners"><a href="#-beginners" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Beginners</h3>
+<p>The language and ecosystem is simple and friendly for people who just stared their journey with software development.
+Tools like <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank" rel="nofollow noopener noreferrer">REPL</a> or implementation like <a href="https://github.com/panda-lang/light" target="_blank" rel="nofollow noopener noreferrer">Light</a> should make this path easier.</p>
+<h3 id="-open-source-developers"><a href="#-open-source-developers" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Open Source Developers</h3>
+<p><a href="https://en.wikipedia.org/wiki/Open-source_software" target="_blank" rel="nofollow noopener noreferrer">Open Source</a> is most of all a community that work together to reach the same goal. Be one of the first people who may create awesome libraries or contribute to the existing projects related with Panda.</p>
+<h3 id="-developers"><a href="#-developers" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Developers</h3>
+<p>Enhance your project by scripts written in Panda or create your own language on top of the Panda Framework. Implement in a few steps language that is suited to your case instead of trying to force existing solutions to your needs.</p>
+<h2 id="when-we-discourage"><a href="#when-we-discourage" aria-hidden="true"><span class="icon icon-link"></span></a>When We Discourage</h2>
+<p>As always, there is no perfect technology and here is a list of disadvantages that should be considered against using projects based on Panda Framework</p>
+<ul>
+<li>Handling huge amount of primitive-based data</li>
+<li>Heavy math operations <em>(it's also related to the first point)</em></li>
+</ul>
+<p>Panda does not support primitive types, each operation on this kind of data causes <a href="https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html" target="_blank" rel="nofollow noopener noreferrer">autoboxing</a>. In a standard code it does not really matter, but in case of any listed situation it may be a bottleneck.</p>
+</div><!----></div><div><div id="101"><h1 id="installation"><a href="#installation" aria-hidden="true"><span class="icon icon-link"></span></a>Installation</h1>
+<p>At this moment we offer two ways to install Panda. The first one is dedicated for users and developers who use and create applications in Panda. The second on is for developers who want to use Panda Framework as a scripting language in theirs applications.</p>
+<h3 id="-general"><a href="#-general" aria-hidden="true"><span class="icon icon-link"></span></a>‣ General</h3>
+<p>As we said, Panda runs on JVM <em>(Java Virtual Machine)</em>. We have prepared installer with wrapped JVM to get rid of problems related to some kind of invalid/custom installations of an existing machines.</p>
+<pre><code class="language-bash">./panda-installer.exe
+</code></pre>
+<h3 id="-developers"><a href="#-developers" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Developers</h3>
+<p>Panda supports various implementations of JVM and all their versions above 8+</p>
+<ul>
+<li>Oracle HotSpot </li>
+<li>OpenJDK</li>
+<li>GraalVM <em>(Native images are not supported yet)</em></li>
+<li>DCEVM</li>
+</ul>
+<p>As a standard way to serve Java library, we host <a href="https://maven.apache.org/what-is-maven.html" target="_blank" rel="nofollow noopener noreferrer">Maven</a> artifact located in our own repository called <a href="https://repo.panda-lang.org/" target="_blank" rel="nofollow noopener noreferrer">Panda Repository</a>: </p>
+<pre><code class="language-xml">&#x3C;repository>
+    &#x3C;id>panda-repository&#x3C;/id>
+    &#x3C;name>Panda Repository&#x3C;/name>
+    &#x3C;url>https://repo.panda-lang.org/&#x3C;/url>
+&#x3C;/repository>
+</code></pre>
+<p>The artifact may be found as:</p>
+<pre><code class="language-xml">&#x3C;dependency>
+    &#x3C;groupId>org.panda-lang&#x3C;/groupId>
+    &#x3C;artifactId>panda&#x3C;/artifactId>
+    &#x3C;version>{version}&#x3C;/version>
+&#x3C;/dependency>
+</code></pre>
+</div><!----></div><div><div id="102"><h2 id="tools"><a href="#tools" aria-hidden="true"><span class="icon icon-link"></span></a>Tools</h2>
+<p>Project is still unstable and there is no official and advanced tools yet. You may take a look at these concepts:</p>
+<ul>
+<li><a href="https://github.com/panda-lang/light" target="_blank" rel="nofollow noopener noreferrer">Light</a> - English-like programming language built using the Panda Framework</li>
+<li><a href="https://github.com/panda-lang/reposilite" target="_blank" rel="nofollow noopener noreferrer">Reposilite</a> - Repository management software based on Spring mainly dedicated for Maven and Panda-based artifacts </li>
+<li><a href="https://github.com/panda-lang/lily" target="_blank" rel="nofollow noopener noreferrer">Lily</a> - a modular and lightweight IDE for languages based on Panda Framework</li>
+</ul>
+<p>We don't recommend to use API of Panda Framework before <strong>beta</strong> release.</p>
+</div><!----></div><div><div id="200"><h1 id="project"><a href="#project" aria-hidden="true"><span class="icon icon-link"></span></a>Project</h1>
+<p>Projects in Panda should follow the standardized structure.
+Create a directory for your new project called e.g. <code>awesome-project</code>:</p>
+<pre><code class="language-bash">$ mkdir awesome-project
+$ cd awesome-project
+</code></pre>
+<p>Every proper project should contain at least 2 files:</p>
+<ul>
+<li><code>panda.hjson</code> - project configuration file with some details about the current project</li>
+<li><code>app.panda</code> - main script file <em>(Name of this file can be changed in a configuration)</em></li>
+</ul>
+<p>Let's see how it should look like:</p>
+<pre><code class="language-bash">panda-project/     # project directory
+  src/             # sources
+    app.panda      # main script file
+  tests/           # &#x3C;concept> integration tests
+  resources/       # &#x3C;concept> non panda files
+  panda.hjson      # project configuration file
+  README.md        # project description for GitHub and Reposilite pages 
+</code></pre>
+</div><!----></div><div><div id="201"><h2 id="configuration-file-pandahjson"><a href="#configuration-file-pandahjson" aria-hidden="true"><span class="icon icon-link"></span></a>Configuration file panda.hjson</h2>
+<p>This file describes our project and the way how it works. It uses JSON-like format called <code>'JSON for Humans'</code>.
+Standard configuration file should contain <code>name</code>, <code>version</code>, <code>author</code> and <code>main</code> key-value properties:</p>
+<pre><code class="language-json">name: awesome-project
+version: 1.0.0
+owner: dzikoysk
+
+scripts: {
+    main: src/app.panda
+}
+</code></pre>
+<p>You may also declare dependencies by adding the dependencies section:</p>
+<pre><code class="language-json">dependencies: [
+    // &#x3C;source>:&#x3C;author>/&#x3C;name>@&#x3C;version>
+    github:dzikoysk/panda-dependency@1.0.1
+]
+</code></pre>
+</div><!----></div><div><div id="202"><h2 id="writing-and-running-a-panda-program"><a href="#writing-and-running-a-panda-program" aria-hidden="true"><span class="icon icon-link"></span></a>Writing and Running a Panda Program</h2>
+<p>Panda files always end with <code>.panda</code> extension. You could already notice that we've declared our main file in project configuration as <code>app.panda</code> in directory <code>src</code>, so let's create it now:</p>
+<pre><code class="language-bash">panda@terminal ./project-awesome/
+$ mkdir src
+$ touch src/app.panda
+</code></pre>
+<p>Next, add the following code to your <code>app.panda</code> file. You can use your favorite editor like e.g. <a href="https://code.visualstudio.com/" target="_blank" rel="nofollow noopener noreferrer">Visual Studio Code</a>.</p>
+<pre><code class="language-panda">main {
+    log 'Hello, Panda!'
+}
+</code></pre>
+<p>You can assume that the code that you have already used will print <code>'Hello, Panda!'</code> message in the console. Don't worry, we will analyze this code later. Let's check the result - to launch the <code>awesome-project</code> you need just one more step:</p>
+<pre><code class="language-bash">panda@terminal ./project-awesome/
+$ panda panda.hjson
+Hello, Panda!
+
+--- OR: you may call src/app.panda directly (it ignores project configuration file)
+
+$ panda src/app.panda
+Hello, Panda!
+</code></pre>
+<p>Congratulations! You've officially written a Panda program. That makes you a Panda programmer - welcome!</p>
+</div><!----></div><div><div id="300"><h1 id="basics"><a href="#basics" aria-hidden="true"><span class="icon icon-link"></span></a>Basics</h1>
+<p>Many programming languages have much in common at their core.
+This chapter is a list of available structures and expressions in Panda.
+They are ordered in a way that may help during the learning process.</p>
+</div><!----></div><div><div id="301"><h2 id="comments"><a href="#comments" aria-hidden="true"><span class="icon icon-link"></span></a>Comments</h2>
+<p>Comments are statements in our code that the interpreter ignores.
+We generally use them to explain the code.
+It means comments will not be the part of the program and it will not be executed.</p>
+<pre><code class="language-panda">// single line comment
+
+/*
+Multiline
+Comment
+*/
+
+/**
+ * Documentation comment
+ * It's used to generate documentation of your program in a standardized way
+ */
+</code></pre>
+</div><!----></div><div><div id="302"><h2 id="main"><a href="#main" aria-hidden="true"><span class="icon icon-link"></span></a>Main</h2>
+<p>The main block is a launch station of your application.
+It is called by the interpreter and it is always the first code that runs in every executable program.</p>
+<pre><code class="language-panda">main {
+    // code goes here
+}
+</code></pre>
+<p>Remember - You should specify file with a main statement in your project configuration file.</p>
+</div><!----></div><div><div id="303"><h2 id="basic-types"><a href="#basic-types" aria-hidden="true"><span class="icon icon-link"></span></a>Basic types</h2>
+<p>Data type identifies and describes values used in your code.
+By default, we have types that identifies numbers, texts or logical values.</p>
+<h3 id="-numbers"><a href="#-numbers" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Numbers</h3>
+<p>Integral numbers are defined by the <code>Int</code> type:</p>
+<pre><code class="language-panda">123
+-321
+</code></pre>
+<p>In the similar way we can use <a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic" target="_blank" rel="nofollow noopener noreferrer">floating-point numbers</a> represented by the <code>Float</code> type:</p>
+<pre><code class="language-panda">1.0
+-0.1337
+</code></pre>
+<p>There are also other number types like <code>Byte</code>, <code>Short</code>, <code>Long</code> and <code>Double</code>.
+You will learn about them in the future.</p>
+<h3 id="-text"><a href="#-text" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Text</h3>
+<p>In programming, the type that describes text is called <a href="https://en.wikipedia.org/wiki/String_(computer_science)" target="_blank" rel="nofollow noopener noreferrer">String</a>.
+As of today, every time you want to use some sequence of characters in your program, you have to call it <code>String</code>.
+We can declare <code>String</code> in two forms:</p>
+<pre><code class="language-panda">// preferred way of declaring strings, 
+// we can use quotation marks inside of the apostrophe string
+'Michael Scott said "I love inside jokes. I hope to be a part of one someday."'
+
+// useful when we want to use apostrophe in string
+"That's what she said"
+</code></pre>
+<h3 id="-logic"><a href="#-logic" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Logic</h3>
+<p>To represent <code>true</code> and <code>false</code> states we need to use the <a href="https://en.wikipedia.org/wiki/Boolean_data_type" target="_blank" rel="nofollow noopener noreferrer">boolean</a> data type.
+The boolean values in Panda are represented by the <code>Bool</code> type.</p>
+<h3 id="-arrays"><a href="#-arrays" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Arrays</h3>
+<p><a href="https://en.wikipedia.org/wiki/Array_programming" target="_blank" rel="nofollow noopener noreferrer">Array</a> is a collection of values with a predefined size.
+It is well-known structure in programming,
+but if you haven't never had a contact with any programming language,
+you can imagine it as a primitive form of list.</p>
+<p>To create an array, you have to use <code>[]</code> operator:</p>
+<pre><code class="language-panda">String[] array = new String[5] // array of 5 elements
+array[0] = "First element in array" // store string value at position 0 in array
+log array[0] // print value at position 0
+</code></pre>
+</div><!----></div><div><div id="304"><h2 id="log"><a href="#log" aria-hidden="true"><span class="icon icon-link"></span></a>Log</h2>
+<p>In a clear way, <em>logging</em> is just a fancy word to define a process of writing down what you do.
+It is utility statement, used in most cases to display list of expressions to a default output of your application <em>(e.g. console)</em>.</p>
+<pre><code class="language-panda">log 'Hello', 'Panda!'
+</code></pre>
+<p>Despite this, serious projects should still consider custom logging libraries for a fuller experience.</p>
+</div><!----></div><div><div id="305"><h2 id="modules"><a href="#modules" aria-hidden="true"><span class="icon icon-link"></span></a>Modules</h2>
+<p>Every piece of your application should belong somewhere. This place is called <em>module</em> and it is defined on top of your file.</p>
+<pre><code class="language-panda">module awesome-app
+
+// for submodules
+
+module awesome-app:submodule
+</code></pre>
+<p>Names of modules supports:</p>
+<ul>
+<li>letters <code>a-zf</code></li>
+<li>digits <code>0-9</code></li>
+<li>dashes <code>-</code></li>
+<li>colons <code>:</code> (to separate submodules)</li>
+</ul>
+</div><!----></div><div><div id="306"><h2 id="require"><a href="#require" aria-hidden="true"><span class="icon icon-link"></span></a>Require</h2>
+<p>As you could see, we can define modules related to some parts of our application.
+It is a standard way to distribute utilities by libraries, to use delivered components we need to import them using the following structure:</p>
+<pre><code class="language-panda">// import java collections from std/module path
+require java:collections
+
+// import 'local-module' module in directory ./local-module
+require 'local-module'
+</code></pre>
+<p>The require statement supports also single files:</p>
+<pre><code class="language-panda">// import './local-file.panda' file
+require 'local-file'
+</code></pre>
+</div><!----></div><div><div id="307"><h2 id="import"><a href="#import" aria-hidden="true"><span class="icon icon-link"></span></a>Import</h2>
+<p>Import works like the require statement, but for Java classes.
+Using this structure you can easily use types from Java, they are mapped automatically.</p>
+<pre><code class="language-panda">import java.lang.Thread
+</code></pre>
+<p><strong>Note:</strong> Imported classes are not visible in another files. To make imported class visible use <code>export</code> statement.</p>
+</div><!----></div><div><div id="308"><h2 id="export"><a href="#export" aria-hidden="true"><span class="icon icon-link"></span></a>Export</h2>
+<p>To improve overall scripting experience and simplify access to the Java types, you can use the <code>export</code> statement.
+The statement works like <code>import</code>, but it also publishes the result to the other participants like files and modules that imports this module.</p>
+<pre><code class="language-panda">module extra-java-bindings
+
+// export StringUtils class, the class will be visible in 
+export org.panda_lang.utilities.commons.StringUtils
+</code></pre>
+<p>It may be helpful during the process of creating wrappers and bindings modules for existing Java apps and libraries.</p>
+</div><!----></div><div><div id="309"><h2 id="variables"><a href="#variables" aria-hidden="true"><span class="icon icon-link"></span></a>Variables</h2>
+<p>A variable is a symbolic name for your information <em>(value)</em>. Every variable must be declared. Any attempt to use a variable that hasn't been declared yet is a syntax error. By default, variables in Panda are:</p>
+<ul>
+<li><em>Immutable</em> - once assigned value cannot be changed in the future</li>
+<li><em>Null safety</em> - you are not allowed to assign <a href="https://en.wikipedia.org/wiki/Null_pointer" target="_blank" rel="nofollow noopener noreferrer">null</a> (not existing) values</li>
+</ul>
+<pre><code class="language-panda">String message = 'With Great Beard Comes Great Responsibility'
+</code></pre>
+<h3 id="-mutable"><a href="#-mutable" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Mutable</h3>
+<p>Sometimes there is a need to change/update value of some variables. To make your variable mutable just add <code>mut</code> keyword</p>
+<pre><code class="language-panda">mut String messageOfTheDay = 'Productivity'
+
+if true {
+    messageOfTheDay = 'Cat Videos'
+}
+</code></pre>
+<h3 id="-nullable"><a href="#-nullable" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Nullable</h3>
+<p>In some evil scenarios you may be also forced to handle null values <em>(e.g. during the interaction with Java libraries)</em>. </p>
+<pre><code class="language-panda">nil String playingWithFire = null
+</code></pre>
+<p><strong>Remember:</strong> You should avoid null values, it is really bad practice to operate directly on a value that in fact does not even exist. Null values are also known as <a href="https://en.wikipedia.org/wiki/Tony_Hoare#Apologies_and_retractions" target="_blank" rel="nofollow noopener noreferrer">The Billion Dollar Mistake</a>. Panda supports <code>null</code> values only because of the compatibility requirements with Java layer.</p>
+<h3 id="-late"><a href="#-late" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Late</h3>
+<p>Let's say you want to assign value to a variable a little later due to e.g. some kind of condition.
+You may use <code>late</code> keyword to have a guarantee that the variable was assigned before its usage.
+You can also still benefit from the immutability of this variable.</p>
+<pre><code class="language-panda">late String conditionalValue
+
+if true {
+    conditionalValue = 'a'
+}
+else {
+    conditionalValue = 'b'
+}
+</code></pre>
+</div><!----></div><div><div id="310"><h2 id="operators"><a href="#operators" aria-hidden="true"><span class="icon icon-link"></span></a>Operators</h2>
+<p>Operators are these all strange combinations of <code>~!=-+:/|()%&#x26;*</code> characters that do some basic stuff like e.g. comparing two values.
+This article should be a part of the Chapter 5 about expressions,
+but we need to explain it now to clarify some of the next basic structures.</p>
+<h3 id="-arithmetic-operators"><a href="#-arithmetic-operators" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Arithmetic Operators</h3>
+<p>Returns <code>Number</code> as a result of operation</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td align="left">Addition</td>
+<td align="left">Adds together two values</td>
+<td align="left"><code>x + y</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td align="left">Subtraction</td>
+<td align="left">Subtracts one value from another</td>
+<td align="left"><code>x - y</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td align="left">Multiplication</td>
+<td align="left">Adds together two values</td>
+<td align="left"><code>x * y</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td align="left">Division</td>
+<td align="left">Adds together two values</td>
+<td align="left"><code>x / y</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td align="left">Modulus</td>
+<td align="left">Adds together two values</td>
+<td align="left"><code>x % y</code></td>
+</tr>
+<tr>
+<td><code>++</code></td>
+<td align="left">Increment</td>
+<td align="left">Increases the value of a variable by 1</td>
+<td align="left"><code>i++</code></td>
+</tr>
+<tr>
+<td><code>--</code></td>
+<td align="left">Decrement</td>
+<td align="left">Decreases the value of a variable by 1</td>
+<td align="left"><code>i--</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="-assignment-operators"><a href="#-assignment-operators" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Assignment Operators</h3>
+<p>Returns assigned value as a result</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code></td>
+<td>Assign value to a variable</td>
+<td><code>x = y</code></td>
+</tr>
+<tr>
+<td><code>+=</code></td>
+<td>Add value to a variable</td>
+<td><code>x += y</code></td>
+</tr>
+<tr>
+<td><code>-=</code></td>
+<td>Subtract value from a variable</td>
+<td><code>x -= y</code></td>
+</tr>
+<tr>
+<td><code>*=</code></td>
+<td>Multiplicate value of variable</td>
+<td><code>x *= y</code></td>
+</tr>
+<tr>
+<td><code>/=</code></td>
+<td>Divide value of variable</td>
+<td><code>x /= y</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remember:</strong> Variables modified by these operators have to be mutable.</p>
+<h3 id="-comparison-operators"><a href="#-comparison-operators" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Comparison Operators</h3>
+<p>Returns <code>true</code> or <code>false</code> as a result:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>==</code></td>
+<td>Equals to</td>
+<td><code>x == y</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>Not equals to</td>
+<td><code>x != y</code></td>
+</tr>
+<tr>
+<td><code>></code></td>
+<td>Greater than</td>
+<td><code>x > y</code></td>
+</tr>
+<tr>
+<td><code>&#x3C;</code></td>
+<td>Less than</td>
+<td><code>x &#x3C; y</code></td>
+</tr>
+<tr>
+<td><code>>=</code></td>
+<td>Greater than or equal to</td>
+<td><code>x &#x3C;= y</code></td>
+</tr>
+<tr>
+<td><code>&#x3C;=</code></td>
+<td>Less than or equal to</td>
+<td><code>x >= y</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="-logical-operators"><a href="#-logical-operators" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Logical Operators</h3>
+<p>Returns <code>true</code> or <code>false</code> as a result:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Name</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&#x26;&#x26;</code></td>
+<td>And</td>
+<td>True if both statements are true</td>
+<td><code>(x == 0) &#x26;&#x26; (y == 0)</code></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>Or</td>
+<td>True if one of the statements is true</td>
+<td><code>(x == 0) || (y == 0)</code></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>Not</td>
+<td>Reverse the result value</td>
+<td><code>!(x == 0)</code></td>
+</tr>
+</tbody>
+</table>
+</div><!----></div><div><div id="311"><h2 id="conditions"><a href="#conditions" aria-hidden="true"><span class="icon icon-link"></span></a>Conditions</h2>
+<p>Conditions performs different computations or actions depending on a provided value:</p>
+<pre><code class="language-panda">String slogan = 'I’m lovin’ it'
+
+if slogan == 'Taste the rainbow' {
+    // do something if the slogan variable is equals to the 'Taste the rainbow' text
+}
+else if slogan != '' {
+    // do something if slogan is not empty
+}
+else {
+    // do something if all of the above conditions hasn't been succeed
+}
+</code></pre>
+<p>As you might suppose, the <code>do something if slogan is not empty</code> section will be performed. </p>
+</div><!----></div><div><div id="312"><h2 id="loops"><a href="#loops" aria-hidden="true"><span class="icon icon-link"></span></a>Loops</h2>
+<p>Loops are used to execute a set of statements repeatedly until a particular condition is satisfied.
+Panda supports 4 types of loops at this moment.</p>
+<h3 id="-loop"><a href="#-loop" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Loop</h3>
+<p>You can just easily loop <code>x</code> times using the standard <code>loop</code> statement:</p>
+<pre><code class="language-panda">loop 5 {
+    log 'ฅ^•ﻌ•^ฅ' // this code will be performed 5 times
+}
+</code></pre>
+<h3 id="-for"><a href="#-for" aria-hidden="true"><span class="icon icon-link"></span></a>‣ For</h3>
+<p>The most popular for-loop in almost every programming language. The pattern of <code>for</code> syntax is as follows:</p>
+<pre><code class="language-panda">for (initialization; termination condition; increment) {
+    statement(s)
+}
+</code></pre>
+<ul>
+<li><em>initialization</em> - you can declare auxiliary variable here. It's executed only once, as the loop begins </li>
+<li><em>termination condition</em> - as long as this condition is <code>true</code>, the loop will be performed</li>
+<li><em>increment</em> - this expression is invoked after each iteration through the loop</li>
+</ul>
+<p>An example implementation of this statement might looks like:</p>
+<pre><code class="language-panda">for (mut Int index = 1; index &#x3C; 2; index++) {
+    log index
+}
+</code></pre>
+<p><strong>Note:</strong> You can also skip some of these expressions or even all of them:</p>
+<pre><code class="language-panda">for (;;) {
+    log 'What's happening?!'
+}
+</code></pre>
+<p>You've just created the infinite loop! </p>
+<h3 id="-for-each"><a href="#-for-each" aria-hidden="true"><span class="icon icon-link"></span></a>‣ For each</h3>
+<p>You can also use <code>foreach</code> loop to iterate over iterable structures (in most cases just collections):</p>
+<pre><code class="language-panda">foreach (String element : collection) { 
+    log element
+}
+</code></pre>
+<h3 id="-while"><a href="#-while" aria-hidden="true"><span class="icon icon-link"></span></a>‣ While</h3>
+<p>Another popular loop called while-loop.
+The while loop loops through a block of code as long as a specified condition is true.</p>
+<pre><code class="language-panda">mut active = true
+
+while active {
+    log 'Active: ' + (active = false)
+}
+</code></pre>
+<p><strong>Note:</strong> As an alternative to infinite loops based on <code>for (;;) { }</code>, you can just use <code>while true { }</code> ✧ʕ̢̣̣̣̣̩̩̩̩·͡˔·ོɁ̡̣̣̣̣̩̩̩̩✧</p>
+</div><!----></div><div><div id="313"><h2 id="branching-statements"><a href="#branching-statements" aria-hidden="true"><span class="icon icon-link"></span></a>Branching statements</h2>
+<p>Branching statements interfere the control flow of your code.
+Using these statements you can easily return values and interrupt some actions.</p>
+<h3 id="-return"><a href="#-return" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Return</h3>
+<p>Using the <code>return</code> statement you can easily interrupt execution of current scope.</p>
+<pre><code class="language-panda">main {
+    if true {
+        return // the main scope will be terminated here
+    } 
+
+    // this code is unreachable
+}
+</code></pre>
+<p>You are also able to return a value.
+For instance, method <code>getMessage()</code> that returns <code>String</code>
+<em>(don't worry, we will explain methods later)</em></p>
+<pre><code class="language-panda">shared String getMessage() {
+    return 'Hello Panda' // return value
+}
+</code></pre>
+<h3 id="-continue"><a href="#-continue" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Continue</h3>
+<p>The <code>continue</code> statement allows us to skip current iteration of loop.
+Because of this fact, it works only in loops.</p>
+<pre><code class="language-panda">for (mut Int index = 0; index &#x3C; 10; index++) {
+    if (index % 2) == 0 {
+        continue // skip even numbers
+    }
+
+    log index
+}
+
+// prints 1, 3, 5, 7, 9
+</code></pre>
+<h3 id="-break"><a href="#-break" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Break</h3>
+<p>The <code>break</code> statement works like <code>return</code> for loops.
+Using the <code>break</code> you can terminate flow of execution.</p>
+<pre><code class="language-panda">while true {
+    if ThreadLocalRandom.current().nextInt(0, 100) == 50 {
+        break // break infinite loop if we draw number 50 🤡
+    }
+}
+</code></pre>
+</div><!----></div><div><div id="314"><h2 id="throw"><a href="#throw" aria-hidden="true"><span class="icon icon-link"></span></a>Throw</h2>
+<p>An <a href="https://en.wikipedia.org/wiki/Exception_handling" target="_blank" rel="nofollow noopener noreferrer">exception</a> is an event,
+which occurs during the execution of a program,
+that disrupts the normal flow of the program's instructions. </p>
+<p>What does it mean?
+In case of any unwanted situations (like passing invalid data),
+we can interrupt execution of our application using the <code>throw</code> keyword.</p>
+<p>Let's say we want to make sure that nobody will perform division by zero:</p>
+<pre><code class="language-panda">Int by = 0 // user data
+
+if (by == 0) {
+    throw new Exception('Cannot divide by zero') // throw error
+}
+
+log 100/by
+</code></pre>
+<p>These exceptions are fully compatible with Java exception system. </p>
+</div><!----></div><div><div id="315"><h2 id="try"><a href="#try" aria-hidden="true"><span class="icon icon-link"></span></a>Try</h2>
+<p>We've just talked about throwing exceptions.
+It might be very confusing to understand, why would you throw these strange exceptions,
+if you could just simply log an error message and return.
+The whole thing is that actually, we can catch these exceptions using the <code>try-catch</code> block:</p>
+<pre><code class="language-panda">Int by = 0 // user data
+
+try {
+    if (by == 0) {
+        throw new Exception('Cannot divide by zero') // throw error
+    }
+
+    log 100/by
+} 
+catch (Exception e) {
+    log e.getMessage() // print message of the caught exception
+}
+</code></pre>
+<p>Using this <code>try-catch</code> you can also catch exceptions thrown in Java sources.</p>
+</div><!----></div><div><div id="400"><h1 id="types"><a href="#types" aria-hidden="true"><span class="icon icon-link"></span></a>Types</h1>
+<p>Types describe values and its behaviors.
+You've already used some of them like <code>String</code> and <code>Bool</code>. </p>
+<p>It's time to create a new one, let's say a <code>Cat</code> type.
+To declare a new type, we need to use <code>type</code> keyword:</p>
+<pre><code class="language-panda">type Cat {
+
+}
+</code></pre>
+<p>To use a new type, you have to create a new instance using the <code>new {TypeName}()</code> structure:</p>
+<pre><code class="language-panda">Cat garfield = new Cat()
+Cat grumpy = new Cat()
+</code></pre>
+<p>In the following articles about <code>fields</code>, <code>methods</code>, <code>constructors</code> and many others, we will enhance this example.</p>
+<p><strong>Remember:</strong> Members of types <em>(like <code>fields</code> or <code>methods</code>)</em> are called <code>properties</code>.
+Some of them can by called using the <code>()</code> structure.
+We can also specify some extra data between this brackets - these values are called <code>arguments</code>.</p>
+</div><!----></div><div><div id="401"><h2 id="visibility"><a href="#visibility" aria-hidden="true"><span class="icon icon-link"></span></a>Visibility</h2>
+<p>In fact, before we will start talking about all the mechanisms associated with types,
+we need to introduce the visibility system. </p>
+<p>Visibility allows us to control access to various properties declared by types.
+At this moment Panda supports 3 visibilities:</p>
+<ul>
+<li><code>public</code> - we can access these properties wherever we are</li>
+<li><code>shared</code> - only module that owns this type, and its submodules, can access these properties</li>
+<li><code>internal</code> - only type and its inheritors can access these properties</li>
+</ul>
+<p>Because of the fact that it might be hard to understand for beginners,
+we will declare every property as <code>public</code> for the purposes of the guide.</p>
+</div><!----></div><div><div id="402"><h2 id="constructors"><a href="#constructors" aria-hidden="true"><span class="icon icon-link"></span></a>Constructors</h2>
+<p>Constructor is a block of code executed when we create an instance of our type.</p>
+<pre><code class="language-panda">type Cat {
+    public constructor(String name) {
+        log name
+    }
+}
+
+main {
+    // new Cat() performs constructor()
+    Cat garfield = new Cat('Garfield')
+    Cat grumpy = new Cat('Grumpy Cat')
+}
+</code></pre>
+<p>If we do not specify a custom constructor,
+Panda will generate the empty one <code>public constructor() { }</code> that just does nothing.</p>
+</div><!----></div><div><div id="403"><h2 id="fields"><a href="#fields" aria-hidden="true"><span class="icon icon-link"></span></a>Fields</h2>
+<p>To put it simply, field is just a variable that belongs to the type.
+The pattern that defines fields is as follows:</p>
+<pre><code class="language-xml">{visibility} {type} {name}
+</code></pre>
+<p>Let's say we want add field with a name of our cat to store this information:</p>
+<pre><code class="language-panda">type Cat {
+    // {visibility} {type} {name}
+    public String name
+
+    public constructor(String name) {
+        // to distinguish variable name with field name, 
+        // we can use 'this.` prefix to indicate field
+        this.name = name
+    }
+}
+
+main {
+    Cat garfield = new Cat('Garfield')
+    Cat grumpy = new Cat('Grumpy Cat')
+
+    // we can access field 'name', so let's print its value
+    log garfield.name, grumpy.name
+}
+</code></pre>
+</div><!----></div><div><div id="404"><h2 id="methods"><a href="#methods" aria-hidden="true"><span class="icon icon-link"></span></a>Methods</h2>
+<p>A function is a block of organized, reusable code that is used to perform a single, related action.
+Functions that belong to types are called <code>methods</code>.
+The pattern that defines methods is as follows:</p>
+<pre><code class="language-xml">{visibility} {return type} {method name} ( {parameters} ) {
+    // code
+}
+</code></pre>
+<p>Let's replace direct access to field <code>name</code> with a method <code>getName()</code>:</p>
+<pre><code class="language-panda">type Cat {
+    internal String name
+
+    public constructor(String name) {
+        this.name = name
+    }
+
+    // {visibility} {return type} {method name} ( {parameters} )
+    public String getName() {
+        return this.name
+    }
+}
+
+main {
+    Cat garfield = new Cat('Garfield')
+    Cat grumpy = new Cat('Grumpy Cat')
+
+    // we can call methods just like that:
+    log garfield.getName(), grumpy.getName()
+}
+</code></pre>
+</div><!----></div><div><div id="405"><h2 id="static"><a href="#static" aria-hidden="true"><span class="icon icon-link"></span></a>Static</h2>
+<p>Fields and methods you've already used in the previous articles were called and accessed using some object instances.
+There is also a way to declare properties that do not need an instance to work.
+This kind of properties are called <code>static</code> and are often used to declare some constant values and utilities.</p>
+<h3 id="-fields"><a href="#-fields" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Fields</h3>
+<p>It is good practice to use uppercase names for static fields:</p>
+<pre><code class="language-panda">type Mars {
+    public static Float RADIUS = 3389.5
+}
+
+main {
+    // we don't need to create instance of Mars
+    // to access RADIUS field coz it is static
+    log Mars.RADIUS 
+}
+</code></pre>
+<h3 id="-methods"><a href="#-methods" aria-hidden="true"><span class="icon icon-link"></span></a>‣ Methods</h3>
+<pre><code class="language-panda">type Math {
+    // find highest value of a and b
+    public static Int max(Int a, Int b) {
+        if (a > b) {
+            return a
+        }
+
+        return b
+    }
+}
+
+main {
+    // we don't need to create instance of Mars
+    // to access max method coz it is static
+    log Math.max(-10, 100)
+}
+</code></pre>
+</div><!----></div><div><div id="406"><h2 id="inheritance"><a href="#inheritance" aria-hidden="true"><span class="icon icon-link"></span></a>Inheritance</h2>
+<p>Inheritance is a concept where we can share common properties between various types.</p>
+<p>We've already defined type <code>Cat</code>.
+If we'd like to create a new type <code>Dog</code> that behaves exactly like <code>Cat</code>, we could just copy-paste its content.
+It is a little silly and exhausting solution, especially in larger projects.</p>
+<p>Let's think about common characteristics of <code>Cat</code> and <code>Dog</code>.
+For instance, they're both animals, so it is time to create the <code>Animal</code> type:</p>
+<pre><code class="language-panda">type Animal {
+    internal String name
+
+    public constructor(String name) {
+        this.name = name
+    }
+
+    public String getName() {
+        return this.name
+    }
+}
+</code></pre>
+<p>To inherit <code>Animal</code> we need to <code>extend</code> it using the <code>type {Name} : {Type to extend}</code>:</p>
+<pre><code class="language-panda">type Cat : Animal { }
+
+type Dog : Animal { }
+</code></pre>
+<p>Voilà! 🥖 </p>
+<p><strong>Note:</strong> Unfortunately, we can <code>extend</code> only one type.
+This limitation is a result of problems that comes with a various conflicts between shared properties.</p>
+</div><!----></div><div><div id="407"><h2 id="base"><a href="#base" aria-hidden="true"><span class="icon icon-link"></span></a>Base</h2>
+<p>The main problem in inheritance is to support compatibility of object initialization process.
+Literally speaking, we need to guarantee call to the <code>base</code> <em>(parent)</em> constructor.</p>
+<p>We will use previous example to explain and fix lack of <code>base</code> call:</p>
+<pre><code class="language-panda">type Animal {
+    constructor(String name) { }
+}
+
+type Cat : Animal {
+
+}
+</code></pre>
+<p>By default, every type without specified constructor has empty constructor without parameters.
+It means that in fact, <code>Cat</code> looks like this:</p>
+<pre><code class="language-panda">type Cat : Animal {
+    constructor() { }
+}
+</code></pre>
+<p>As you can see, we have conflict between constructors.
+Calling <code>new Cat()</code> we cannot perform <code>new Animal('name of animal')</code> due to lack of <code>name</code> parameter.
+It's time for the <code>base</code> statement:</p>
+<pre><code class="language-panda">type Cat : Animal {
+    constructor(String name) { 
+        base(name) // pass value to parent constructor 
+    }
+}
+</code></pre>
+<p>Fixed 👍 </p>
+</div><!----></div><div><div id="408"><h2 id="interfaces"><a href="#interfaces" aria-hidden="true"><span class="icon icon-link"></span></a>Interfaces</h2>
+<p>The <code>interface</code> is a list of requirements that type has to contain.
+One type can implement several interfaces.</p>
+<pre><code class="language-panda">interface AnimalType {
+
+    String getAnimalType()
+    
+}
+</code></pre>
+<p>Implementation of interface looks exactly the same as extending another type:</p>
+<pre><code class="language-panda">type Cat : Animal, AnimalType {
+
+    override String getAnimalType() {
+        return 'Cat'
+    }
+
+}
+</code></pre>
+<p>As you can see, we've used strange new keyword - <code>override</code>.
+In Panda, we have to mark overridden <em>(declared by other types)</em> methods and thanks to that,
+we can avoid unintentional overrides.</p>
+</div><!----></div><div><div id="500"><h1 id="expressions"><a href="#expressions" aria-hidden="true"><span class="icon icon-link"></span></a>Expressions</h1>
+<p>Welcome to the chapter 5 🤠.
+It's been a while to get here.
+You've already learned some expressions...
+Wait, we didn't explain what <code>expression</code> really is.</p>
+<p>To put it simply, <code>expression</code> is a statement that returns something as a result.
+Some of expressions that we used in previous chapters:</p>
+<pre><code class="language-panda">'Hello'
+123
+true
+10 != 20
+index++
+new Cat()
+cat.name
+dog.getName()
+</code></pre>
+<p>As you can see, all of them return value that we can e.g. assign to a variable.
+In this chapter we will show you other useful built-in expressions.</p>
+</div><!----></div><div><div id="501"><h2 id="concatenation"><a href="#concatenation" aria-hidden="true"><span class="icon icon-link"></span></a>Concatenation</h2>
+<p>String <a href="https://en.wikipedia.org/wiki/Concatenation" target="_blank" rel="nofollow noopener noreferrer">concatenation</a> is the operation of joining string values.</p>
+<pre><code class="language-panda">log 'We can add values ' + "as strings and even other objects like"
+</code></pre>
+<p>We can also concatenate other types:</p>
+<pre><code class="language-panda">log 'Value: ' + 1000
+</code></pre>
+<p>You should be careful, for instance let's consider this case:</p>
+<pre><code class="language-panda">log '🤔: ' + 1 + 2
+</code></pre>
+<p>The following code prints <code>🤔: 12</code>.
+To avoid strange behaviors we stringify all the parameters without exceptions.
+To perform some kind of custom actions like math operations,
+you have to wrap the operation into the <code>( )</code> brackets:</p>
+<pre><code class="language-panda">log '🤔: ' + (1 + 2)
+</code></pre>
+</div><!----></div><div><div id="502"><h2 id="number-types"><a href="#number-types" aria-hidden="true"><span class="icon icon-link"></span></a>Number types</h2>
+<p>List of available number types in std:</p>
+<ul>
+<li><code>Byte</code> represents values between <code>-128 to 127</code>, defined as <code>123B</code></li>
+<li><code>Short</code> represents values between <code>-32,768 to 32,767</code>, defined as <code>123S</code></li>
+<li><code>Int</code> represents values between <code>-2^31 to 2^31-1</code>, defined as <code>123</code></li>
+<li><code>Long</code> represents values between <code>-2^63 to 2^63-1</code>, defined as <code>123L</code></li>
+<li><code>Float</code> represents values between 32-bit floating point specified in <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html" target="_blank" rel="nofollow noopener noreferrer">Java Language Specification</a>, defined as <code>123.0F</code></li>
+<li><code>Double</code> represents values between 64-bit floating point specified in <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html" target="_blank" rel="nofollow noopener noreferrer">Java Language Specification</a>, defined as <code>123.0D</code></li>
+</ul>
+<p>To access primitive wrappers for primitive types, use <code>Primitive{Type}</code> types.
+It's sometimes necessary during the access to Java API:</p>
+<pre><code class="language-panda">PrimitiveChar[] primitiveArray = '#onlypanda'.toCharArray()
+Arrays.sort(primitiveArray)
+log new String(primitiveArray)
+</code></pre>
+</div><!----></div><div><div id="600"><h1 id="developers"><a href="#developers" aria-hidden="true"><span class="icon icon-link"></span></a>Developers</h1>
+<p><strong>Note:</strong> This chapter is dedicated only for developers that want to wrap Panda in their projects.
+It is not a part of the language guide.</p>
+<hr>
+<p><strong>Warning:</strong> API is not stable</p>
+<hr>
+<p>To be continued ฅ^•ﻌ•^ฅ</p>
+<hr>
+</div><!----></div></div></div></main><footer class="bg-black text-center p-2 py-4 text-xxs font-sans w-full z-1"><div class="container mx-auto flex text-white"><div class="flex-1"><p class="text-white">Copyright © 2020 The Panda Programming Language</p></div><div class="flex-1 text-center text-sm"><a href="https://github.com/panda-lang"><i class="fab fa-github"></i></a><a href><i class="fab fa-discord"></i></a></div><div class="flex-1"></div></div></footer></div>
+    <script src="/assets/js/app.c53240d5.js" defer></script><script src="/assets/js/page--src-pages-guide-vue.313f6ed5.js" defer></script>
+</body>
+</html>

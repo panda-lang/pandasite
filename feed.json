@@ -1,0 +1,30 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Pandasite",
+    "home_page_url": "https://panda-lang.org/",
+    "feed_url": "https://panda-lang.org/feed.json",
+    "description": "panda-lang organization website",
+    "items": [
+        {
+            "id": "https://panda-lang.org/news/pandasite/",
+            "content_html": "\r\n# Pandasite\r\nFinally, after a long time, \r\nwe're happy to announce and introduce the [Pandasite](https://github.com/panda-lang/pandasite) - \r\na new website for panda-lang organization. \r\nAs a part of alpha release cycle, \r\nwe've add some extra sections with interesting content like:\r\n* `News` - regularly posted set of articles about changes and future updates\r\n* `Guide` - simple introduction into the Panda world and its features\r\n\r\nIt's also time to say goodby to the old one: \r\n\r\n![Old Page](/news/0.old-page.png) \r\n\r\nSo goodby, you served us well  💕  \r\n\r\n",
+            "url": "https://panda-lang.org/news/pandasite/",
+            "title": "Pandasite",
+            "date_modified": "2020-05-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://panda-lang.org/news/release-1-0-0-alpha/",
+            "content_html": "\r\n# Panda 1.0.0-alpha\r\nWe're happy to announce 📢 the first official release of Panda. \r\nUntil this day we'll distribute user-friendly binaries to provide simple access and overall availability of current progress.\r\n\r\nGoals for alpha releases:\r\n* detect various bugs\r\n* verify some concepts\r\n* improve performance issues\r\n* simplify API for developers\r\n\r\nTo download and install Panda, visit [install](/install) page. ",
+            "url": "https://panda-lang.org/news/release-1-0-0-alpha/",
+            "title": "Panda 1.0.0-alpha",
+            "date_modified": "2020-05-10T00:00:00.000Z"
+        },
+        {
+            "id": "https://panda-lang.org/news/releases-roadmap/",
+            "content_html": "\r\n# Roadmap of release life cycle\r\nIt's time to introduce the precisely defined Panda release life cycle.\r\nThe development process is divided into 4 phases and we will describe them in this article.\r\nFor the sake of clarity and transparent: we've just entered the 2nd phase - alpha.\r\n\r\nHere is a list of all the all phases:\r\n* `indev`\r\n* `alpha`\r\n* `beta`\r\n* `stable`\r\n\r\nWe've prepared an image to visualize all these phases and plan for them:\r\n\r\n![How to draw Panda](/news/1.how-to-draw-panda.png) \r\n\r\n*„I can't think of anything more rewarding than being able to express yourself to others through painting”\r\n<img class='emoji' src=\"https://panda-lang.org/news/1.bob-ross.png\" alt='Bob Ross'> *",
+            "url": "https://panda-lang.org/news/releases-roadmap/",
+            "title": "Releases Roadmap",
+            "date_modified": "2020-05-10T00:00:00.000Z"
+        }
+    ]
+}
