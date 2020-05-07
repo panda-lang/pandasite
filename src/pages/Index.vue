@@ -21,7 +21,7 @@
                 .w-1-1.mx-6.h-full.lg_w-1-2.lg_mx-0
                     h1.bg-white.inline-block.mb-6.text-4xl.px-6.py-2.mb-4 Panda
                     h2.bg-white.inline-block.font-thin.text-3xl.px-6.py-2 is a clear and stylish programming language for JVM
-                    a.bg-white.inline-block.px-6.py-2.mt-6.text-2xl.bg-theme-download.text-white(href='/install') Get started →
+                    a.inline-block.px-6.py-2.mt-6.text-2xl.bg-theme-download.text-white(href='/install') Get started →
 
         .latest-release.container.mx-auto.flex.mb-14
             div.flex-1.mx-5
@@ -34,14 +34,14 @@
             div.flex-1.mx-5
                 hr.border-black
 
-        .features.container.mb-4.mx-auto.pb-4
+        .features.container.mb-5.mx-auto.pb-4
             .features-data.flex.flex-col.justify-center.md_flex-row.md_flex-wrap.content-center
                 Feature(
                     v-for="feature in $page.allFeature.edges" 
                     :key="feature.node.id" 
                     :feature="feature.node"
                 )
-        .news.pb-12.container.mx-auto
+        .news.pb-20.container.mx-auto
             .news-data.flex-col
                 h1.inline-block.text-2xl.mb-6.px-6.pb-2 News
                 .flex.flex-col.justify-center.md_flex-row.md_flex-wrap

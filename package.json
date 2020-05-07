@@ -2,9 +2,8 @@
   "name": "pandasite",
   "private": true,
   "scripts": {
-    "build": "vue-cli-service build",
-    "develop": "vue-cli-service serve",
-    "dist": "gridsome dist"
+    "develop": "gridsome develop",
+    "dist": "gridsome build"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
@@ -12,6 +11,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.5.0",
     "@gridsome/vue-remark": "^0.1.10",
+    "@microflash/gridsome-plugin-feed": "^1.0.5",
     "core-js": "^3.6.4",
     "gridsome": "^0.7.13",
     "gridsome-plugin-flexsearch": "^0.1.19",

@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Pandasite',
+  siteUrl: 'https://panda-lang.org/',
 
   templates: {
       NewsPost: '/news/:path',
@@ -62,14 +63,49 @@ module.exports = {
         searchFields: [ 'title', 'content' ]
       }
     },
-    { 
-      use: 'gridsome-plugin-pug' 
+    {
+      use: '@microflash/gridsome-plugin-feed',
+      options: {
+        contentTypes: [ 'NewsPost' ],
+
+        feedOptions: {
+          title: 'Pandasite',
+          description: 'panda-lang organization website'
+        },
+
+        rss: {
+          enabled: true,
+          output: '/feed.xml'
+        },
+        atom: {
+          enabled: true,
+          output: '/feed.atom'
+        },
+        json: {
+          enabled: true,
+          output: '/feed.json'
+        },
+
+        maxItems: 25,
+        htmlFields: ['content'],
+        enforceTrailingSlashes: false,
+        filterNodes: (node) => true,
+
+        nodeToFeedItem: (node) => ({
+          title: node.title,
+          date: node.date,
+          content: node.content
+        })
+      }
     },
     {
       use: 'gridsome-plugin-tailwindcss',
       options: { 
         shouldPurge: false
       }
+    },
+    { 
+      use: 'gridsome-plugin-pug' 
     },
     { 
       use: 'gridsome-plugin-purgecss' 
