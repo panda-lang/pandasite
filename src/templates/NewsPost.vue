@@ -8,7 +8,7 @@
           span(v-html="$page.post.title")
         p 
           a(href='/news') ← Back to the news
-      p.markdown.pt-3(v-html="$page.post.content")
+      p.markdown.pt-3.mb-24(v-html="$page.post.content")
 </template>
 
 <page-query>

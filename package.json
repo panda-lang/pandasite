@@ -12,11 +12,13 @@
     "@gridsome/transformer-remark": "^0.5.0",
     "@gridsome/vue-remark": "^0.1.10",
     "@microflash/gridsome-plugin-feed": "^1.0.5",
+    "@netsells/vue-range-slider": "^1.0.0",
     "core-js": "^3.6.4",
     "gridsome": "^0.7.13",
     "gridsome-plugin-flexsearch": "^0.1.19",
     "gridsome-plugin-remark-prismjs-all": "^0.3.5",
     "highlight.js": "^9.18.1",
+    "surge": "^0.21.3",
     "vue": "^2.6.11",
     "vue-slider-component": "^3.1.1"
   },

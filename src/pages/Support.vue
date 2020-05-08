@@ -1,4 +1,4 @@
-<template lang="pug" v-if="isClient">
+<template lang="pug">
     .support
         .support-hero.h-128.md_h-96
             .container.mx-auto.relative.z-5.mx-6.pt-6.justify-center.flex
@@ -41,14 +41,13 @@
                                     span(v-html="value")
                             i.fa.fa-heart.fa-10x
                     .flex-initial
-                        ClientOnly
-                            VueSlider(
-                                v-model="value"
-                                :min="min"
-                                :max="max"
-                                :tooltip-placement="['bottom']"
-                                :tooltip-formatter="formatter"
-                            )
+                        VueSlider(
+                            v-model="value"
+                            :min="min"
+                            :max="max"
+                            :tooltip-placement="['bottom']"
+                            :tooltip-formatter="formatter"
+                        )
             div.mt-20.text-center.flex
                 .flex-1
                     hr.z-4.absolute.border-gray-400.mt-5.w-full.left-0
@@ -58,23 +57,12 @@
 </template>
 
 <script>
-import VueSlider from 'vue-slider-component/dist-css/vue-slider-component.umd.min'
-import 'vue-slider-component/dist-css/vue-slider-component.css'
-import 'vue-slider-component/theme/material.css'
-
-console.log(VueSlider)
-
 export default {
     metaInfo: {
         title: 'Support'
     },
-    data() {
-        return {
-            isClient: process.isClient
-        }
-    },
     components: {
-        VueSlider
+        VueSlider: () => import('vue-slider-component/dist-css/vue-slider-component.umd.min.js')
     },
     data: function() {
         return {

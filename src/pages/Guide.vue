@@ -157,9 +157,6 @@ export default {
   .list
     a
       color black
-      
-footer
-  position fixed
 
 .search-element
   font-family 'Montserrat'

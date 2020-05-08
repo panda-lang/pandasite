@@ -1,56 +1,18 @@
-import fontawesome from '@fortawesome/fontawesome'
 import App from '~/App.vue'
 import NewsMixins from '~/mixins/news-mixins.js'
 import '~/assets/default.styl'
 import '~/assets/markdown.styl'
 
-fontawesome.config = { 
-  autoReplaceSvg: false 
-}
+import fontawesome from '@fortawesome/fontawesome'
+fontawesome.config = { autoReplaceSvg: false }
+import highlightPanda from '~/plugins/panda-highlight.js'
 
-export default function (Vue, { router, head, isClient }) {
+export default async function (Vue, { router, head, isClient }) {
+  Vue.use(import('~/plugins/vue-slider-component.js'))
   Vue.mixin(NewsMixins)
   Vue.component('Layout', App)
 
   if (isClient) {
-    const hljs = Vue.prototype.hljs = import('highlight.js')
-
-    hljs.then(hljs => {
-      hljs.registerLanguage('panda', hljs => {
-        return {
-          aliases: ['panda'],
-          keywords: {
-            keyword:
-              'for if while main import module continue break loop method void new shared internal log',
-            literal: 'true false null',
-            type: 'String Console Panda'
-          },
-          contains: [
-            {
-              className: 'class',
-              beginKeywords: 'class',
-              end: /[{;=]/,
-              excludeEnd: true,
-              keywords: 'class interface',
-              illegal: /[:"[\]]/,
-              contains: [{ beginKeywords: 'extends' }, hljs.UNDERSCORE_TITLE_MODE]
-            },
-            hljs.C_BLOCK_COMMENT_MODE,
-            hljs.C_LINE_COMMENT_MODE,
-            hljs.QUOTE_STRING_MODE,
-            hljs.APOS_STRING_MODE,
-            hljs.NUMBER_MODE
-          ]
-        }
-      })
-
-      router.afterEach((to, from) => {
-        Vue.nextTick(_ => {
-          document.querySelectorAll('pre code.panda').forEach(block => {
-            hljs.highlightBlock(block)
-          })
-        })
-      })
-    })
+    highlightPanda(Vue, router)
   }
 }

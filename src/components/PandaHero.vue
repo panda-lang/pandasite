@@ -6,7 +6,14 @@
 
 <script>
 export default {
-    name: "PandaHero"
+    name: 'PandaHero',
+    updated() {
+        if (!process.isClient) {
+            return
+        }
+
+        document.querySelectorAll('pre code.panda').forEach(block => Vue.$hljs.highlightBlock(block))
+    }
 }
 </script>
 

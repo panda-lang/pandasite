@@ -16,7 +16,7 @@
                 .clearfix
         main
             slot
-        footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full.z-1
+        footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full.z-1(v-bind:class="{ fixed: isFixedFooterActive }")
             .container.mx-auto.flex.text-white
                 div.flex-1
                    p.text-white Copyright © 2020 The Panda Programming Language
@@ -27,6 +27,21 @@
                       i.fab.fa-discord
                 div.flex-1
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isFixedFooterActive: false
+    }
+  },
+  watch:{
+    $route (to, from){
+        this.isFixedFooterActive = to.path.includes('guide')
+    }
+} 
+}
+</script>
 
 <style lang="stylus">
 .layout
@@ -66,4 +81,6 @@ footer .container
   padding  7
 footer .container a
     margin 0 7px
+.fixed
+  position fixed
 </style>
