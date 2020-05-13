@@ -1,6 +1,6 @@
 <template lang="pug">
   .guide.flex
-      .panel.bg-grey.flex.justify-end
+      .panel.bg-grey.justify-end.hidden.md_flex
         .panel-right.panel-width
           .fixed.panel-width
             .panel-content.flex.flex-col.items-center.md_items-start.fixed.overflow-auto.panel-width.pl-8
@@ -16,7 +16,7 @@
                   a(:href="'#' + normalize(edge.node.title)")
                     p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 100.0) == 0") {{ edge.node.title }}
                     p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
-      .guide-content.markdown.p-24.pt-7.justify-center.mb-40
+      .guide-content.markdown.flex-1.p-6.md_p-24.pt-7.justify-center.mb-40.overflow-x-auto
           div(v-if="searchTerm != '' && searchResults.length == 0")
             h1 Not Found
           div(v-else v-for="edge in $page.allGuidePost.edges" :key="edge.node.id")

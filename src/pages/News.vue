@@ -1,9 +1,9 @@
 <template lang="pug">
     .news-list
-        div.container.mx-auto.pt-12.bg-white
+        div.container.mx-auto.pt-14.bg-white
             div.mx-12.pb-24
                 div.text-center   
-                  h1.text-3xl.align-center Panda Blog
+                  h1.text-3xl.align-center Panda News
                   div.flex.pb-6
                     div.flex-1
                     p.p-5.flex-shrink.w-3-4.text-xbase

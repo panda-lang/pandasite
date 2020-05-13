@@ -1,7 +1,7 @@
 <template lang="pug">
     .support
         .support-hero.h-128.md_h-96
-            .container.mx-auto.relative.z-5.mx-6.pt-6.justify-center.flex
+            .container.mx-auto.relative.z-5.mx-6.pt-8.justify-center.flex
                 .flex.flex-col.mx-4
                     div.flex-initial
                         h1.inline-block.my-4.py-4.px-6.text-black.bg-white How to help? 💕 
