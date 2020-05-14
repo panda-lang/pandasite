@@ -14,7 +14,7 @@ query {
 </static-query>
 
 <script>
-import Default from "~/layouts/Default.vue";
+import Default from "~/Default.vue";
 
 export default {
   components: {

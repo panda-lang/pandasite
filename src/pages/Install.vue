@@ -4,7 +4,7 @@
             .container.h-160.md_h-146.lg_h-96.flex.relative.flex-col.justify-center.items-center.mx-auto
                 .flex-initial.flex.flex-col.mx-4.mt-6
                     .flex-initial
-                        h1.inline-block.my-4.py-4.px-6.text-black.bg-white How to install? 🧪
+                        h1.inline-block.my-4.py-4.px-6.text-black.bg-white How to install? 💎
                     .flex-initial
                         p.flex-1.inline-block.bg-white.text-black.py-2.px-6.text-2xl.font-thin
                             | Download 

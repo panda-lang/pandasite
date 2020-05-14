@@ -31,16 +31,16 @@
                             li Join the developers team and develop projects associated with Panda organization
                             li Consider a donation to help us in financial aspect of infrastucture
                 .support-navbar.w-1-1.md_w-1-2.border.border-grey.bg-grey.rounded.text-center.p-8.flex.flex-col.justify-center
-                    h1.flex-initial.font.thin.p-4.pb-3
+                    h1.flex-initial.font.thin.p-4.pb-2
                         | Your donation will fund Panda development
                     .flex-1.p-2.heart.p-5
-                        .heart-icon.inline-block
+                        .heart-icon.inline-block(v-on:click="paypal()")
                             .absolute.mt-1.heart-text.pt-14.text-white.pl-11
                                 | Donate 
                                 span.font-bold.text-white $
                                     span(v-html="value")
                             i.fa.fa-heart.fa-10x
-                    .flex-initial
+                    .flex-initial  
                         VueSlider(
                             v-model="value"
                             :min="min"
@@ -48,28 +48,57 @@
                             :tooltip-placement="['bottom']"
                             :tooltip-formatter="formatter"
                         )
+                        p.text-xxs.italic.mt-8
+                            span.font-bold Note: 
+                            | Donations are validated manually, so it'll take some time before it appears below.
+                            | For other methods of payment, contact with us via payments@panda-lang.org
             div.mt-20.text-center.flex
                 .flex-1
                     hr.z-4.absolute.border-gray-400.mt-5.w-full.left-0
-                    h1.bg-white.inline-block.relative.px-8 Supporters
-                    
+                    h1.bg-white.inline-block.relative.px-8.mb-10 Supporters
+                    .flex.flex-wrap.justify-center
+                        SupportersList.w-1-1.md_w-1-2(
+                            :title="'Top of all the time'" 
+                            :supporters="supporters.slice(0, 3)"
+                            :prefix="'👑'"
+                        )
+                        SupportersList.w-1-1.md_w-1-2(
+                            :title="'Top Early'"
+                            :supporters="supporters.filter(supporter => supporter.early).slice(0, 3)"
+                            :prefix="'❤️'"
+                        )
+                        SupportersList.w-full.full-list(
+                            :title="'All supporters'" 
+                            :supporters="supporters"
+                        )
+                        
 
 </template>
 
 <script>
+import SupportersList from '~/components/SupportersList.vue'
+import supporters from '~/assets/supporters.js'
+
 export default {
     metaInfo: {
         title: 'Support'
-    },
-    components: {
-        VueSlider: () => import('vue-slider-component/dist-css/vue-slider-component.umd.min.js')
     },
     data: function() {
         return {
             value: 5,
             min: 1,
             max: 100,
-            formatter: '${value}'
+            formatter: '${value}',
+            supporters: supporters.sort((supporter, to) => to.amount - supporter.amount)
+        }
+    },
+    components: {
+        VueSlider: () => import('vue-slider-component/dist-css/vue-slider-component.umd.min.js'),
+        SupportersList
+    },
+    methods: {
+        paypal() {
+            window.location.href = 'https://www.paypal.me/pandalang/' + this.value + 'USD';
         }
     }
 }
@@ -125,4 +154,19 @@ li
 .heart-icon:hover i
     @apply text-red-600
     transition color 1.5s
+
+.full-list
+    section
+        display flex
+        flex-wrap wrap
+        justify-content center
+    .supporter-block
+        width 90%
+    @media (min-width: 756px)
+        .supporter-block
+            width 50%
+    @media (min-width: 1224px)
+        .supporter-block
+            width 33.33%
+
 </style>

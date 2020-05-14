@@ -1,6 +1,6 @@
 <template lang="pug">
     .layout
-        header.panda-header.bg-black.text-white.bg-texture.z-20.w-full.top-0.h-32.md_h-header-spacing.md_fixed
+        header.panda-header.bg-black.text-white.bg-texture.z-20.w-full.top-0.md_h-header-spacing.md_fixed.h-auto
             nav.container.mx-auto.bg-black.flex.w-full.justify-center.md_justify-between.flex-col.md_flex-row.my-auto
                 .flex-1.justify-center.md_justify-start.flex.w-full.px-4.mt-2.md_mt-0.select-none
                     g-link(to="/").logo
@@ -16,13 +16,15 @@
                             Support: '/support'
                           }
                         each route, name in routes
-                            g-link.px-4.pt-4.md_pt-4.inline-block(to= route)= name
+                            g-link.select-none.px-4.pt-4.md_pt-4.inline-block(to= route)= name
                         a.px-4.py-4.inline-block(href='xxxhttps://discordapp.com/invite/AN8HgWc') Community
-        main
+        main.md_pt-header-spacing
             slot
         footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full.z-1(v-bind:class="{ fixed: isFixedFooterActive }")
             .container.mx-auto.flex.text-white
                 div.flex-1.text-center.text-sm
+                    a(href="")
+                      i.fab.fa-twitter
                     a(href="https://github.com/panda-lang")
                        i.fab.fa-github
                     a(href="")
@@ -53,13 +55,14 @@ export default {
   min-height 100vh
   flex-direction column
   align-items stretch
-.layout-padding
-  padding-top 56px
 
 header, main, footer 
   flex-shrink 0
 header
   height 56px
+main
+  flex 1
+
 header, footer
   a
     color white
@@ -74,9 +77,6 @@ header, footer
 .logo img
   border-radius 100%
   background-color black
-
-main
-  flex: 1
 
 footer
   //height: 32px

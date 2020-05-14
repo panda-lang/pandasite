@@ -1,10 +1,11 @@
-import App from '~/App.vue'
-import NewsMixins from '~/mixins/news-mixins.js'
 import '~/assets/default.styl'
 import '~/assets/markdown.styl'
 
 import fontawesome from '@fortawesome/fontawesome'
 fontawesome.config = { autoReplaceSvg: false }
+
+import App from '~/App.vue'
+import NewsMixins from '~/plugins/news-mixins.js'
 import highlightPanda from '~/plugins/panda-highlight.js'
 
 export default async function (Vue, { router, head, isClient }) {
