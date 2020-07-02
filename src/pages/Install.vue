@@ -11,21 +11,21 @@
                             span.font-normal Panda 
                             | installer for your platform, and start developing today  
                 .flex-initial.pt-2.md_pt-5.text-center.lg_pt-2.w-full.mx-auto.mb-16
-                    a.w-3-4.lg_w-1-4.inline-block.mx-4.py-3.mt-6.text-2xl.bg-theme-download.text-white(href='/install')
+                    a(href='https://github.com/panda-lang/installer').w-3-4.lg_w-1-4.inline-block.mx-4.py-3.mt-6.text-2xl.bg-theme-blue.theme-blue-hover.text-white
                         h1.text-white.mx-4  
                             i.text-xl.fab.fa-microsoft
                             | &nbsp; Windows
-                        p.italic.text-xsbase panda-1.0.0-alpha.exe
-                    a.w-3-4.lg_w-1-4.inline-block.mx-1.py-3.mt-6.text-2xl.bg-theme-download.text-white(href='/install')
+                        p.italic.text-xsbase Panda {{ this.$parent.version }} - Installer
+                    a(href='https://github.com/panda-lang/panda/releases').w-3-4.lg_w-1-4.inline-block.mx-1.py-3.mt-6.text-2xl.bg-theme-blue.theme-blue-hover.text-white
                         h1.text-white.mx-4  
                             i.text-xl.fab.fa-linux
                             | &nbsp; Linux
-                        p.italic.text-xsbase panda-1.0.0-alpha.rpm/deb
-                    a.w-3-4.lg_w-1-4.inline-block.mx-4.py-3.mt-6.text-2xl.bg-theme-download.text-white(href='/install')
+                        p.italic.text-xsbase Panda {{ this.$parent.version }} - Archive
+                    a(href='https://github.com/panda-lang/panda/releases').w-3-4.lg_w-1-4.inline-block.mx-4.py-3.mt-6.text-2xl.bg-theme-blue.theme-blue-hover.text-white
                         h1.text-white.mx-4  
                             i.text-xl.fab.fa-apple
                             | &nbsp; macOS
-                        p.italic.text-xsbase panda-1.0.0-alpha.app
+                        p.italic.text-xsbase Panda {{ this.$parent.version }} - Archive
         .container.mx-auto.pt-14.mb-20
             .mx-12
                 h1 Getting started
@@ -34,7 +34,7 @@
                     | The first one is dedicated for users and developers who use and create applications in Panda. 
                     | The second on is for developers who want to use 
                     span.italic.text-red-600 Panda Framework 
-                    | as a scripting language in theirs applications.
+                    | as a scripting language in their applications.
                 h1.mt-5 Users
                 p.py-4 
                     | • Download installer dedicated for your platform and just launch it.
@@ -44,8 +44,10 @@
                     | After installation, you should be able to launch applications written in Panda.
                     br
                     | • In case of any problems visit 
-                    a(href="https://github.com/panda-lang/panda/issues") Panda :: issue tracker 
-                    | to ask your question.
+                    a(href="https://github.com/panda-lang/panda/issues") Panda :: Issue tracker 
+                    | to ask your question, or 
+                    a(href="https://github.com/panda-lang/installer/issues") Installer :: Issue tracker 
+                    | in case of any problems during the installation process.
                 h1.mt-5 Developers
                 p.py-4 
                     | • To create your first application in Panda, 
@@ -61,11 +63,14 @@
                     | artifacts - visit 
                     a(href="/guide#installation") Guide :: installation 
                     | to get more details.
+
 </template>
 
 <script>
 export default {
-    
+    metaInfo: {
+        title: 'Installation'
+    }
 }
 </script>
 

@@ -12,7 +12,7 @@ export default {
             return
         }
 
-        document.querySelectorAll('pre code.panda').forEach(block => Vue.$hljs.highlightBlock(block))
+        document.querySelectorAll('pre code.panda').forEach(block => this.$hljs.highlightBlock(block))
     }
 }
 </script>

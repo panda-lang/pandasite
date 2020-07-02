@@ -30,18 +30,18 @@ export default [
         early: true
     },
     {
-        user: 're-host.ovh',
+        user: 'rehost.pl',
         amount: 18.50,
+        early: true
+    },
+    {
+        user: 'guardspigot',
+        amount: 16.00,
         early: true
     },
     {
         user: 'jaredmeister',
         amount: 15.00,
-        early: true
-    },
-    {
-        user: 'mcguard',
-        amount: 12.00,
         early: true
     },
     {

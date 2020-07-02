@@ -3,7 +3,7 @@
     "short_name": "Pandasite",
     "icons": [
       {
-        "src": "./logo.png",
+        "src": "./images/open-graph-1.png",
         "sizes": "4096x4096",
         "type": "image/png"
       }

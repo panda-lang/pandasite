@@ -1,6 +1,6 @@
 <template lang="pug">
     .support
-        .support-hero.h-128.md_h-96
+        .support-hero.h-136.md_h-96
             .container.mx-auto.relative.z-5.mx-6.pt-8.justify-center.flex
                 .flex.flex-col.mx-4
                     div.flex-initial
@@ -106,7 +106,7 @@ export default {
 
 <style lang="stylus">
 .support-hero    
-    --breakpoint 85%
+    --breakpoint 90%
     position relative
     background-color white
     z-index 1

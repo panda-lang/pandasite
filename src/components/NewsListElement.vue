@@ -1,13 +1,13 @@
 <template lang="pug">  
-    .relative.flex.h-auto.flex-row.py-3.mb-10.border.border-pre-theme
+    g-link.relative.flex.h-auto.flex-row.py-3.mb-10.border.border-pre-theme.text-black(:to="post.path")
         .desc.text-center.w-24.h-full.flex.align-center.mt-4.flex-col
             h5.font-bold.text-lg.mx-auto.mb-4(v-html="'#' + post.id")
             p.mb-4.mx-auto.my-auto.break-words.px-8(v-html="post.date")
         .pt-4
             h5.mr-4.text-lg(v-html="post.title")
             .pb-3
-                p.p-4.pl-0(v-html="toDescriptionPreview(post, 200)")
-                g-link.mr-4.my-4.text-xs.text-theme-download(:to="post.path") Read More →
+                p.p-4.pl-0(v-html="description(post, 200)")
+                g-link.mr-4.my-4.text-xs.text-theme-blue(:to="post.path") Read More →
 </template>
 
 <script>

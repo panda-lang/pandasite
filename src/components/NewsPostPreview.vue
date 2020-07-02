@@ -1,9 +1,10 @@
 <template lang="pug">
-    article.news-article.border.border-grey-300.relative
-        h5.text-slg(v-html="post.title")
-        span.news-time.text-xs.absolute.font-thin(v-html="post.date")
-        p.py-4(v-html="toDescriptionPreview(post, 99)")
-        g-link.text-xs.text-theme-download(:to="post.path") Read More →
+    g-link(:to="post.path")
+        article.news-article.border.border-grey-300.relative
+            h5.text-slg(v-html="post.title")
+            span.news-time.text-xs.absolute.font-thin(v-html="post.date")
+            p.py-4(v-html="description(post, 99)")
+            g-link.text-xs.text-theme-blue(:to="post.path") Read More →
 </template>
 
 <script>

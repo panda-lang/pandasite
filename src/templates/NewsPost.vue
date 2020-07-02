@@ -22,3 +22,23 @@ query NewsPost ($id: ID!) {
   }
 }
 </page-query>
+
+<script>
+export default {
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        /* Default */
+        this.social('description', this.description(this.$page.post, 99)),
+        /* Open Graph */
+        this.social('og:title', this.$page.post.title),
+        this.social('og:description', this.description(this.$page.post, 99)),
+        /* Twitter */
+        this.social('twitter:title', this.$page.post.title),
+        this.social('twitter:description', this.description(this.$page.post, 99))
+      ]
+    }
+  }
+}
+</script>
