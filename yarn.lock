@@ -839,6 +839,13 @@
     sort-package-json "^1.15.0"
     update-notifier "^4.1.0"
 
+"@gridsome/plugin-google-analytics@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@gridsome/plugin-google-analytics/-/plugin-google-analytics-0.1.1.tgz#f2f37d97dd8559fd7c4d409a6335d07e1b4be19f"
+  integrity sha512-cJ1+bqhGMDf3ZlmGNOWj1dVXitQA2ziGiR22RTv2jsX3bby1pvz8C2mentVE3ZzSKJoSQJHvlazjXmzWcifneg==
+  dependencies:
+    vue-analytics "^5.16.1"
+
 "@gridsome/remark-prismjs@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@gridsome/remark-prismjs/-/remark-prismjs-0.3.0.tgz#3a0a6f67ab518ff9d42b75c1f97f834806181d04"
@@ -11274,6 +11281,11 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
   integrity sha1-wGavtYK7HLQSjWDqkjkulNXp2+w=
+
+vue-analytics@^5.16.1:
+  version "5.22.1"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.22.1.tgz#9d6b32da56daee1b9dfb23a267b50349a03f710f"
+  integrity sha512-HPKQMN7gfcUqS5SxoO0VxqLRRSPkG1H1FqglsHccz6BatBatNtm/Vyy8brApktZxNCfnAkrSVDpxg3/FNDeOgQ==
 
 vue-class-component@^7.1.0:
   version "7.2.3"

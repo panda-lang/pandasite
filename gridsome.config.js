@@ -9,8 +9,8 @@ module.exports = {
   siteUrl: 'https://panda-lang.org/',
 
   templates: {
-      NewsPost: '/news/:path',
-      GuidePost: '/guide/:title'
+    NewsPost: '/news/:path',
+    GuidePost: '/guide/:title'
   },
 
   transformers: {
@@ -43,8 +43,8 @@ module.exports = {
         typeName: 'NewsPost',
         refs: {
           tags: {
-            typeName: "Tag",
-            route: "/tag/:id",
+            typeName: 'Tag',
+            route: '/tag/:id',
             create: true
           }
         }
@@ -57,16 +57,16 @@ module.exports = {
           {
             typeName: 'GuidePost',
             indexName: 'GuidePost',
-            fields: [ 'id', 'title', 'content' ]
+            fields: ['id', 'title', 'content']
           }
         ],
-        searchFields: [ 'title', 'content' ]
+        searchFields: ['title', 'content']
       }
     },
     {
       use: '@microflash/gridsome-plugin-feed',
       options: {
-        contentTypes: [ 'NewsPost' ],
+        contentTypes: ['NewsPost'],
 
         feedOptions: {
           title: 'Pandasite',
@@ -89,9 +89,9 @@ module.exports = {
         maxItems: 25,
         htmlFields: ['content'],
         enforceTrailingSlashes: false,
-        filterNodes: (node) => true,
+        filterNodes: node => true,
 
-        nodeToFeedItem: (node) => ({
+        nodeToFeedItem: node => ({
           title: node.title,
           date: node.date,
           content: node.content
@@ -99,16 +99,22 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-171558010-1'
+      }
+    },
+    {
       use: 'gridsome-plugin-tailwindcss',
-      options: { 
+      options: {
         shouldPurge: false
       }
     },
-    { 
-      use: 'gridsome-plugin-pug' 
+    {
+      use: 'gridsome-plugin-pug'
     },
-    { 
-      use: 'gridsome-plugin-purgecss' 
+    {
+      use: 'gridsome-plugin-purgecss'
     }
   ]
 }
