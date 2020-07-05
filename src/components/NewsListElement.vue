@@ -12,8 +12,8 @@
 
 <script>
 export default {
-    name: 'NewsListElement',
-    props: ['post']
+  name: 'NewsListElement',
+  props: ['post']
 }
 </script>
 

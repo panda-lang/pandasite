@@ -68,9 +68,9 @@
 
 <script>
 export default {
-    metaInfo: {
-        title: 'Installation'
-    }
+  metaInfo: {
+    title: 'Installation'
+  }
 }
 </script>
 

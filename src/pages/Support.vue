@@ -80,32 +80,36 @@ import SupportersList from '~/components/SupportersList.vue'
 import supporters from '~/assets/supporters.js'
 
 export default {
-    metaInfo: {
-        title: 'Support'
-    },
-    data: function() {
-        return {
-            value: 5,
-            min: 1,
-            max: 100,
-            formatter: '${value}',
-            supporters: supporters.sort((supporter, to) => to.amount - supporter.amount)
-        }
-    },
-    components: {
-        VueSlider: () => import('vue-slider-component/dist-css/vue-slider-component.umd.min.js'),
-        SupportersList
-    },
-    methods: {
-        paypal() {
-            window.location.href = 'https://www.paypal.me/pandalang/' + this.value + 'USD';
-        }
+  metaInfo: {
+    title: 'Support'
+  },
+  data: function () {
+    return {
+      value: 5,
+      min: 1,
+      max: 100,
+      formatter: '${value}',
+      supporters: supporters.sort(
+        (supporter, to) => to.amount - supporter.amount
+      )
     }
+  },
+  components: {
+    VueSlider: () =>
+      import('vue-slider-component/dist-css/vue-slider-component.umd.min.js'),
+    SupportersList
+  },
+  methods: {
+    paypal () {
+      window.location.href =
+        'https://www.paypal.me/pandalang/' + this.value + 'USD'
+    }
+  }
 }
 </script>
 
 <style lang="stylus">
-.support-hero    
+.support-hero
     --breakpoint 90%
     position relative
     background-color white
@@ -128,8 +132,8 @@ export default {
         relative _
         margin 177px _ 77px
         z-index 3
-    
-li 
+
+li
     margin 7px 0 7px
 .support-way h1
     font-family 'Lato'
@@ -168,5 +172,4 @@ li
     @media (min-width: 1224px)
         .supporter-block
             width 33.33%
-
 </style>

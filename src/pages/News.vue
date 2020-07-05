@@ -41,11 +41,11 @@ query {
 import NewsListElement from '~/components/NewsListElement.vue'
 
 export default {
-    metaInfo: {
-        title: 'News'
-    },
-    components: {
-        NewsListElement
-    }
+  metaInfo: {
+    title: 'News'
+  },
+  components: {
+    NewsListElement
+  }
 }
 </script>

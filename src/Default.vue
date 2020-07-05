@@ -38,18 +38,18 @@
 const axios = require('axios')
 
 export default {
-  data() {
+  data () {
     return {
       version: '',
       isFixedFooterActive: false
     }
   },
   watch: {
-    $route (to, from){
-        this.isFixedFooterActive = to.path.includes('guide')
+    $route (to, from) {
+      this.isFixedFooterActive = to.path.includes('guide')
     }
   },
-  mounted() {
+  mounted () {
     this.version = axios
       .get('https://repo.panda-lang.org/releases/org/panda-lang/panda/latest')
       .then(response => (this.version = response.data))
@@ -68,7 +68,7 @@ export default {
   flex-direction column
   align-items stretch
 
-header, main, footer 
+header, main, footer
   flex-shrink 0
 header
   height 56px

@@ -6,14 +6,16 @@
 
 <script>
 export default {
-    name: 'PandaHero',
-    updated() {
-        if (!process.isClient) {
-            return
-        }
-
-        document.querySelectorAll('pre code.panda').forEach(block => this.$hljs.highlightBlock(block))
+  name: 'PandaHero',
+  updated () {
+    if (!process.isClient) {
+      return
     }
+
+    document
+      .querySelectorAll('pre code.panda')
+      .forEach(block => this.$hljs.highlightBlock(block))
+  }
 }
 </script>
 

@@ -36,16 +36,22 @@ export default {
         this.social('og:type', 'article'),
         this.social('og:title', 'The Panda Programming Language'),
         this.social('og:description', description),
-        this.social('og:image', 'https://panda-lang.org/images/open-graph-1.png'),
+        this.social(
+          'og:image',
+          'https://panda-lang.org/images/open-graph-1.png'
+        ),
         this.social('og:width', 1200),
         this.social('og:height', 630),
         /* Twitter */
         this.social('twitter:title', 'The Panda Programming Language'),
         this.social('twitter:description', description),
         this.social('twitter:card', 'summary_large_image'),
-        this.social('twitter:image', 'https://panda-lang.org/images/open-graph-1.png'),
+        this.social(
+          'twitter:image',
+          'https://panda-lang.org/images/open-graph-1.png'
+        ),
         this.social('twitter:site', '@panda_language'),
-        this.social('twitter:creator', '@dzikoysk'),
+        this.social('twitter:creator', '@dzikoysk')
       ]
     }
   }

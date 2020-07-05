@@ -7,12 +7,10 @@
 
 <script>
 export default {
-    metaInfo: {
-        title: 'Not Found'
-    }
+  metaInfo: {
+    title: 'Not Found'
+  }
 }
 </script>
 
-<style lang="stylus">
-
-</style>
+<style lang="stylus"></style>

@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: 'Supporter',
-    props: ['supporter', 'prefix']
+  name: 'Supporter',
+  props: ['supporter', 'prefix']
 }
 </script>

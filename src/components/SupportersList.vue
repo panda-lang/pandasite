@@ -9,16 +9,16 @@
 import Supporter from '~/components/Supporter.vue'
 
 export default {
-    name: 'SupportersList',
-    props: [ 'title', 'supporters', 'prefix' ],
-    components: {
-        Supporter
-    }
+  name: 'SupportersList',
+  props: ['title', 'supporters', 'prefix'],
+  components: {
+    Supporter
+  }
 }
 </script>
 
 <style lang="stylus">
 .supporters-list
-    h1 
+    h1
         font-family 'Segoe UI'
 </style>

@@ -9,8 +9,8 @@
 
 <script>
 export default {
-    name: 'NewsPostPreview',
-    props: ['post']
+  name: 'NewsPostPreview',
+  props: ['post']
 }
 </script>
 
@@ -26,10 +26,10 @@ export default {
     font-weight 600
     font-family 'Noto Sans'
     letter-spacing -0.7px
-    
+
 .news-article p
     color #8a8a8a
-.news-time 
+.news-time
     right 14px
     top 23px
     color gray

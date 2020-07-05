@@ -25,7 +25,7 @@ query NewsPost ($id: ID!) {
 
 <script>
 export default {
-  metaInfo() {
+  metaInfo () {
     return {
       title: this.$page.post.title,
       meta: [
@@ -36,7 +36,10 @@ export default {
         this.social('og:description', this.description(this.$page.post, 99)),
         /* Twitter */
         this.social('twitter:title', this.$page.post.title),
-        this.social('twitter:description', this.description(this.$page.post, 99))
+        this.social(
+          'twitter:description',
+          this.description(this.$page.post, 99)
+        )
       ]
     }
   }

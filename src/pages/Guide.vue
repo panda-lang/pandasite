@@ -50,17 +50,15 @@ export default {
   metaInfo: {
     title: 'Guide'
   },
-  mixins: [
-    Search
-  ],
+  mixins: [Search],
   data: () => ({
     searchTerm: ''
   }),
-  mounted() {
+  mounted () {
     Prism.highlightAll()
   },
   computed: {
-    searchResults() {
+    searchResults () {
       const searchTerm = this.searchTerm
 
       if (searchTerm.length < 1) {
@@ -71,10 +69,10 @@ export default {
     }
   },
   methods: {
-    normalize(title) {
+    normalize (title) {
       return title.toLowerCase().replace(' ', '-')
     },
-    getResult(node) {
+    getResult (node) {
       const searchTerm = this.searchTerm.trim().toLowerCase()
 
       for (const item of this.searchResults) {
@@ -86,22 +84,22 @@ export default {
         let stack = []
 
         for (let index = 0; index < filteredContent.length; index++) {
-            let char = filteredContent[index]
+          let char = filteredContent[index]
 
-            if (stack.length != 0) {
-              filteredContent[index] = ' '
+          if (stack.length != 0) {
+            filteredContent[index] = ' '
 
-              if (char == '>') {
-                stack.pop()
-              }
-
-              continue
+            if (char == '>') {
+              stack.pop()
             }
-            
-            if (char == '<') {
-              stack.push('<')
-              filteredContent[index] = ' '
-            }
+
+            continue
+          }
+
+          if (char == '<') {
+            stack.push('<')
+            filteredContent[index] = ' '
+          }
         }
 
         filteredContent = filteredContent.join('')
@@ -109,35 +107,44 @@ export default {
         let contentIndex = -1
         let extra = 0
 
-        while ((contentIndex = filteredContent.indexOf(searchTerm, contentIndex)) !== -1) {
+        while (
+          (contentIndex = filteredContent.indexOf(searchTerm, contentIndex)) !==
+          -1
+        ) {
           if (filteredContent[contentIndex] == ' ') {
             contentIndex += searchTerm.length
             continue
           }
 
           const term = content.substr(contentIndex + extra, searchTerm.length)
-          const wrapped = '<span style="font-weight: bold; background-color: yellow;">' + term + '</span>'
-          content = content.slice(0, contentIndex + extra) + wrapped  + content.slice(contentIndex + extra + term.length)
+          const wrapped =
+            '<span style="font-weight: bold; background-color: yellow;">' +
+            term +
+            '</span>'
+          content =
+            content.slice(0, contentIndex + extra) +
+            wrapped +
+            content.slice(contentIndex + extra + term.length)
 
-          extra += (wrapped.length - term.length)
+          extra += wrapped.length - term.length
           contentIndex += term.length
         }
 
-        return ({
+        return {
           id: node.id,
           title: node.title,
           content: content
-        })
+        }
       }
 
       return null
     }
   }
-};
+}
 </script>
 
 <style lang="stylus">
-.panel 
+.panel
   width calc(290px + (100% - 1280px)/2)
   min-width 290px
   min-height 900px
