@@ -35,7 +35,7 @@ export default {
         /* Open Graph */
         this.social('og:url', 'https://panda-lang.org' + this.$route.fullPath),
         this.social('og:site_name', 'panda-lang'),
-        this.social('og:type', 'website'),
+        this.social('og:type', 'article'),
         this.social('og:title', 'The Panda Programming Language'),
         this.social('og:description', description),
         this.social(
@@ -47,7 +47,7 @@ export default {
         /* Twitter */
         this.social('twitter:title', 'The Panda Programming Language'),
         this.social('twitter:description', description),
-        this.social('twitter:card', 'summary_large_image'),
+        this.social('twitter:card', 'summary'),
         this.social(
           'twitter:image',
           'https://panda-lang.org/images/open-graph-1.png'
