@@ -26,14 +26,16 @@ export default {
   },
   metaInfo () {
     return {
-      title: this.$static.metadata.siteName,
+      title: 'Panda Programming Language',
       meta: [
         /* Default */
         this.social('description', description),
+        this.social('keywords', 'panda-lang'),
+        this.social('author', 'dzikoysk'),
         /* Open Graph */
         this.social('og:url', 'https://panda-lang.org' + this.$route.fullPath),
         this.social('og:site_name', 'panda-lang'),
-        this.social('og:type', 'article'),
+        this.social('og:type', 'website'),
         this.social('og:title', 'The Panda Programming Language'),
         this.social('og:description', description),
         this.social(

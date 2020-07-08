@@ -8,13 +8,13 @@
 export default {
   name: 'PandaHero',
   updated () {
-    if (!process.isClient) {
-      return
+    if (process.isClient) {
+      this.$nextTick(() => {
+        document
+          .querySelectorAll('pre code.panda')
+          .forEach(block => this.$hljs.highlightBlock(block))
+      })
     }
-
-    document
-      .querySelectorAll('pre code.panda')
-      .forEach(block => this.$hljs.highlightBlock(block))
   }
 }
 </script>

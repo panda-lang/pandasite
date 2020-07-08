@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'Pandasite',
   siteUrl: 'https://panda-lang.org/',
+  titleTemplate: '%s',
 
   templates: {
     NewsPost: '/news/:path',
@@ -61,6 +62,32 @@ module.exports = {
           }
         ],
         searchFields: ['title', 'content']
+      }
+    },
+    {
+      use: 'gridsome-plugin-service-worker',
+      options: {
+        networkFirst: {
+          routes: [
+            '/',
+            /\.(js|css|png)$/ // means "every JS, CSS, and PNG images"
+          ]
+        }
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        config: {
+          '/news/*': {
+            changefreq: 'daily',
+            priority: 0.5
+          },
+          '/guide': {
+            changefreq: 'weekly',
+            priority: 0.8
+          }
+        }
       }
     },
     {

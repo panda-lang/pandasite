@@ -80,8 +80,16 @@ import SupportersList from '~/components/SupportersList.vue'
 import supporters from '~/assets/supporters.js'
 
 export default {
-  metaInfo: {
-    title: 'Support'
+  metaInfo () {
+    return {
+      title: 'Support - Pandasite',
+      meta: [
+        this.social(
+          'descrition',
+          'How to help? There are 4 main ways to contribute to the organization.'
+        )
+      ]
+    }
   },
   data: function () {
     return {

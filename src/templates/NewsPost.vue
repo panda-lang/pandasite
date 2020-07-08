@@ -34,6 +34,7 @@ export default {
         /* Open Graph */
         this.social('og:title', this.$page.post.title),
         this.social('og:description', this.description(this.$page.post, 99)),
+        this.social('og:type', 'article'),
         /* Twitter */
         this.social('twitter:title', this.$page.post.title),
         this.social(

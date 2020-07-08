@@ -7,8 +7,11 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Not Found'
+  metaInfo () {
+    return {
+      title: 'Not Found',
+      meta: ['description', 'This page does not exist']
+    }
   }
 }
 </script>

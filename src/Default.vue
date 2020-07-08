@@ -1,13 +1,13 @@
 <template lang="pug">
     .layout
         header.panda-header.bg-black.text-white.bg-texture.z-20.w-full.top-0.md_h-header-spacing.md_fixed.h-auto
-            nav.container.mx-auto.bg-black.flex.w-full.justify-center.md_justify-between.flex-col.md_flex-row.my-auto
+            .container.mx-auto.bg-black.flex.w-full.justify-center.md_justify-between.flex-col.md_flex-row.my-auto
                 .flex-1.justify-center.md_justify-start.flex.w-full.px-4.mt-2.md_mt-0.select-none
                     g-link(to="/").logo
                       img(width="27px", src="/images/logo.png")
                     g-link.font-bold.ml-4.mt-4(to="/") Pandasite
                 .flex-initial.flex.justify-center.md_justify-end.px-4.pt-2.md_pt-0
-                    div.w-full.text-center.md_text-right.select-none
+                    nav.w-full.text-center.md_text-right.select-none
                         - 
                           var routes = {
                             Install: '/install',
@@ -37,6 +37,10 @@
 <script>
 const axios = require('axios')
 
+import Prism from 'prismjs' 
+import '~/assets/prism/prism-ghcolors.styl' 
+import '~/assets/prism/prism-languages.js'
+
 export default {
   data () {
     return {
@@ -50,13 +54,22 @@ export default {
     }
   },
   mounted () {
-    this.version = axios
-      .get('https://repo.panda-lang.org/releases/org/panda-lang/panda/latest')
+    axios.get('https://repo.panda-lang.org/releases/org/panda-lang/panda/latest')
       .then(response => (this.version = response.data))
       .catch(error => {
         console.log(error)
         this.version = 'Cannot fetch the latest version'
       })
+
+    this.highlight()
+  },
+  updated () {
+    this.highlight()
+  },
+  methods: {
+    highlight() {
+      Prism.highlightAll()
+    }
   }
 }
 </script>

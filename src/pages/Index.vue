@@ -91,7 +91,7 @@ import NewsPostPreview from '../components/NewsPostPreview'
 
 export default {
   metaInfo: {
-    title: 'Home'
+    title: 'Pandasite'
   },
   components: {
     PandaHero,

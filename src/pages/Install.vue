@@ -68,8 +68,16 @@
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Installation'
+  metaInfo () {
+    return {
+      title: 'Installation - Pandasite',
+      meta: [
+        this.social(
+          'description',
+          'Download Panda installer for your platform, and start developing today'
+        )
+      ]
+    }
   }
 }
 </script>

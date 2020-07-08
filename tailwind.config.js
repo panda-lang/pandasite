@@ -2,6 +2,9 @@ module.exports = {
   prefix: '',
   important: false,
   separator: '_',
+  purge: [
+    "./src/**/*.vue",
+  ],
   theme: {
     screens: {
       sm: '640px',

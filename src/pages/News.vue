@@ -41,8 +41,16 @@ query {
 import NewsListElement from '~/components/NewsListElement.vue'
 
 export default {
-  metaInfo: {
-    title: 'News'
+  metaInfo () {
+    return {
+      title: 'News - Pandasite',
+      meta: [
+        this.social(
+          'description',
+          'Follow our mission to make the easiest and most fun language for building modern apps that are clean by default'
+        )
+      ]
+    }
   },
   components: {
     NewsListElement

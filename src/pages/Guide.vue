@@ -13,7 +13,7 @@
               )
               .list.pb-16
                 .md_pl-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id").w-full
-                  a(:href="'#' + normalize(edge.node.title)")
+                  a(:href="'#' + edge.node.id")
                     p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 100.0) == 0") {{ edge.node.title }}
                     p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
       .guide-content.markdown.flex-1.p-6.md_p-24.pt-7.justify-center.mb-40.overflow-x-auto
@@ -41,22 +41,24 @@ query {
 </page-query>
 
 <script>
-import Prism from 'prismjs'
 import Search from 'gridsome-plugin-flexsearch/SearchMixin'
-import '~/assets/prism/prism-ghcolors.styl'
-import '~/assets/prism/prism-languages.js'
 
 export default {
-  metaInfo: {
-    title: 'Guide'
+  metaInfo () {
+    return {
+      title: 'Guide - Pandasite',
+      meta: [
+        this.social(
+          'description',
+          'Guide will give you an overview of the language. Set up a Panda development environment and write yuor first app.'
+        )
+      ]
+    }
   },
   mixins: [Search],
   data: () => ({
     searchTerm: ''
   }),
-  mounted () {
-    Prism.highlightAll()
-  },
   computed: {
     searchResults () {
       const searchTerm = this.searchTerm
