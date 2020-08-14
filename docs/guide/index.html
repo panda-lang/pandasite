@@ -91,7 +91,7 @@ $ cd awesome-project
 </code></pre>
 <p>Every proper project should contain at least 2 files:</p>
 <ul>
-<li><code>panda.hjson</code> - project configuration file with some details about the current project</li>
+<li><code>panda.cdn</code> - project configuration file in <a href="https://github.com/dzikoysk/cdn" target="_blank" rel="nofollow noopener noreferrer">CDN</a> (JSON5 like format) with some details about the current project</li>
 <li><code>app.panda</code> - main script file <em>(Name of this file can be changed in a configuration)</em></li>
 </ul>
 <p>Let's see how it should look like:</p>
@@ -100,13 +100,13 @@ $ cd awesome-project
     app.panda      # main script file
   tests/           # &#x3C;concept> integration tests
   resources/       # &#x3C;concept> non panda files
-  panda.hjson      # project configuration file
+  panda.cdn      # project configuration file
   README.md        # project description for GitHub and Reposilite pages 
 </code></pre>
-</div><!----></div><div><div id="201"><h2 id="configuration-file-pandahjson"><a href="#configuration-file-pandahjson" aria-hidden="true"><span class="icon icon-link"></span></a>Configuration file panda.hjson</h2>
+</div><!----></div><div><div id="201"><h2 id="configuration-file-pandacdn"><a href="#configuration-file-pandacdn" aria-hidden="true"><span class="icon icon-link"></span></a>Configuration file panda.cdn</h2>
 <p>This file describes our project and the way how it works. It uses JSON-like format called <code>'JSON for Humans'</code>.
 Standard configuration file should contain <code>name</code>, <code>version</code>, <code>author</code> and <code>main</code> key-value properties:</p>
-<pre><code class="language-json">name: awesome-project
+<pre><code class="language-json5">name: awesome-project
 version: 1.0.0
 owner: dzikoysk
 
@@ -115,9 +115,12 @@ scripts: {
 }
 </code></pre>
 <p>You may also declare dependencies by adding the dependencies section:</p>
-<pre><code class="language-json">dependencies: [
-    // &#x3C;source>:&#x3C;author>/&#x3C;name>@&#x3C;version>
+<pre><code class="language-json5">// &#x3C;source>:&#x3C;author>/&#x3C;name>@&#x3C;version>
+dependencies: [
+    // Panda library from GitHub
     github:dzikoysk/panda-dependency@1.0.1
+    // Java library from Maven
+    maven:org.panda-lang/reposilite@2.8.2
 ]
 </code></pre>
 </div><!----></div><div><div id="202"><h2 id="writing-and-running-a-panda-program"><a href="#writing-and-running-a-panda-program" aria-hidden="true"><span class="icon icon-link"></span></a>Writing and Running a Panda Program</h2>
@@ -133,7 +136,7 @@ $ touch src/app.panda
 </code></pre>
 <p>You can assume that the code that you have already used will print <code>'Hello, Panda!'</code> message in the console. Don't worry, we will analyze this code later. Let's check the result - to launch the <code>awesome-project</code> you need just one more step:</p>
 <pre><code class="language-bash">panda@terminal ./project-awesome/
-$ panda panda.hjson
+$ panda panda.cdn
 Hello, Panda!
 
 --- OR: you may call src/app.panda directly (it ignores project configuration file)
