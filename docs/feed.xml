@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pandasite</title>
+        <link>https://panda-lang.org/</link>
+        <description>panda-lang organization website</description>
+        <lastBuildDate>Fri, 14 Aug 2020 15:18:41 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Gridsome Feed Plugin</generator>
+        <atom:link href="https://panda-lang.org/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Panda 0.1.1-alpha]]></title>
+            <link>https://panda-lang.org/news/release-0-1-1-alpha/</link>
+            <guid>https://panda-lang.org/news/release-0-1-1-alpha/</guid>
+            <pubDate>Tue, 07 Jul 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+# Panda 0.1.1-alpha
+Panda 0.1.1-alpha has been released! 🎉
+
+## Changes in language
+
+- [GH-528](https://github.com/panda-lang/panda/issues/528) Move return type of method to the end of its signature
+
+```panda
+shared shouldReturnTrue () -> Bool {
+  return true
+}
+```
+
+- [GH-526](https://github.com/panda-lang/panda/issues/526) Support string method names
+
+```panda
+shared 'should return true' () -> Bool {
+  return true
+}
+```
+
+- [GH-529](https://github.com/panda-lang/panda/issues/529) Support backquote sequences
+
+```panda
+String text = `text with ' ' and " " :)`
+
+// useful when we want to mix ' and "
+`"Two things are infinite: 
+the universe and human stupidity;
+and I'm not sure about the universe."`
+```
+
+- [GH-532](https://github.com/panda-lang/panda/issues/532) Rename `public` visibility to `open`
+
+```panda
+open type World { 
+  open String name = `Earth`
+
+  open getName () -> String {
+    return this.name
+  }
+}
+```
+
+## Changes in API
+
+- [GH-527](https://github.com/panda-lang/panda/issues/527) Remove `InterceptorData` and `LocalCache` and delegate its functionalities to `LocalChannel`
+- [GH-527](https://github.com/panda-lang/panda/issues/527) Always fork context to guarantee independence of layers
+- [GH-531](https://github.com/panda-lang/panda/issues/531) Optimize PandaSourceStream#getUnreadLength
+- [GH-531](https://github.com/panda-lang/panda/issues/531) Add immutability signature to improve the performance of not modifiable snippets
+- [GH-531](https://github.com/panda-lang/panda/issues/531) + [GH-527](https://github.com/panda-lang/panda/issues/527) Rename `CustomPattern` to `FunctionalPattern`, improve its performance and add simplified API to the `BootstrapInitializer`
+- [GH-531](https://github.com/panda-lang/panda/issues/531) Use generated method injectors to call bootstrap methods to improve the performance
+
+## Download
+
+Installation: [panda-lang.org/install](https://panda-lang.org/install) <br>
+Developers: [panda-lang.org/guide#installation](https://panda-lang.org/guide#installation)
+
+Archives:
+
+- [Panda 0.1.1-alpha [ jar ]](https://repo.panda-lang.org/org/panda-lang/panda/0.1.1-alpha/panda-0.1.1-alpha-all.jar)
+- [Panda 0.1.1-alpha without dependencies [ jar ]](https://repo.panda-lang.org/org/panda-lang/panda/0.1.1-alpha/panda-0.1.1-alpha-all.jar)
+
+
+To download and install Panda, visit the [install](/install) page.
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Releases Roadmap]]></title>
+            <link>https://panda-lang.org/news/releases-roadmap/</link>
+            <guid>https://panda-lang.org/news/releases-roadmap/</guid>
+            <pubDate>Thu, 02 Jul 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+# Roadmap of release life cycle
+
+It's time to introduce Panda release life cycle.
+The development process is divided into 4 phases and we will describe them in this article.
+For the sake of clarity, we've just entered the 2nd phase - alpha.
+
+Here is a list of all phases:
+
+- `indev`
+- `alpha`
+- `beta`
+- `stable`
+
+We've also prepared an image to visualize it and our plans for them:
+
+![How to draw Panda](/news/1.how-to-draw-panda.png)
+
+_„I can't think of anything more rewarding than being able to express yourself to others through painting”
+<img class='emoji' src="https://panda-lang.org/news/1.bob-ross.png" alt='Bob Ross'> _
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Panda 0.1.0-alpha]]></title>
+            <link>https://panda-lang.org/news/release-0-1-0-alpha/</link>
+            <guid>https://panda-lang.org/news/release-0-1-0-alpha/</guid>
+            <pubDate>Wed, 01 Jul 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+# Panda 0.1.0-alpha
+We're happy to announce 📢 the first official alpha release of Panda. 
+Until this day we'll distribute user-friendly binaries to provide simple access and preview of development progress.
+
+Goals for alpha releases:
+* detect various bugs
+* verify some concepts
+* improve performance issues (!)
+* simplify API for developers (!)
+
+To download and install Panda, visit [install](/install) page. ]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Pandasite]]></title>
+            <link>https://panda-lang.org/news/pandasite/</link>
+            <guid>https://panda-lang.org/news/pandasite/</guid>
+            <pubDate>Tue, 30 Jun 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+# Pandasite
+Finally, after a long time, 
+we're happy to announce and introduce the [Pandasite](https://github.com/panda-lang/pandasite) - 
+a new website for panda-lang organization. 
+As a part of alpha release cycle, 
+we've add some extra sections with interesting content like:
+* `News` - regularly posted set of articles about changes and future updates
+* `Guide` - simple introduction into the Panda world and its features
+
+It's also time to say goodby to the old one: 
+
+![Old Page](/news/0.old-page.png) 
+
+So goodby, you served us well  💕  
+
+]]></content:encoded>
+        </item>
+    </channel>
+</rss>

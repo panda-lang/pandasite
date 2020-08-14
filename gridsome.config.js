@@ -8,6 +8,7 @@ module.exports = {
   siteName: 'Pandasite',
   siteUrl: 'https://panda-lang.org/',
   titleTemplate: '%s',
+  outputDir: 'docs',
 
   templates: {
     NewsPost: '/news/:path',

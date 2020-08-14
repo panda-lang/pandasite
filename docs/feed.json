@@ -1,0 +1,37 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Pandasite",
+    "home_page_url": "https://panda-lang.org/",
+    "feed_url": "https://panda-lang.org/feed.json",
+    "description": "panda-lang organization website",
+    "items": [
+        {
+            "id": "https://panda-lang.org/news/release-0-1-1-alpha/",
+            "content_html": "\r\n# Panda 0.1.1-alpha\r\nPanda 0.1.1-alpha has been released! 🎉\r\n\r\n## Changes in language\r\n\r\n- [GH-528](https://github.com/panda-lang/panda/issues/528) Move return type of method to the end of its signature\r\n\r\n```panda\r\nshared shouldReturnTrue () -> Bool {\r\n  return true\r\n}\r\n```\r\n\r\n- [GH-526](https://github.com/panda-lang/panda/issues/526) Support string method names\r\n\r\n```panda\r\nshared 'should return true' () -> Bool {\r\n  return true\r\n}\r\n```\r\n\r\n- [GH-529](https://github.com/panda-lang/panda/issues/529) Support backquote sequences\r\n\r\n```panda\r\nString text = `text with ' ' and \" \" :)`\r\n\r\n// useful when we want to mix ' and \"\r\n`\"Two things are infinite: \r\nthe universe and human stupidity;\r\nand I'm not sure about the universe.\"`\r\n```\r\n\r\n- [GH-532](https://github.com/panda-lang/panda/issues/532) Rename `public` visibility to `open`\r\n\r\n```panda\r\nopen type World { \r\n  open String name = `Earth`\r\n\r\n  open getName () -> String {\r\n    return this.name\r\n  }\r\n}\r\n```\r\n\r\n## Changes in API\r\n\r\n- [GH-527](https://github.com/panda-lang/panda/issues/527) Remove `InterceptorData` and `LocalCache` and delegate its functionalities to `LocalChannel`\r\n- [GH-527](https://github.com/panda-lang/panda/issues/527) Always fork context to guarantee independence of layers\r\n- [GH-531](https://github.com/panda-lang/panda/issues/531) Optimize PandaSourceStream#getUnreadLength\r\n- [GH-531](https://github.com/panda-lang/panda/issues/531) Add immutability signature to improve the performance of not modifiable snippets\r\n- [GH-531](https://github.com/panda-lang/panda/issues/531) + [GH-527](https://github.com/panda-lang/panda/issues/527) Rename `CustomPattern` to `FunctionalPattern`, improve its performance and add simplified API to the `BootstrapInitializer`\r\n- [GH-531](https://github.com/panda-lang/panda/issues/531) Use generated method injectors to call bootstrap methods to improve the performance\r\n\r\n## Download\r\n\r\nInstallation: [panda-lang.org/install](https://panda-lang.org/install) <br>\r\nDevelopers: [panda-lang.org/guide#installation](https://panda-lang.org/guide#installation)\r\n\r\nArchives:\r\n\r\n- [Panda 0.1.1-alpha [ jar ]](https://repo.panda-lang.org/org/panda-lang/panda/0.1.1-alpha/panda-0.1.1-alpha-all.jar)\r\n- [Panda 0.1.1-alpha without dependencies [ jar ]](https://repo.panda-lang.org/org/panda-lang/panda/0.1.1-alpha/panda-0.1.1-alpha-all.jar)\r\n\r\n\r\nTo download and install Panda, visit the [install](/install) page.\r\n",
+            "url": "https://panda-lang.org/news/release-0-1-1-alpha/",
+            "title": "Panda 0.1.1-alpha",
+            "date_modified": "2020-07-07T00:00:00.000Z"
+        },
+        {
+            "id": "https://panda-lang.org/news/releases-roadmap/",
+            "content_html": "\r\n# Roadmap of release life cycle\r\n\r\nIt's time to introduce Panda release life cycle.\r\nThe development process is divided into 4 phases and we will describe them in this article.\r\nFor the sake of clarity, we've just entered the 2nd phase - alpha.\r\n\r\nHere is a list of all phases:\r\n\r\n- `indev`\r\n- `alpha`\r\n- `beta`\r\n- `stable`\r\n\r\nWe've also prepared an image to visualize it and our plans for them:\r\n\r\n![How to draw Panda](/news/1.how-to-draw-panda.png)\r\n\r\n_„I can't think of anything more rewarding than being able to express yourself to others through painting”\r\n<img class='emoji' src=\"https://panda-lang.org/news/1.bob-ross.png\" alt='Bob Ross'> _\r\n",
+            "url": "https://panda-lang.org/news/releases-roadmap/",
+            "title": "Releases Roadmap",
+            "date_modified": "2020-07-02T00:00:00.000Z"
+        },
+        {
+            "id": "https://panda-lang.org/news/release-0-1-0-alpha/",
+            "content_html": "\r\n# Panda 0.1.0-alpha\r\nWe're happy to announce 📢 the first official alpha release of Panda. \r\nUntil this day we'll distribute user-friendly binaries to provide simple access and preview of development progress.\r\n\r\nGoals for alpha releases:\r\n* detect various bugs\r\n* verify some concepts\r\n* improve performance issues (!)\r\n* simplify API for developers (!)\r\n\r\nTo download and install Panda, visit [install](/install) page. ",
+            "url": "https://panda-lang.org/news/release-0-1-0-alpha/",
+            "title": "Panda 0.1.0-alpha",
+            "date_modified": "2020-07-01T00:00:00.000Z"
+        },
+        {
+            "id": "https://panda-lang.org/news/pandasite/",
+            "content_html": "\r\n# Pandasite\r\nFinally, after a long time, \r\nwe're happy to announce and introduce the [Pandasite](https://github.com/panda-lang/pandasite) - \r\na new website for panda-lang organization. \r\nAs a part of alpha release cycle, \r\nwe've add some extra sections with interesting content like:\r\n* `News` - regularly posted set of articles about changes and future updates\r\n* `Guide` - simple introduction into the Panda world and its features\r\n\r\nIt's also time to say goodby to the old one: \r\n\r\n![Old Page](/news/0.old-page.png) \r\n\r\nSo goodby, you served us well  💕  \r\n\r\n",
+            "url": "https://panda-lang.org/news/pandasite/",
+            "title": "Pandasite",
+            "date_modified": "2020-06-30T00:00:00.000Z"
+        }
+    ]
+}

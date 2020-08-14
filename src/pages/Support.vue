@@ -7,11 +7,13 @@
                         h1.inline-block.my-4.py-4.px-6.text-black.bg-white How to help? 💕 
                     div.flex-initial
                         p.inline-block.py-4.px-6.text-xbase.bg-white.text-black.text-2xl.font-thin
-                            | The Panda programming language is an open source project.
+                            | The 
+                            span.underline panda-lang
+                            |  organization is an open source initiative.
                             br
                             | There are 
                             span.font-normal 4 
-                            | main ways to contribute to the organization.
+                            | main ways to support this project.
         .container.mx-auto.relative.mb-20
             div.mx-6.flex.flex-col.md_flex-row
                 .support-content.w-1-1.md_w-1-2.pr-6.mb-24.md_mb-0
