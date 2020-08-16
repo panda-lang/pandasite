@@ -4,7 +4,7 @@
         <title>Pandasite</title>
         <link>https://panda-lang.org/</link>
         <description>panda-lang organization website</description>
-        <lastBuildDate>Sun, 16 Aug 2020 16:03:24 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 16 Aug 2020 17:13:11 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="https://panda-lang.org/feed.xml" rel="self" type="application/rss+xml"/>
@@ -18,10 +18,10 @@
 Panda 0.1.2-alpha has been released! 🚀
 
 **Changes in language**:
-* GH-545 Replace HJSON with [CDN](https://github.com/dzikoysk/cdn). You have to rename your project build file from `panda.hjson` to `panda.cdn`.
-* GH-522 Support maven artifacts as modules in package manager script
+* [GH-545](https://github.com/panda-lang/panda/issues/545) Replace HJSON with [CDN](https://github.com/dzikoysk/cdn). You have to rename your project build file from `panda.hjson` to `panda.cdn`.
+* [GH-522](https://github.com/panda-lang/panda/issues/522) Support maven artifacts as modules in package manager script
 
-```json5
+```panda
 name: panda-with-java-library-dependency
 version: 1.0.0
 owner: dzikoysk
@@ -40,17 +40,17 @@ repositories: [
 ```
 
 **Changes in API**:
-* GH-527 Annotation scanner has been removed from Panda and moved to [github.com/dzikoysk/annotations](https://github.com/dzikoysk/annotations)
-* GH-527 Dependency injection has been removed from Panda Utilities and moved to [github.com/dzikoysk/di](https://github.com/dzikoysk/di)
-* GH-531 Remove annotation based registration of parser 
-* GH-527 Move list of formatters and layouts to the dedicated classes 
-* GH-541 Merge design package into language domain
-* GH-539 Rename generations to stages, rename cycle to stage and delegation property to phases
-* GH-544 Replace URLClassLoader with PandaClassLoader 
+* [GH-527](https://github.com/panda-lang/panda/issues/527) Annotation scanner has been removed from Panda and moved to [github.com/dzikoysk/annotations](https://github.com/dzikoysk/annotations)
+* [GH-527](https://github.com/panda-lang/panda/issues/527) Dependency injection has been removed from Panda Utilities and moved to [github.com/dzikoysk/di](https://github.com/dzikoysk/di)
+* [GH-531](https://github.com/panda-lang/panda/issues/531) Remove annotation based registration of parser 
+* [GH-527](https://github.com/panda-lang/panda/issues/527) Move list of formatters and layouts to the dedicated classes 
+* [GH-541](https://github.com/panda-lang/panda/issues/541) Merge design package into language domain
+* [GH-539](https://github.com/panda-lang/panda/issues/539) Rename generations to stages, rename cycle to stage and delegation property to phases
+* [GH-544](https://github.com/panda-lang/panda/issues/544) Replace URLClassLoader with PandaClassLoader 
 * Bump dependencies
 
 **Download**: 
-Installation: [panda-lang.org/install](https://panda-lang.org/install)
+Installation: [panda-lang.org/install](https://panda-lang.org/install) <br>
 Developers: [panda-lang.org/guide#installation](https://panda-lang.org/guide#installation)
 
 Archives:

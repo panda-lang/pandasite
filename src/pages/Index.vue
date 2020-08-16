@@ -43,7 +43,8 @@
                 )
         .news.pb-20.container.mx-auto
             .news-data.flex-col
-                h1.inline-block.text-2xl.mb-6.px-5.pb-2 News
+                h1.inline-block.text-2xl.mb-6.px-5.pb-2 
+                  a(to="/news") News
                 .flex.flex-col.justify-center.md_flex-row.md_flex-wrap
                     NewsPostPreview.w-1-1.md_w-2-3.lg_w-1-3.xl_w-4-11(
                         v-for="newsPost in $page.allNewsPost.edges" 
