@@ -3,7 +3,10 @@
         div.container.mx-auto.pt-10.bg-white
             div.mx-12.pb-24
                 div.text-center  
-                  h1.text-3xl.align-center Panda News
+                  h1.text-3xl.align-center 
+                    | Panda News 
+                    a(href="/feed.xml").pl-2.text-gray-500
+                      i.fas.fa-rss
                   div.flex.pb-8.md_pb-8
                     div.flex-1
                     p.p-5.flex-shrink.w-3-4.text-xbase
@@ -14,8 +17,7 @@
                 NewsListElement.mx-auto.md_w-3-4(
                     v-for="edge in $page.allNewsPost.edges" 
                     :key="edge.node.id" 
-                    :post="edge.node"
-                )
+                    :post="edge.node")
 </template>
 
 <page-query>
