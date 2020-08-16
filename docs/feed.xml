@@ -4,10 +4,60 @@
         <title>Pandasite</title>
         <link>https://panda-lang.org/</link>
         <description>panda-lang organization website</description>
-        <lastBuildDate>Fri, 14 Aug 2020 19:26:10 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 16 Aug 2020 16:03:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="https://panda-lang.org/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Panda 0.1.2-alpha]]></title>
+            <link>https://panda-lang.org/news/release-0-1-2-alpha/</link>
+            <guid>https://panda-lang.org/news/release-0-1-2-alpha/</guid>
+            <pubDate>Sun, 16 Aug 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+# Panda 0.1.2-alpha
+Panda 0.1.2-alpha has been released! 🚀
+
+**Changes in language**:
+* GH-545 Replace HJSON with [CDN](https://github.com/dzikoysk/cdn). You have to rename your project build file from `panda.hjson` to `panda.cdn`.
+* GH-522 Support maven artifacts as modules in package manager script
+
+```json5
+name: panda-with-java-library-dependency
+version: 1.0.0
+owner: dzikoysk
+
+scripts: {
+    main: app.panda
+}
+
+dependencies: [
+    maven:org.panda-lang/reposilite@2.8.1
+]
+
+repositories: [
+    https://repo.panda-lang.org/
+]
+```
+
+**Changes in API**:
+* GH-527 Annotation scanner has been removed from Panda and moved to [github.com/dzikoysk/annotations](https://github.com/dzikoysk/annotations)
+* GH-527 Dependency injection has been removed from Panda Utilities and moved to [github.com/dzikoysk/di](https://github.com/dzikoysk/di)
+* GH-531 Remove annotation based registration of parser 
+* GH-527 Move list of formatters and layouts to the dedicated classes 
+* GH-541 Merge design package into language domain
+* GH-539 Rename generations to stages, rename cycle to stage and delegation property to phases
+* GH-544 Replace URLClassLoader with PandaClassLoader 
+* Bump dependencies
+
+**Download**: 
+Installation: [panda-lang.org/install](https://panda-lang.org/install)
+Developers: [panda-lang.org/guide#installation](https://panda-lang.org/guide#installation)
+
+Archives:
+- [Panda 0.1.2-alpha](https://repo.panda-lang.org/org/panda-lang/panda/0.1.2-alpha/panda-0.1.2-alpha-all.jar)
+- [Panda 0.1.2-alpha without dependencies](https://repo.panda-lang.org/org/panda-lang/panda/0.1.2-alpha/panda-0.1.2-alpha-all.jar)
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Panda 0.1.1-alpha]]></title>
             <link>https://panda-lang.org/news/release-0-1-1-alpha/</link>
