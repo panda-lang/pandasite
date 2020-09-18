@@ -30,13 +30,13 @@ export default [
     early: true
   },
   {
-    user: 'rehost.pl',
-    amount: 18.5,
+    user: 'guardspigot',
+    amount: 16.5,
     early: true
   },
   {
-    user: 'guardspigot',
-    amount: 16.0,
+    user: 'rehost.pl',
+    amount: 18.5,
     early: true
   },
   {
