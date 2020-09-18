@@ -31,12 +31,12 @@ export default [
   },
   {
     user: 'guardspigot',
-    amount: 18.5,
+    amount: 20.5,
     early: true
   },
   {
     user: 'rehost.pl',
-    amount: 18.5,
+    amount: 20.0,
     early: true
   },
   {
