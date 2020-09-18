@@ -36,7 +36,7 @@ export default [
   },
   {
     user: 'rehost.pl',
-    amount: 20.0,
+    amount: 21.0,
     early: true
   },
   {
