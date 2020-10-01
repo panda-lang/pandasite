@@ -2,20 +2,17 @@
   .guide.flex
       .panel.bg-grey.justify-end.hidden.md_flex
         .panel-right.panel-width
-          .fixed.panel-width
-            .panel-content.flex.flex-col.items-center.md_items-start.fixed.overflow-auto.panel-width.pl-8
-              input.px-2.py-1.md_mt-14.mb-3(
-                  id="search"
-                  type="text" 
-                  class="input",
-                  v-model="searchTerm"
-                  placeholder="Search"
-              )
-              .list.pb-16
-                .md_pl-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id").w-full
-                  a(:href="'#' + edge.node.id")
-                    p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 100.0) == 0") {{ edge.node.title }}
-                    p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
+          .panel-content.flex.flex-col.items-center.md_items-start.overflow-auto.panel-width.pl-8
+            input.px-2.py-1.md_mt-14.mb-3(
+                id="search"
+                type="text" 
+                class="input", v-model="searchTerm" placeholder="Search"
+            )
+            .list.pb-16
+              .md_pl-2(v-for="edge in $page.allGuidePost.edges" :key="edge.node.id").w-full
+                a(:href="'#' + edge.node.id")
+                  p.mt-4.text-sbase.font-bold.uppercase(v-if="(edge.node.id % 100.0) == 0") {{ edge.node.title }}
+                  p.md_ml-4.mt-2.text-sbase(v-else) {{ edge.node.title }}
       .guide-content.markdown.flex-1.p-6.md_p-24.pt-7.justify-center.mb-40.overflow-x-auto
           div(v-if="searchTerm != '' && searchResults.length == 0")
             h1 Not Found
@@ -156,12 +153,15 @@ export default {
   color black
 
 .panel-width
-  width: 290px
+  width 290px
 
 .panel-content
-  height calc(100% - 56px)
-  padding-top 53px
-  bottom 53px
+  height calc(100vh - 3.5rem)
+  top 3.5rem
+
+  position fixed
+  @supports (position: sticky)
+    position sticky
 
   .list
     a
