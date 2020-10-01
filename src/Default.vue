@@ -20,6 +20,10 @@
                         a.px-4.py-4.inline-block(href='https://github.com/panda-lang') Contribute
         main.md_pt-header-spacing
             slot
+
+        .fixed.w-16.h-16.bg-black.bottom-0.right-0.m-4.cursor-pointer.z-40.duration-200.transition-opacity(:class="goToTopOpacity", @click="goToTop")
+          .transform.rotate-45.h-8.w-8.border-right.border-l-4.border-t-4.ml-4.mt-6
+
         footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full.z-1
             .container.mx-auto.flex.text-white
                 div.flex-1.text-center.text-sm
@@ -41,10 +45,16 @@ import Prism from 'prismjs'
 import '~/assets/prism/prism-ghcolors.styl' 
 import '~/assets/prism/prism-languages.js'
 
+const opacity = {
+  true: 'opacity-1',
+  false: 'opacity-0 pointer-events-none'
+}
+
 export default {
   data () {
     return {
-      version: ''
+      version: '',
+      goToTopOpacity: opacity[false]
     }
   },
   mounted () {
@@ -56,6 +66,11 @@ export default {
       })
 
     this.highlight()
+
+    this.updateGoToTop()
+    window.addEventListener('scroll', () => {
+      this.updateGoToTop()
+    })
   },
   updated () {
     this.highlight()
@@ -63,6 +78,20 @@ export default {
   methods: {
     highlight() {
       Prism.highlightAll()
+    },
+
+    goToTop() {
+      window.scrollTo(0, 0)
+    },
+
+    updateGoToTop () {
+      if (this.goToTopOpacity === opacity[false] && window.scrollY > innerHeight / 2) {
+        this.goToTopOpacity = opacity[true]
+      }
+
+      if (this.goToTopOpacity === opacity[true] && window.scrollY < innerHeight / 2) {
+        this.goToTopOpacity = opacity[false]
+      }
     }
   }
 }
