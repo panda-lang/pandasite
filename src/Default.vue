@@ -20,7 +20,7 @@
                         a.px-4.py-4.inline-block(href='https://github.com/panda-lang') Contribute
         main.md_pt-header-spacing
             slot
-        footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full.z-1(v-bind:class="{ fixed: isFixedFooterActive }")
+        footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full.z-1
             .container.mx-auto.flex.text-white
                 div.flex-1.text-center.text-sm
                     a(href="https://twitter.com/dzikoysk")
@@ -44,13 +44,7 @@ import '~/assets/prism/prism-languages.js'
 export default {
   data () {
     return {
-      version: '',
-      isFixedFooterActive: false
-    }
-  },
-  watch: {
-    $route (to, from) {
-      this.isFixedFooterActive = to.path.includes('guide')
+      version: ''
     }
   },
   mounted () {
