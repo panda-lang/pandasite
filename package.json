@@ -19,7 +19,7 @@
     "gridsome": "^0.7.13",
     "gridsome-plugin-flexsearch": "^0.1.19",
     "gridsome-plugin-remark-prismjs-all": "^0.3.5",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.4.1",
     "moment": "^2.27.0",
     "surge": "^0.21.3",
     "vue": "^2.6.11",
