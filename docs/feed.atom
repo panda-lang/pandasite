@@ -2,11 +2,96 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://panda-lang.org/</id>
     <title>Pandasite</title>
-    <updated>2020-10-01T23:30:40.051Z</updated>
+    <updated>2021-01-02T20:02:38.745Z</updated>
     <generator>Gridsome Feed Plugin</generator>
     <link rel="alternate" href="https://panda-lang.org/"/>
     <link rel="self" href="https://panda-lang.org/feed.atom"/>
     <subtitle>panda-lang organization website</subtitle>
+    <entry>
+        <title type="html"><![CDATA[Panda 0.2.0-alpha]]></title>
+        <id>https://panda-lang.org/news/release-0-2-0-alpha/</id>
+        <link href="https://panda-lang.org/news/release-0-2-0-alpha/"/>
+        <updated>2020-12-31T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+# Panda 0.2.0-alpha
+Happy New Year! 🎊 And may the odds be ever in your favor. 
+
+Finally, after 4 months, **Panda 0.2.0-alpha** has been released. 
+Most of the changes affected Panda internals, but as a result we have finally features such as generic types! <img class='emoji' src="https://panda-lang.org/news/6.panda-woah.png" alt='Panda Woah'>
+
+**Changes in language**:
+* [GH-556](https://github.com/panda-lang/panda/pull/558) Added a new type system, based on signatures, with generic type support
+
+```panda
+module lang
+
+main {
+    /* Parametrized instance */
+    Foo<String> parametrizedType = new Foo<String>('test')
+
+    /* Parametrized return type */
+    String parametrizedValue = parametrizedType.getValue()
+
+    /* Parametrized arguments */
+    parametrizedType.setValue(parametrizedValue)
+
+    /* Parametrized reassignation */
+    Foo<String> sameParametrizedType = parametrizedType
+    Foo<Object> lowerParametrizedType = sameParametrizedType
+    Bar<String> lowerBaseType = sameParametrizedType
+    Bar<Object> lowerBaseAndParametrizedType = sameParametrizedType
+}
+
+type Foo<V> : Bar<V> {
+    constructor (V barValue) {
+        base(barValue)
+    }
+}
+
+type Bar<V> {
+    internal mut V value
+
+    constructor (V value) {
+        this.value = value
+    }
+
+    shared setValue (V value) {
+        this.value = value
+    }
+
+    shared getValue () -> V {
+        return value
+    }
+}
+```
+
+* [GH-556](https://github.com/panda-lang/panda/pull/558) Other changes:
+  * Removed `[]` based arrays
+  * Supported `not` keyword as an alternative to `!` logical negation
+  * Added autocasts between primitive types
+
+**Changes in API**:
+* [GH-556](https://github.com/panda-lang/panda/pull/558):
+  * Magic free implementation of parser API
+  * Removed `Parser Bootstrap API` - dependency injection based abstraction layer for business-like parsers
+  * Replaced mutable component based context API with predefined immutable context with generic subject
+  * Removed recursive assignation parser
+  * Removed expression transactions
+  * Removed all deprecated pattern systems like: linear pattern, functional pattern, custom pattern
+  * Removed unused classes and renamed a lot of domain objects
+  * Simplified some internals
+  * Bump dependencies
+
+**Download**:
+
+Installation: [panda-lang.org/install](https://panda-lang.org/install) <br>
+Developers: [panda-lang.org/guide#installation](https://panda-lang.org/guide#installation) <br>
+
+Archives:
+- [Panda 0.2.0-alpha](https://repo.panda-lang.org/org/panda-lang/panda/0.2.0-alpha/panda-0.2.0-alpha-all.jar)
+- [Panda 0.2.0-alpha without dependencies](https://repo.panda-lang.org/org/panda-lang/panda/0.2.0-alpha/panda-0.2.0-alpha-all.jar)
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Panda 0.1.3-alpha]]></title>
         <id>https://panda-lang.org/news/release-0-1-3-alpha/</id>

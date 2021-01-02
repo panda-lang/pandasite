@@ -14,7 +14,6 @@
     "@gridsome/transformer-remark": "^0.5.0",
     "@gridsome/vue-remark": "^0.1.10",
     "@microflash/gridsome-plugin-feed": "^1.0.5",
-    "@netsells/vue-range-slider": "^1.0.0",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "gridsome": "^0.7.13",

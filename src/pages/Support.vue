@@ -42,14 +42,15 @@
                                 span.font-bold.text-white $
                                     span(v-html="value")
                             i.fa.fa-heart.fa-10x
-                    .flex-initial  
-                        VueSlider(
-                            v-model="value"
-                            :min="min"
-                            :max="max"
-                            :tooltip-placement="['bottom']"
-                            :tooltip-formatter="formatter"
-                        )
+                    .flex-initial
+                        ClientOnly
+                            VueSlider(
+                                v-model="value"
+                                :min="min"
+                                :max="max"
+                                :tooltip-placement="['bottom']"
+                                :tooltip-formatter="formatter"
+                            )
                         p.text-xxs.italic.mt-8
                             span.font-bold Note: 
                             | Donations are validated manually, so it'll take some time before it appears below.
@@ -105,8 +106,7 @@ export default {
     }
   },
   components: {
-    VueSlider: () =>
-      import('vue-slider-component/dist-css/vue-slider-component.umd.min.js'),
+    VueSlider: () => import('vue-slider-component/dist-css/vue-slider-component.umd.min.js'),
     SupportersList
   },
   methods: {

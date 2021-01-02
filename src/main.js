@@ -11,9 +11,9 @@ import highlightPanda from '~/plugins/panda-highlight.js'
 export default async function (Vue, { router, isClient }) {
   Vue.component('Layout', App)
   Vue.mixin(NewsMixins)
-  Vue.use(require('~/plugins/vue-slider-component.js'))
   
   if (isClient) {
+    Vue.use(require('~/plugins/vue-slider-component.js'))
     highlightPanda(Vue, router)
   }
 }
