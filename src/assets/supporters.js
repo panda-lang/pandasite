@@ -65,6 +65,11 @@ export default [
     early: true
   },
   {
+    user: 'Artur Kołecki',
+    amount: 4.0,
+    early: true
+  },
+  {
     user: 'szymex73',
     amount: 3.0,
     early: true
