@@ -2,11 +2,70 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://panda-lang.org/</id>
     <title>Pandasite</title>
-    <updated>2021-01-13T22:37:15.640Z</updated>
+    <updated>2021-01-15T23:48:46.442Z</updated>
     <generator>Gridsome Feed Plugin</generator>
     <link rel="alternate" href="https://panda-lang.org/"/>
     <link rel="self" href="https://panda-lang.org/feed.atom"/>
     <subtitle>panda-lang organization website</subtitle>
+    <entry>
+        <title type="html"><![CDATA[Panda 0.2.1-alpha]]></title>
+        <id>https://panda-lang.org/news/release-0-2-1-alpha/</id>
+        <link href="https://panda-lang.org/news/release-0-2-1-alpha/"/>
+        <updated>2021-01-16T00:00:00.000Z</updated>
+        <content type="html"><![CDATA[
+# Panda 0.2.1-alpha
+
+Update time! <img class='emoji' src="https://panda-lang.org/news/6.panda-woah.png" alt='Panda Woah'> <br>
+Take a look at **Panda 0.2.1-alpha** and these awesome bitwise operations:
+
+**Changes in language**:
+* [GH-585](https://github.com/panda-lang/panda/issues/585) Support for bitwise operators
+
+```panda
+log (-8) ==     (~7)
+log   1  ==  (5 & 3)
+log   7  ==  (5 | 3)
+log   6  ==  (5 ^ 3)
+log   4  == (2 << 1)
+log   2  == (4 >> 1)
+```
+
+* [GH-605](https://github.com/panda-lang/panda/issues/605) Support for floating numbers without leading zero
+
+```panda
+log 1.01 == (1 + .01)
+```
+
+* [GH-590](https://github.com/panda-lang/panda/issues/590) Fixed invalid equals comparison between different number types
+
+```panda
+Int positiveInt = 7
+Int negativeInt = -7
+
+Double positiveDouble = 7.0
+Double negativeDouble = -7.0
+
+// Since 0.2.1-alpha works as expected ❤️
+log positiveInt == positiveDouble
+log negativeInt == negativeDouble
+```
+
+* [GH-596](https://github.com/panda-lang/panda/issues/596) Removed possibility of using operation based expressions as standalone statements
+
+**Changes in internals**:
+* [b301f411733b08c2bc4c0f732db4519aa2cac5ee](https://github.com/panda-lang/panda/commit/b301f411733b08c2bc4c0f732db4519aa2cac5ee) Improved performance of math and logical operations
+* [GH-606](https://github.com/panda-lang/panda/issues/606) Added conjunction property to operators
+* [GH-556](https://github.com/panda-lang/panda/issues/556) Fixed LGTM issues 
+
+**Download**: <br>
+Installation: [panda-lang.org/install](https://panda-lang.org/install) <br>
+Developers: [panda-lang.org/guide#installation](https://panda-lang.org/guide#installation)
+
+Archives:
+- [Panda 0.2.1-alpha](https://repo.panda-lang.org/org/panda-lang/panda/0.2.1-alpha/panda-0.2.1-alpha-all.jar)
+- [Panda 0.2.1-alpha without dependencies](https://repo.panda-lang.org/org/panda-lang/panda/0.2.1-alpha/panda-0.2.1-alpha-all.jar)
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Panda 0.2.0-alpha]]></title>
         <id>https://panda-lang.org/news/release-0-2-0-alpha/</id>
