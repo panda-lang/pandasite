@@ -4,10 +4,105 @@
         <title>Pandasite</title>
         <link>https://panda-lang.org/</link>
         <description>panda-lang organization website</description>
-        <lastBuildDate>Sun, 17 Jan 2021 14:10:10 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 24 Jan 2021 14:52:48 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="https://panda-lang.org/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Panda 0.3.0-alpha]]></title>
+            <link>https://panda-lang.org/news/release-0-3-0-alpha/</link>
+            <guid>https://panda-lang.org/news/release-0-3-0-alpha/</guid>
+            <pubDate>Sun, 24 Jan 2021 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+# Panda 0.3.0-alpha
+
+Panda 0.3.0-alpha has been released! 🎉
+
+**Changes in language**:
+* [GH-298](https://github.com/panda-lang/panda/issues/298) Simple type inference through `let` keyword
+
+```panda
+module lang
+
+main {
+    /* Immutable */
+
+    let rawValue = '#onlypanda x '
+    let methodValue = 0xCAFEBABE.toString()
+
+    log rawValue + methodValue
+
+    /* Mutable */
+
+    mut let mutableValue = '#onlydiorite'
+    mutableValue = '#onlypanda'
+
+    /* Nillable */
+
+    nil let nillableValue = '#'
+}
+```
+
+* [GH-472](https://github.com/panda-lang/panda/issues/472) Removed null 
+
+```panda
+/* No longer possible */
+nil String value = null // <-- interpretation error
+
+/* Nillable variables */
+nil String playingWithFire = Java.null()
+```
+
+* [GH-608](https://github.com/panda-lang/panda/issues/608) Modulo operation
+
+```panda
+log 3 == (8 % 5)
+```
+
+* [GH-611](https://github.com/panda-lang/panda/issues/611) Support for hexadecimal longs
+
+```panda
+log 0xCAFEBABE
+log 0xFFFFFFFFFFFFFF
+```
+
+* [GH-593](https://github.com/panda-lang/panda/issues/593) [GH-609](https://github.com/panda-lang/panda/issues/609) Fixed operators like `!`, `not`, `~`, `-`, `++`, `--` that could not be used without `( )` in complex operations
+
+```panda
+log !false && true // --> worked as !(false && true)
+log !false && true // fixed -> (!false) && true
+```
+
+* 13c7a34d9ab4a9018c3a4e0154dd3043ae354051 Fixed call to another constructor through 'this' keyword
+
+```panda
+open type Foo {
+    internal String field
+
+    constructor (String field) {
+        this.field = field
+    }
+
+    constructor () {
+        this('Default') // Fixed
+    }
+}
+```
+
+**Changes in internals**:
+* 2b661242d1647483fb74bb43a0fb59f66b44a7d8 Fixed invalid generated method names that uses java keywords
+* c81a733043ea95edaca2c928eb9e31d3d778f602 Improved the possibility of redirecting output 
+* [GH-550](https://github.com/panda-lang/panda/issues/550) Added multiple language tests in `examples` directory, increased overall coverage
+
+**Download**: <br>
+Installation: [panda-lang.org/install](https://panda-lang.org/install) <br>
+Developers: [panda-lang.org/guide#installation](https://panda-lang.org/guide#installation)
+
+Archives:
+- [Panda 0.3.0-alpha](https://repo.panda-lang.org/org/panda-lang/panda/0.3.0-alpha/panda-0.3.0-alpha-all.jar)
+- [Panda 0.3.0-alpha without dependencies](https://repo.panda-lang.org/org/panda-lang/panda/0.3.0-alpha/panda-0.3.0-alpha.jar)
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Panda 0.2.1-alpha]]></title>
             <link>https://panda-lang.org/news/release-0-2-1-alpha/</link>
