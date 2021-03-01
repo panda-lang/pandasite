@@ -8,7 +8,7 @@ export default function (Vue, router) {
       aliases: ['panda'],
       keywords: {
         keyword:
-          'for if while main import module continue break loop method void new shared internal log type',
+          'for if while main require module continue break loop method void new shared internal log type let open',
         literal: 'true false null',
         type: 'String Console Panda'
       },

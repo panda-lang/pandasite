@@ -22,7 +22,7 @@
             slot
 
         .fixed.w-16.h-16.bg-black.bottom-0.right-0.m-4.cursor-pointer.z-40.duration-200.transition-opacity(:class="goToTopOpacity", @click="goToTop")
-          .transform.rotate-45.h-8.w-8.border-right.border-l-4.border-t-4.ml-4.mt-6
+          .transform.rotate-45.h-8.w-8.border-white.border-right.border-l-4.border-t-4.ml-4.mt-6
 
         footer.bg-black.text-center.p-2.py-4.text-xxs.font-sans.w-full.z-1
             .container.mx-auto.flex.text-white
@@ -34,7 +34,7 @@
                     //a(href="")
                     // i.fab.fa-discord
                 div.flex-1
-                   p.text-white Copyright © 2020 The Panda Programming Language
+                   p.text-white Copyright © 2021 The Panda Programming Language
 
 </template>
 

@@ -1,5 +1,5 @@
 <template lang="pug">  
-    g-link.relative.flex.h-auto.flex-row.py-3.mb-10.border.border-pre-theme.text-black(:to="post.path")
+    g-link.relative.flex.h-auto.flex-row.py-3.mb-10.border-1.border-pre-theme.text-black(:to="post.path")
         .desc.text-center.w-26.h-full.flex.align-center.mt-4.flex-col
             h5.font-bold.text-lg.mx-auto.mb-4(v-html="'#' + post.id")
             p.mb-4.mx-auto.my-auto.break-words.px-8(v-html="post.date")

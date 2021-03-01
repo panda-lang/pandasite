@@ -1,21 +1,28 @@
 <template lang="pug">
     div
         panda-hero
-            .flex.flex-wrap-reverse.justify-center.container.mb-10.mt-20.md_mt-32.k.mx-auto.lg_flex-no-wrap.lg_mb-24.lg_px-6.lg_mt-40
-                .w-full.mx-6.my-6.h-full.lg_my-0.lg_w-1-2.lg_mx-0.lg_mr-6
+            div(class=`
+              container mx-auto
+              flex
+              flex-col-reverse lg_flex-row lg_flex-no-wrap
+              justify-center
+              mb-10 mt-20 md_mt-32k lg_mb-24 lg_px-6 lg_mt-40
+              k
+            `)
+                .w-full.px-6.my-6.h-full.lg_my-0.lg_w-1-2.lg_mx-0.lg_mr-6
                     pre.text-xs.md_text-base
                         code.panda.
-                            module awesomeness
+                            require 'panda-lang/awesomeness'
 
-                            shared type Panda {
-                                internal hello(String name) {
+                            type Panda {
+                                open hello (String name) {
                                     log 'Hey, ' + name + '.'
                                     log "You're finally awake ฅ^•ﻌ•^ฅ"
                                 }
                             }
 
                             main {
-                                Panda panda = new Panda()
+                                let panda = new Panda()
                                 panda.hello('you')
                             }
                 .w-1-1.mx-6.h-full.lg_w-1-2.lg_mx-0
@@ -46,7 +53,7 @@
                 h1.inline-block.text-2xl.mb-6.px-5.pb-2 
                   a(href="/news").text-black News
                 .flex.flex-col.justify-center.md_flex-row.md_flex-wrap
-                    NewsPostPreview.w-1-1.md_w-2-3.lg_w-1-3.xl_w-4-11(
+                    NewsPostPreview.w-1-1.md_w-2-3.lg_w-1-3(
                         v-for="newsPost in $page.allNewsPost.edges" 
                         :key="newsPost.node.id" 
                         :post="newsPost.node"

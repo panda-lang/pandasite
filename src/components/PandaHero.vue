@@ -1,6 +1,6 @@
 <template lang="pug">
     section.panda-hero
-        .lg_container.z-5.relative
+        .lg_container.z-5.relative.md_mx-auto
             slot
 </template>
 
