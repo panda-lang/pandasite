@@ -35,6 +35,11 @@ export default [
     early: true
   },
   {
+    user: 'CDFN',
+    amount: 21.37,
+    early: true
+  },
+  {
     user: 'rehost.pl',
     amount: 21.0,
     early: true
