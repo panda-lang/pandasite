@@ -65,6 +65,11 @@ export default [
     early: true
   },
   {
+    user: 'zrdzn',
+    amount: 6.51,
+    early: true
+  },
+  {
     user: 'Paradise-RPG.PL',
     amount: 5.0,
     early: true

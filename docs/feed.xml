@@ -4,7 +4,7 @@
         <title>Pandasite</title>
         <link>https://panda-lang.org/</link>
         <description>panda-lang organization website</description>
-        <lastBuildDate>Tue, 09 Mar 2021 18:52:51 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 09 Mar 2021 19:08:49 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <atom:link href="https://panda-lang.org/feed.xml" rel="self" type="application/rss+xml"/>
