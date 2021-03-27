@@ -23,8 +23,8 @@
                         ul.list-disc.list-inside.mx-4
                             li
                                 | Star 
-                                a.text-blue-500(href) Panda 
-                                | project on GitHub to reach a wider audience
+                                a.text-blue-500(href="https://github.com/panda-lang/panda") Panda 
+                                | related projects on GitHub to help us reach a wider audience
                             li Create some projects on GitHub to increase the popularity and library database
                     article.relative.pt-12
                         hr.z-4.absolute.border-gray-300.w-full.mt-9

@@ -1,5 +1,11 @@
 export default [
   {
+    user: 'zzmgck',
+    amount: 191.0,
+    early: true,
+    project: 'reposilite'
+  },
+  {
     user: 'Daffit',
     amount: 100.0,
     early: true
@@ -91,6 +97,11 @@ export default [
   },
   {
     user: 'Cytrus',
+    amount: 1.0,
+    early: true
+  },
+  {
+    user: 'Rollczi',
     amount: 1.0,
     early: true
   },
