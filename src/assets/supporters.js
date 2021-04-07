@@ -37,7 +37,7 @@ export default [
   },
   {
     user: 'guardspigot',
-    amount: 20.5,
+    amount: 23.5,
     early: true
   },
   {
