@@ -17,7 +17,7 @@ export default [
   },
   {
     user: 'bstefanski.com',
-    amount: 58.0,
+    amount: 69.0,
     early: true
   },
   {
