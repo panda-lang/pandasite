@@ -51,6 +51,12 @@ export default [
     early: true
   },
   {
+    user: 'milkyway0308',
+    amount: 15.0,
+    early: true,
+    project: 'reposilite'
+  },
+  {
     user: 'jaredmeister',
     amount: 15.0,
     early: true
@@ -74,6 +80,12 @@ export default [
     user: 'zrdzn',
     amount: 6.51,
     early: true
+  },
+  {
+    user: 'Rob',
+    amount: 5.0,
+    early: true,
+    project: 'reposilite'
   },
   {
     user: 'Paradise-RPG.PL',
