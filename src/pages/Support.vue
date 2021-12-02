@@ -184,12 +184,12 @@ li {
 .full-list .supporter-block {
     width: 90%;
 }
-@media all and (max-width: 756px) {
+@media screen and (min-width: 756px) {
     .full-list .supporter-block {
         width: 50%;
     }
 }
-@media all and (max-width: 1224px) {
+@media screen and (min-width: 1224px) {
     .full-list .supporter-block {
         width: 33.33%;
     }

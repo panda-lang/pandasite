@@ -6,7 +6,7 @@
         .pt-4
             h5.mr-4.text-lg(v-html="post.title")
             .pb-3
-                p.p-4.pl-0(v-html="description(post, 200)")
+                p.p-4.pl-0(v-html="description(post, 230)")
                 g-link.mr-4.my-4.text-xs.text-theme-blue(:to="post.path") Read More →
 </template>
 
@@ -16,9 +16,3 @@ export default {
   props: ['post']
 }
 </script>
-
-<style>
-.desc h5 {
-    padding-top: 1px;
-}
-</style>

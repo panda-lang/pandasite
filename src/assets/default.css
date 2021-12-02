@@ -32,7 +32,7 @@ pre {
   @apply px-6;
   @apply py-4;
 }
-pre code .hljs .panda {
+pre code .hljs.panda {
     background: transparent;
     padding: 0;
 }
@@ -55,6 +55,6 @@ pre code .hljs .panda {
   /* color #ffb734 !important */
 }
 .hljs {
-  @apply text-gray-200;
+  @apply text-gray-200 !important;
   /* color #8f9295 !important */
 }
