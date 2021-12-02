@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{Vefc:function(n,e,t){"use strict";t.r(e);var l=t("KHd+"),u=null,c=Object(l.a)({},(function(){var n=this.$createElement;return(this._self._c||n)("div")}),[],!1,null,null,null);"function"==typeof u&&u(c);e.default=c.exports}}]);

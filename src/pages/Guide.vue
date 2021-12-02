@@ -142,35 +142,32 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.panel
-  width calc(290px + (100% - 1280px)/2)
-  min-width 290px
-  min-height 900px
-
-.panel input:focus
-  border-radius 0
-  color black
-
-.panel-width
-  width 290px
-
-.panel-content
-  height calc(100vh - 3.5rem)
-  top 3.5rem
-
-  position fixed
-  @supports (position: sticky)
-    position sticky
-
-  .list
-    a
-      color black
-
-.search-element
-  font-family 'Montserrat'
-
-.guide-content
-  width calc(100% - 290px)
-  max-width 1010px
+<style>
+.panel {
+  width: calc(290px + (100% - 1280px)/2);
+  min-width: 290px;
+  min-height: 900px;
+}
+.panel input:focus {
+  border-radius: 0;
+  color: black;
+}
+.panel-width {
+  width: 290px;
+}
+.panel-content {
+  height: calc(100vh - 3.5rem);
+  top: 3.5rem;
+  position: sticky;
+}
+.panel-content .list a {
+  color: black;
+}
+.search-element {
+  font-family: 'Montserrat';
+}
+.guide-content {
+  width: calc(100% - 290px);
+  max-width: 1010px;
+}
 </style>

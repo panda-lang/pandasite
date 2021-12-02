@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://panda-lang.org/</id>
     <title>Pandasite</title>
-    <updated>2021-07-09T11:53:01.009Z</updated>
+    <updated>2021-12-02T14:04:08.543Z</updated>
     <generator>Gridsome Feed Plugin</generator>
     <link rel="alternate" href="https://panda-lang.org/"/>
     <link rel="self" href="https://panda-lang.org/feed.atom"/>

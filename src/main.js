@@ -1,5 +1,5 @@
-import '~/assets/default.styl'
-import '~/assets/markdown.styl'
+import '~/assets/default.css'
+import '~/assets/markdown.css'
 
 import fontawesome from '@fortawesome/fontawesome-free'
 fontawesome.config = { autoReplaceSvg: false }

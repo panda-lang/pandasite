@@ -14,21 +14,25 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.news-article
-    background-color white
-    padding 17px
-    margin 17px
-    margin-top 8px
-    margin-bottom 8px
-    line-height 1.4
-.news-article h5
-    font-weight 600
-    letter-spacing -0.7px
-.news-article p
-    color #777777
-.news-time
-    right 14px
-    top 23px
-    color gray
+<style>
+.news-article {
+    background-color: white;
+    padding: 17px;
+    margin: 17px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+.news-article h5 {
+    font-weight: 600;
+    letter-spacing: -0.7px;
+}
+.news-article p {
+    color: #777777;
+}
+.news-time {
+    right: 14px;
+    top: 23px;
+    color: gray;
+}
 </style>

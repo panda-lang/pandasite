@@ -118,68 +118,80 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.support-hero
-    --breakpoint 90%
-    position relative
-    background-color white
-    z-index 1
-
-    &::before
-        position absolute
-        content ''
-        display block
-        top 0
-        right 0
-        left 0
-        bottom 0
-        height var(--breakpoint)
-        background black
-        clip-path polygon(0 100%, 100% 82%, 100% 0, 0px 0)
-        z-index 2
-
-    > .container
-        relative _
-        margin 177px _ 77px
-        z-index 3
-
-li
-    margin 7px 0 7px
-.support-way h1
-    font-family 'Lato'
-
-.vue-slider-rail
-    background-color lightgrey
-.vue-slider-process
-    //@apply bg-green-400
-    background #20bf82
-.vue-slider-dot-handle
-    background-color black
-.vue-slider-dot-tooltip-inner
-    background black
-.vue-slider-dot-handle::after
-    //@apply bg-red-300
-    @apply bg-gray-400
-.heart-icon
-    cursor pointer
-.heart i
-    @apply text-red-500
-    transition color 0.5s
-.heart-icon:hover i
-    @apply text-red-600
-    transition color 1.5s
-
-.full-list
-    section
-        display flex
-        flex-wrap wrap
-        justify-content center
-    .supporter-block
-        width 90%
-    @media (min-width: 756px)
-        .supporter-block
-            width 50%
-    @media (min-width: 1224px)
-        .supporter-block
-            width 33.33%
+<style>
+.support-hero {
+    --breakpoint: 90%;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+.support-hero::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: var(--breakpoint);
+    background: black;
+    clip-path: polygon(0 100%, 100% 82%, 100% 0, 0px 0);
+    z-index: 2;
+}
+.support-hero .container {
+    position: relative;
+    margin: 177px _ 77px;
+    z-index: 3;
+}
+li {
+    margin: 7px 0 7px;
+}
+.support-way h1 {
+    font-family: 'Lato';
+}
+.vue-slider-rail {
+    background-color: lightgrey;
+}
+.vue-slider-process {
+    /* @apply bg-green-400 */
+    background: #20bf82;
+}
+.vue-slider-dot-handle {
+    background-color: black;
+}
+.vue-slider-dot-tooltip-inner {
+    background: black;
+}
+.vue-slider-dot-handle::after {
+    @apply bg-gray-400;
+}
+.heart-icon {
+    cursor: pointer;
+}
+.heart i {
+    @apply text-red-500;
+    transition: color 0.5s;
+}
+.heart-icon:hover i {
+    @apply text-red-600;
+    transition: color 1.5s;
+}
+.full-list section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.full-list .supporter-block {
+    width: 90%;
+}
+@media all and (max-width: 756px) {
+    .full-list .supporter-block {
+        width: 50%;
+    }
+}
+@media all and (max-width: 1224px) {
+    .full-list .supporter-block {
+        width: 33.33%;
+    }
+}
 </style>

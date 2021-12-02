@@ -114,42 +114,45 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.home-links a
-    margin-right 1rem
-
-.latest-text
-    //text-shadow: 0 1px 0 rgba(0,0,0,.25)
-    font-family 'Montserrat'
-    min-width 240px
-
-.feature-title
-    font-family 'Lato'
-.feature-block
-    //font-family: 'Montserrat'
-
-.footer-end
-    --breakpoint 100%
-    position relative
-    background-color white
-    height 56px
-
-    &::before
-        position absolute
-        content ''
-        display block
-        top 0
-        right 0
-        left 0
-        bottom 0
-        height var(--breakpoint)
-        background black
-        clip-path polygon(0 0, 100% 56px, 100% 100%, 0 100%)
-    > .container
-        relative _
-        margin 177px _ 77px
-        z-index 1
-
-.news-data
-    position relative
+<style>
+.home-links a {
+    margin-right: 1rem;
+}
+.latest-text {
+    /* text-shadow: 0 1px 0 rgba(0,0,0,.25) */
+    font-family: 'Montserrat';
+    min-width: 240px;
+}
+.feature-title {
+    font-family: 'Lato';
+}
+.feature-block {
+    /* font-family: 'Montserrat' */
+}
+.footer-end {
+    --breakpoint: 100%;
+    position: relative;
+    background-color: white;
+    height: 56px;
+}
+.footer-end::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background: black;
+  clip-path: polygon(0 0, 100% 56px, 100% 100%, 0 100%);
+}
+ .footer-end .container {
+  position: relative;
+  margin: 177px 0 77px;
+  z-index: 1;
+ }
+.news-data {
+    position: relative;
+}
 </style>

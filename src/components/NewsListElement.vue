@@ -17,7 +17,8 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.desc h5
-    padding-top 1px
+<style>
+.desc h5 {
+    padding-top: 1px;
+}
 </style>

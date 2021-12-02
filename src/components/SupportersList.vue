@@ -17,8 +17,8 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.supporters-list
-    h1
-        font-family 'Segoe UI'
+<style>
+.supporters-list h1 {
+  font-family: 'Segoe UI';
+}
 </style>

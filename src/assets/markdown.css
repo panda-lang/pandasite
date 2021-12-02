@@ -1,0 +1,61 @@
+.markdown h1 {
+    padding-top: 124px;
+    margin-top: -100px;
+    padding-bottom: 20px;
+    @apply text-3xl;
+}
+.markdown h2 {
+    padding-top: 84px;
+    margin-top: -60px;
+    padding-bottom: 20px;
+}
+.markdown h3, h4, h5 {
+    padding-top: 64px;
+    margin-top: -50px;
+    padding-bottom: 12px;
+    color: #808080;
+}
+.markdown p {
+    @apply my-2;
+}
+.markdown img {
+    @apply my-5;
+    border: 1px solid black;
+}
+.markdown ul {
+    @apply list-disc;
+    /* @apply list-inside */
+    @apply py-2;
+    @apply px-6;
+}
+.markdown code {
+    @apply text-sm;
+    @apply bg-grey;
+    @apply my-6;
+    color: #dd157c;
+}
+.markdown pre {
+    @apply my-5;
+}
+.markdown pre code {
+    background-color: transparent;
+    color: inherit;
+}
+.markdown table {
+    @apply my-5;
+    border: 1px solid #ddd;
+}
+.markdown table td, .markdown table th {
+    @apply px-4 py-1;
+}
+.markdown table th {
+    text-align: leftl;
+    @apply px-3;
+}
+.markdown .emoji {
+    display: inline;
+    border: none;
+    width: 36px;
+    height: auto;
+    @apply my-0;
+}

@@ -19,31 +19,31 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-
-section.panda-hero
-    --breakpoint 85%
-    overflow-y auto
-    position relative
-    background #ffffff
-
-    &::before
-        content ''
-        display block
-        position absolute
-        top 0
-        right 0
-        left 0
-        bottom 0
-        height var(--breakpoint)
-        background black
-        clip-path polygon(0 0, 100% 0, 100% 91%, 0 calc(100% - 130px))
-
-    > .container
-        relative _
-        z-index 1
-        margin 177px _ 77px
-
-    pre
-        background-color #19191c
+<style>
+section.panda-hero {
+  --breakpoint: 85%;
+  overflow-y: auto;
+  position: relative;
+  background: #ffffff;
+}
+section.panda-hero::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 85%;
+  background: black;
+  clip-path: polygon(0 0, 100% 0, 100% 91%, 0 calc(100% - 130px));
+}
+section.panda-hero .container {
+  position: relative;
+  z-index: 1;
+  margin: 177px 0 77px;
+}
+section.panda-hero pre {
+  background-color: #19191c;
+}
 </style>

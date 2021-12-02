@@ -42,7 +42,7 @@
 const axios = require('axios')
 
 import Prism from 'prismjs' 
-import '~/assets/prism/prism-ghcolors.styl' 
+import '~/assets/prism/prism-ghcolors.css' 
 import '~/assets/prism/prism-languages.js'
 
 const opacity = {
@@ -58,7 +58,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('https://repo.panda-lang.org/releases/org/panda-lang/panda/latest')
+    axios.get('https://repo.panda-lang.org/api/maven/latest/releases/org/panda-lang/panda-standalone')
       .then(response => (this.version = response.data))
       .catch(error => {
         console.log(error)
@@ -97,43 +97,51 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.layout
-  display flex
-  min-height 100vh
-  flex-direction column
-  align-items stretch
+<style>
+.layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: stretch;
+}
+header, main, footer {
+  flex-shrink: 0;
+}
+header {
+  height: 56px;
+}
+main {
+  flex: 1;
+}
+header a, footer a {
+ color: white;
+}
 
-header, main, footer
-  flex-shrink 0
-header
-  height 56px
-main
-  flex 1
+.logo {
+  height: 27px;
+  width: 27px;
+  border-radius: 100%;
+  background-color: #fff;
+  padding: 2px;
+  margin-top: 16px;
+}
+.logo img {
+  border-radius: 100%;
+  background-color: black;
+}
 
-header, footer
-  a
-    color white
-
-.logo
-  height 27px
-  width 27px
-  border-radius 100%
-  background-color #fff
-  padding 2px
-  margin-top 16px
-.logo img
-  border-radius 100%
-  background-color black
-
-footer
-  //height: 32px
-  bottom 0
-  position relative
-footer .container
-  padding  7
-footer .container a
-    margin 0 7px
-.fixed
-  position fixed
+footer {
+  /* height: 32px */
+  bottom: 0;
+  position: relative;
+}
+footer .container {
+  padding: 7;
+}
+footer .container a {
+    margin: 0 7px;
+}
+.fixed {
+  position: fixed;
+}
 </style>

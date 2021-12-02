@@ -114,7 +114,7 @@ export default [
   },
   {
     user: 'Rollczi',
-    amount: 1.0,
+    amount: 10.0,
     early: true
   },
   {
